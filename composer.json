@@ -3,7 +3,7 @@
   "version": "master",
   "autoload": {
     "psr-0" : {
-      "Zend_" : "./"
+      "Zend_" : "Zend/"
     }
   }
 }
