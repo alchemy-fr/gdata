@@ -1,4 +1,9 @@
 {
   "name": "alchemy/gdata",
-  "version": "master"
+  "version": "master",
+  "autoload": {
+    "psr-0" : {
+      "Zend_" : "./"
+    }
+  }
 }
