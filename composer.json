@@ -2,10 +2,19 @@
     "name": "zend/gdata",
     "type": "library",
     "keywords": ["zend","gdata"],
+    "authors": [
+    {
+        "name": "Zend Contributors",
+        "homepage": "http://framework.zend.com/community/contributors"
+    }
+    ],
     "description": "The Google Data APIs are a set of web services for read/write access to applications hosted by Google",
     "version": "1.11.11",
     "license": "New BSD",
     "homepage": "http://framework.zend.com/download/webservices",
+    "require": {
+        "php" : ">5.2.4"
+    },
     "autoload": {
         "psr-0" : {
             "Zend_" : "library"
