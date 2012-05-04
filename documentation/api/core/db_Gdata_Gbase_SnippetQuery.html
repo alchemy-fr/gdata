@@ -1,0 +1,1560 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/Gbase/SnippetQuery.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_Gbase_SnippetQuery">\Zend_Gdata_Gbase_SnippetQuery</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gbase
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: SnippetQuery.php 23805 2011-03-16 00:55:40Z tjohns $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_Gbase_SnippetQuery"></a><h2 class="class">\Zend_Gdata_Gbase_SnippetQuery<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Assists in constructing queries for Google Base Snippets Feed</p>
+<div class="long-description"><p>Queries are not defined for APP, but are provided by Gdata services
+as an extension.</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query">\Zend_Gdata_Gbase_Query</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>link</dt>
+<dd>
+<a href="http://code.google.com/apis/base/">http://code.google.com/apis/base/</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gbase
+         
+    </dd>
+</dl>
+<h3>Constants</h3>
+<div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::BASE_SNIPPET_FEED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">BASE_SNIPPET_FEED_URI</span>
+                = 'https://www.google.com/base/feeds/snippets'
+            </code><div class="description"><p class="short-description">Path to the snippets feeds on the Google Base server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::$_defaultFeedUri"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_defaultFeedUri</span>= 'self'
+                </code><div class="description">
+<p class="short-description">The default URI for POST methods</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>self</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::__construct()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+           $url
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Create Gdata_Query object</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::__construct()">\Zend_Gdata_Query::__construct()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$url</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::__get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+           $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::__get()">\Zend_Gdata_Query::__get()</a></small>
+</div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::__set()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__set</span><span class="nb-faded-text">(
+           $name,  $val
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::__set()">\Zend_Gdata_Query::__set()</a></small>
+</div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$val</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getAdjust()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAdjust</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getAdjust()">\Zend_Gdata_Gbase_Query::getAdjust()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>adjust</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getAlt()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlt</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getAlt()">\Zend_Gdata_Query::getAlt()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>rss or atom</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getAuthor()">\Zend_Gdata_Query::getAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>author</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getBq()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getBq</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getBq()">\Zend_Gdata_Gbase_Query::getBq()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>bq</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCategory</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getCategory()">\Zend_Gdata_Query::getCategory()</a></small>
+</div>
+<div class="code-tabs"></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getContent()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getContent</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getContent()">\Zend_Gdata_Gbase_Query::getContent()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getCrowdBy()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCrowdBy</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getCrowdBy()">\Zend_Gdata_Gbase_Query::getCrowdBy()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>crowdby</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getKey()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getKey</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getKey()">\Zend_Gdata_Gbase_Query::getKey()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>key</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getMaxResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMaxResults</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getMaxResults()">\Zend_Gdata_Query::getMaxResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>maxResults</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getOrderBy()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getOrderBy</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getOrderBy()">\Zend_Gdata_Gbase_Query::getOrderBy()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>orderby</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getParam()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getParam</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getParam()">\Zend_Gdata_Query::getParam()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getPublishedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPublishedMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getPublishedMax()">\Zend_Gdata_Query::getPublishedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>publishedMax</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getPublishedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPublishedMin</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getPublishedMin()">\Zend_Gdata_Query::getPublishedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>publishedMin</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getQuery()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQuery</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getQuery()">\Zend_Gdata_Query::getQuery()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>query</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getQueryString()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getQueryString()">\Zend_Gdata_Query::getQueryString()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>querystring</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getQueryUrl()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryUrl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Returns the query URL generated by this query instance.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The query URL for this instance.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getRefine()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRefine</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getRefine()">\Zend_Gdata_Gbase_Query::getRefine()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>refine</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getSortOrder()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSortOrder</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::getSortOrder()">\Zend_Gdata_Gbase_Query::getSortOrder()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>sortorder</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStartIndex</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getStartIndex()">\Zend_Gdata_Query::getStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>startIndex</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getUpdatedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdatedMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getUpdatedMax()">\Zend_Gdata_Query::getUpdatedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>updatedMax</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::getUpdatedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdatedMin</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getUpdatedMin()">\Zend_Gdata_Query::getUpdatedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>updatedMin</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::resetParameters()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">resetParameters</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::resetParameters()">\Zend_Gdata_Query::resetParameters()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description">
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setAdjust()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAdjust</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setAdjust()">\Zend_Gdata_Gbase_Query::setAdjust()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setAlt()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAlt</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setAlt()">\Zend_Gdata_Query::setAlt()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthor</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setAuthor()">\Zend_Gdata_Query::setAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setBq()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setBq</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setBq()">\Zend_Gdata_Gbase_Query::setBq()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCategory</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setCategory()">\Zend_Gdata_Query::setCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setContent()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setContent</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setContent()">\Zend_Gdata_Gbase_Query::setContent()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setCrowdBy()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCrowdBy</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setCrowdBy()">\Zend_Gdata_Gbase_Query::setCrowdBy()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setKey()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setKey</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query">\Zend_Gdata_Gbase_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setKey()">\Zend_Gdata_Gbase_Query::setKey()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query">\Zend_Gdata_Gbase_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setMaxResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMaxResults</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setMaxResults()">\Zend_Gdata_Query::setMaxResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setOrderBy()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setOrderBy</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setOrderBy()">\Zend_Gdata_Gbase_Query::setOrderBy()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setParam()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setParam</span><span class="nb-faded-text">(
+          string $name, string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setParam()">\Zend_Gdata_Query::setParam()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setPublishedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setPublishedMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setPublishedMax()">\Zend_Gdata_Query::setPublishedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setPublishedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setPublishedMin</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setPublishedMin()">\Zend_Gdata_Query::setPublishedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setQuery()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setQuery</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setQuery()">\Zend_Gdata_Query::setQuery()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setRefine()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRefine</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setRefine()">\Zend_Gdata_Gbase_Query::setRefine()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setSortOrder()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSortOrder</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Gbase_Query.html#%5CZend_Gdata_Gbase_Query::setSortOrder()">\Zend_Gdata_Gbase_Query::setSortOrder()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gbase_ItemQuery.html#%5CZend_Gdata_Gbase_ItemQuery">\Zend_Gdata_Gbase_ItemQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStartIndex</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setStartIndex()">\Zend_Gdata_Query::setStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setUpdatedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdatedMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setUpdatedMax()">\Zend_Gdata_Query::setUpdatedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gbase_SnippetQuery::setUpdatedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdatedMin</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setUpdatedMin()">\Zend_Gdata_Query::setUpdatedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

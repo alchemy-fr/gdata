@@ -1,0 +1,3171 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/YouTube.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_YouTube">\Zend_Gdata_YouTube</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>YouTube
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: YouTube.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_YouTube"></a><h2 class="class">\Zend_Gdata_YouTube<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Service class for interacting with the YouTube Data API.</p>
+<div class="long-description"><p>As the Google data API protocol is based upon the Atom Publishing Protocol
+(APP), Gdata functionality extends the appropriate Zend_Gdata_App classes</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Media.html#%5CZend_Gdata_Media">\Zend_Gdata_Media</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>link</dt>
+<dd>
+<a href="http://code.google.com/apis/youtube/">http://code.google.com/apis/youtube/</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>YouTube
+         
+    </dd>
+</dl>
+<h3>Constants</h3>
+<div>
+<a id="\Zend_Gdata_YouTube::AUTH_SERVICE_NAME"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">AUTH_SERVICE_NAME</span>
+                = 'youtube'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::CLIENTLOGIN_URL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">CLIENTLOGIN_URL</span>
+                = 'https://www.google.com/youtube/accounts/ClientLogin'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_TOP_RATED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_TOP_RATED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/top_rated'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_MOST_VIEWED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_MOST_VIEWED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/most_viewed'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_RECENTLY_FEATURED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_RECENTLY_FEATURED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/recently_featured'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_WATCH_ON_MOBILE_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_WATCH_ON_MOBILE_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/watch_on_mobile'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_TOP_RATED_URI_V2"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_TOP_RATED_URI_V2</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/top_rated'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_MOST_VIEWED_URI_V2"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_MOST_VIEWED_URI_V2</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/most_viewed'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_RECENTLY_FEATURED_URI_V2"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_RECENTLY_FEATURED_URI_V2</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/recently_featured'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::STANDARD_WATCH_ON_MOBILE_URI_V2"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">STANDARD_WATCH_ON_MOBILE_URI_V2</span>
+                = 'http://gdata.youtube.com/feeds/api/standardfeeds/watch_on_mobile'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/users'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::VIDEO_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">VIDEO_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/videos'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::PLAYLIST_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">PLAYLIST_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#playlist'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_UPLOADS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_UPLOADS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#user.uploads'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_PLAYLISTS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_PLAYLISTS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#user.playlists'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_SUBSCRIPTIONS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_SUBSCRIPTIONS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#user.subscriptions'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_CONTACTS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_CONTACTS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#user.contacts'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::USER_FAVORITES_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">USER_FAVORITES_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#user.favorites'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::VIDEO_RESPONSES_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">VIDEO_RESPONSES_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#video.responses'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::VIDEO_RATINGS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">VIDEO_RATINGS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#video.ratings'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::VIDEO_COMPLAINTS_REL"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">VIDEO_COMPLAINTS_REL</span>
+                = 'http://gdata.youtube.com/schemas/2007#video.complaints'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::ACTIVITY_FEED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">ACTIVITY_FEED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/events'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::FRIEND_ACTIVITY_FEED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">FRIEND_ACTIVITY_FEED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/users/default/friendsactivity'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::IN_REPLY_TO_SCHEME"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">IN_REPLY_TO_SCHEME</span>
+                = 'http://gdata.youtube.com/schemas/2007#in-reply-to'
+            </code><div class="description"><p class="short-description">The URI of the in-reply-to schema for comments in reply to
+other comments.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::INBOX_FEED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">INBOX_FEED_URI</span>
+                = 'http://gdata.youtube.com/feeds/api/users/default/inbox'
+            </code><div class="description"><p class="short-description">The URI of the inbox feed for the currently authenticated user.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::ACTIVITY_FEED_MAX_USERS"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">integer 
+                <span class="highlight">ACTIVITY_FEED_MAX_USERS</span>
+                = '20'
+            </code><div class="description"><p class="short-description">The maximum number of users for which activity can be requested for,
+as enforced by the API.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>integer<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::FAVORITES_URI_SUFFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">FAVORITES_URI_SUFFIX</span>
+                = 'favorites'
+            </code><div class="description"><p class="short-description">The suffix for a feed of favorites.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::UPLOADS_URI_SUFFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">UPLOADS_URI_SUFFIX</span>
+                = 'uploads'
+            </code><div class="description"><p class="short-description">The suffix for the user's upload feed.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::RESPONSES_URI_SUFFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">RESPONSES_URI_SUFFIX</span>
+                = 'responses'
+            </code><div class="description"><p class="short-description">The suffix for a feed of video responses.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::RELATED_URI_SUFFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">RELATED_URI_SUFFIX</span>
+                = 'related'
+            </code><div class="description"><p class="short-description">The suffix for a feed of related videos.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::INBOX_URI_SUFFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant">string 
+                <span class="highlight">INBOX_URI_SUFFIX</span>
+                = 'inbox'
+            </code><div class="description"><p class="short-description">The suffix for a feed of messages (inbox entries).</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info">
+<dt></dt>
+<dd>string<br><em></em>
+</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_YouTube::$namespaces"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">array
+                 <span class="highlight">$namespaces</span>= 'array'
+                </code><div class="description">
+<span class="attribute">static</span><p class="short-description">Namespaces used for Zend_Gdata_YouTube</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>array</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_YouTube::__call()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
+          string $method, array $args
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Provides a magic factory method to instantiate new objects with
+shorter syntax than would otherwise be required by the Zend Framework
+naming conventions.  For instance, to construct a new
+Zend_Gdata_Calendar_Extension_Color, a developer simply needs to do
+$gCal->newColor().  For this magic constructor, packages are searched
+in the same order as which they appear in the $_registeredPackages
+array</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::__call()">\Zend_Gdata_App::__call()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em>The method name being called</em></td>
+</tr>
+<tr>
+<th>$args</th>
+<td>array</td>
+<td><em>The arguments passed to the call</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::__construct()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client
+              =
+              null, string $applicationId
+              =
+              MyCompany-MyApp-1.0, string $clientId
+              =
+              null, string $developerKey
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Create Zend_Gdata_YouTube object</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em><p>(optional) The HTTP client to use when when communicating with the Google servers.</p>
+</em></td>
+</tr>
+<tr>
+<th>$applicationId</th>
+<td>string</td>
+<td><em><p>The identity of the app in the form of Company-AppName-Version</p>
+</em></td>
+</tr>
+<tr>
+<th>$clientId</th>
+<td>string</td>
+<td><em>The clientId issued by the YouTube dashboard</em></td>
+</tr>
+<tr>
+<th>$developerKey</th>
+<td>string</td>
+<td><em>The developerKey issued by the YouTube dashboard</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::delete()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">delete</span><span class="nb-faded-text">(
+          mixed $data,  $remainingRedirects
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">DELETE entry with client object</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::delete()">\Zend_Gdata_App::delete()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or URL to delete</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">get</span><span class="nb-faded-text">(
+          string $uri, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">GET a URI using client object.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::get()">\Zend_Gdata_App::get()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>GET URI</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getActivityForUser()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getActivityForUser</span><span class="nb-faded-text">(
+           $username
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_ActivityFeed.html#%5CZend_Gdata_YouTube_ActivityFeed">\Zend_Gdata_YouTube_ActivityFeed</a></code><div class="description"><p class="short_description">Retrieves the activity feed for users</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_ActivityFeed.html#%5CZend_Gdata_YouTube_ActivityFeed">\Zend_Gdata_YouTube_ActivityFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_VersionException.html#%5CZend_Gdata_App_VersionException">\Zend_Gdata_App_VersionException</a></td>
+<td><em>if using version less than 2.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getContactFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getContactFeed</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_ContactFeed.html#%5CZend_Gdata_YouTube_ContactFeed">\Zend_Gdata_YouTube_ContactFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of a user's contacts</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_ContactFeed.html#%5CZend_Gdata_YouTube_ContactFeed">\Zend_Gdata_YouTube_ContactFeed</a></td>
+<td>The feed of contacts</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEntry</span><span class="nb-faded-text">(
+          mixed $location,  $className
+              =
+              Zend_Gdata_Entry
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Retrieve entry as string or object</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::getEntry()">\Zend_Gdata::getEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location as string or Zend_Gdata_Query</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getFeed()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFeed</span><span class="nb-faded-text">(
+          mixed $location, string $className
+              =
+              Zend_Gdata_Feed
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Retrieve feed as string or object</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::getFeed()">\Zend_Gdata::getFeed()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location as string or Zend_Gdata_Query</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class type to use for returning the feed</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getFormUploadToken()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFormUploadToken</span><span class="nb-faded-text">(
+          <a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a> $videoEntry, string $url
+              =
+              http://gdata.youtube.com/action/GetUploadToken
+          )
+        </span>
+        :
+          array</code><div class="description"><p class="short_description">Retrieves a YouTube token</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoEntry</th>
+<td><a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a></td>
+<td><em>The video entry</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em>The location as a string URL</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An array containing a token and URL</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getFriendActivityForCurrentUser()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFriendActivityForCurrentUser</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_ActivityFeed.html#%5CZend_Gdata_YouTube_ActivityFeed">\Zend_Gdata_YouTube_ActivityFeed</a></code><div class="description"><p class="short_description">Retrieve the activity of the currently authenticated users friend.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_ActivityFeed.html#%5CZend_Gdata_YouTube_ActivityFeed">\Zend_Gdata_YouTube_ActivityFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em>if not logged in.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getFullVideoEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFullVideoEntry</span><span class="nb-faded-text">(
+           $videoId
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a>|null</code><div class="description"><p class="short_description">Retrieves a video entry from the user's upload feed.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoId</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a>null</td>
+<td>The video entry to be retrieved, or null if it was not found or the user requesting it did not have the appropriate permissions.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getGzipEnabled()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGzipEnabled</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the HTTP override state</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getGzipEnabled()">\Zend_Gdata_App::getGzipEnabled()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Get the Zend_Http_Client object used for communication</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getHttpClient()">\Zend_Gdata_App::getHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getHttpMethodOverride()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpMethodOverride</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the HTTP override state</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getHttpMethodOverride()">\Zend_Gdata_App::getHttpMethodOverride()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getInboxFeedForCurrentUser()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getInboxFeedForCurrentUser</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_InboxFeed.html#%5CZend_Gdata_YouTube_InboxFeed">\Zend_Gdata_YouTube_InboxFeed</a>|null</code><div class="description"><p class="short_description">Retrieve a feed of messages in the currently authenticated user's inbox.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_YouTube_InboxFeed.html#%5CZend_Gdata_YouTube_InboxFeed">\Zend_Gdata_YouTube_InboxFeed</a>null</td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em>if not logged in.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMajorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description">Get the major protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMajorProtocolVersion()">\Zend_Gdata_App::getMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>The major protocol version in use.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getMaxRedirects()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMaxRedirects</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the maximum number of redirects to follow during HTTP operations</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMaxRedirects()">\Zend_Gdata_App::getMaxRedirects()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>Maximum number of redirects to follow</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMinorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the minor protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMinorProtocolVersion()">\Zend_Gdata_App::getMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use, or NULL if no minor version is specified.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getMostViewedVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMostViewedVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of the most viewed videos.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getPlaylistListFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPlaylistListFeed</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_PlaylistListFeed.html#%5CZend_Gdata_YouTube_PlaylistListFeed">\Zend_Gdata_YouTube_PlaylistListFeed</a></code><div class="description"><p class="short_description">Retrieves a feed which lists a user's playlist</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_PlaylistListFeed.html#%5CZend_Gdata_YouTube_PlaylistListFeed">\Zend_Gdata_YouTube_PlaylistListFeed</a></td>
+<td>The feed of playlists</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getPlaylistVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPlaylistVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_PlaylistVideoFeed.html#%5CZend_Gdata_YouTube_PlaylistVideoFeed">\Zend_Gdata_YouTube_PlaylistVideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of videos in a particular playlist</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_PlaylistVideoFeed.html#%5CZend_Gdata_YouTube_PlaylistVideoFeed">\Zend_Gdata_YouTube_PlaylistVideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getRecentlyFeaturedVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRecentlyFeaturedVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of recently featured videos.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getRelatedVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRelatedVideoFeed</span><span class="nb-faded-text">(
+          string $videoId
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of videos related to the specified video ID.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoId</th>
+<td>string</td>
+<td><em>The videoId of interest</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getStaticHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStaticHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Gets the HTTP client object. If none is set, a new Zend_Http_Client will be used.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getStaticHttpClient()">\Zend_Gdata_App::getStaticHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getSubscriptionFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSubscriptionFeed</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          \Zend_Gdata_YouTube_SubscriptionListFeed</code><div class="description"><p class="short_description">Retrieves a feed of a user's subscriptions</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_YouTube_SubscriptionListFeed</td>
+<td>The feed of subscriptions</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getTopRatedVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTopRatedVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_CommentFeed.html#%5CZend_Gdata_YouTube_CommentFeed">\Zend_Gdata_YouTube_CommentFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of comments related to the specified video ID.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_CommentFeed.html#%5CZend_Gdata_YouTube_CommentFeed">\Zend_Gdata_YouTube_CommentFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getUserFavorites()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUserFavorites</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a user's favorites</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The videos favorited by the user</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getUserProfile()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUserProfile</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_UserProfileEntry.html#%5CZend_Gdata_YouTube_UserProfileEntry">\Zend_Gdata_YouTube_UserProfileEntry</a></code><div class="description"><p class="short_description">Retrieves a user's profile as an entry</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_UserProfileEntry.html#%5CZend_Gdata_YouTube_UserProfileEntry">\Zend_Gdata_YouTube_UserProfileEntry</a></td>
+<td>The user profile entry</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getUserUploads()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUserUploads</span><span class="nb-faded-text">(
+          string $user
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a user's uploads</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em><p>(optional) The username of interest</p>
+</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The videos uploaded by the user</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getVerboseExceptionMessages()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVerboseExceptionMessages</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get whether to use verbose exception messages</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getVerboseExceptionMessages()">\Zend_Gdata_App::getVerboseExceptionMessages()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>In the case of HTTP errors,  use the body of the HTTP response
+in the exception message.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getVideoCommentFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVideoCommentFeed</span><span class="nb-faded-text">(
+          string $videoId
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_CommentFeed.html#%5CZend_Gdata_YouTube_CommentFeed">\Zend_Gdata_YouTube_CommentFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of comments related to the specified video ID.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoId</th>
+<td>string</td>
+<td><em>The videoId of interest</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_CommentFeed.html#%5CZend_Gdata_YouTube_CommentFeed">\Zend_Gdata_YouTube_CommentFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getVideoEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVideoEntry</span><span class="nb-faded-text">(
+          mixed $videoId
+              =
+              null, mixed $location
+              =
+              null, boolean $fullEntry
+              =
+              false
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a></code><div class="description"><p class="short_description">Retrieves a specific video entry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoId</th>
+<td>mixed</td>
+<td><em>The ID of the video to retrieve.</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined.</p>
+</em></td>
+</tr>
+<tr>
+<th>$fullEntry</th>
+<td>boolean</td>
+<td><em><p>(optional) Retrieve the full metadata for the entry. Only possible if entry belongs to currently authenticated user. An exception will be thrown otherwise.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a></td>
+<td>The video entry found at the specified URL.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of videos.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getVideoResponseFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVideoResponseFeed</span><span class="nb-faded-text">(
+          string $videoId
+              =
+              null, mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of video responses related to the specified video ID.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$videoId</th>
+<td>string</td>
+<td><em>The videoId of interest</em></td>
+</tr>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::getWatchOnMobileVideoFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getWatchOnMobileVideoFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></code><div class="description"><p class="short_description">Retrieves a feed of videos recently featured for mobile devices.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>These videos will have RTSP links in the $entry->mediaGroup->content</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The URL to query or a Zend_Gdata_Query object from which a URL can be determined</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_VideoFeed.html#%5CZend_Gdata_YouTube_VideoFeed">\Zend_Gdata_YouTube_VideoFeed</a></td>
+<td>The feed of videos found at the specified URL.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::import()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">import</span><span class="nb-faded-text">(
+          string $uri, <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client
+              =
+              null, string $className
+              =
+              Zend_Gdata_Feed
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed located at $uri.</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::import()">\Zend_Gdata::import()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em>The client used for communication</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::importFile()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importFile</span><span class="nb-faded-text">(
+          string $filename, string $className
+              =
+              Zend_Gdata_App_Feed, string $useIncludePath
+              =
+              false
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed from a file located at $filename.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importFile()">\Zend_Gdata_App::importFile()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$filename</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$useIncludePath</th>
+<td>string</td>
+<td><em>Whether the include_path should be searched</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::importString()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importString</span><span class="nb-faded-text">(
+          string $string, string $className
+              =
+              Zend_Gdata_App_Feed,  $majorProtocolVersion
+              =
+              null,  $minorProtocolVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed represented by $string.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importString()">\Zend_Gdata_App::importString()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$string</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$majorProtocolVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorProtocolVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::importUrl()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importUrl</span><span class="nb-faded-text">(
+          string $url, string $className
+              =
+              Zend_Gdata_App_Feed, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Imports the specified URL (non-statically).</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importUrl()">\Zend_Gdata_App::importUrl()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em>The URL to import</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::insertEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertEntry</span><span class="nb-faded-text">(
+          mixed $data, string $uri, string $className
+              =
+              Zend_Gdata_App_Entry, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Inserts an entry to a given URI and returns the response as a
+fully formed Entry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::insertEntry()">\Zend_Gdata_App::insertEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>POST URI</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class of entry to be returned.</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>The entry returned by the service after insertion.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::isAuthenticated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">isAuthenticated</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<p class="short_description">Determines whether service object is authenticated.</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::isAuthenticated()">\Zend_Gdata::isAuthenticated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>True if service object is authenticated, false otherwise.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::parseFormUploadTokenResponse()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">parseFormUploadTokenResponse</span><span class="nb-faded-text">(
+          string $response
+          )
+        </span>
+        :
+          array</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Helper function for parsing a YouTube token response</p>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$response</th>
+<td>string</td>
+<td><em>The service response</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An array containing the token and URL</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::performHttpRequest()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">performHttpRequest</span><span class="nb-faded-text">(
+          string $method, string $url, array $headers
+              =
+              array, string $body
+              =
+              null, string $contentType
+              =
+              null, int $remainingRedirects
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">Performs a HTTP request using the specified method.</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::performHttpRequest()">\Zend_Gdata::performHttpRequest()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Overrides the definition in the parent (Zend_Gdata_App)
+and uses the Zend_Gdata_HttpClient functionality
+to filter the HTTP requests and responses.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The HTTP method for the request - 'GET', 'POST', 'PUT', 'DELETE'</p>
+</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em><p>The URL to which this request is being performed, or null if found in $data</p>
+</em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em>An associative array of HTTP headers for this request</em></td>
+</tr>
+<tr>
+<th>$body</th>
+<td>string</td>
+<td><em>The body of the HTTP request</em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em>The value for the content type of the request body</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td>int</td>
+<td><em>Number of redirects to follow if requests results in one</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td>The response object</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::post()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">post</span><span class="nb-faded-text">(
+          mixed $data, string $uri
+              =
+              null,  $remainingRedirects
+              =
+              null, string $contentType
+              =
+              null, array $extraHeaders
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">POST data with client object</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::post()">\Zend_Gdata_App::post()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>POST URI</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em><p>Content-type of the data</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::prepareRequest()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">prepareRequest</span><span class="nb-faded-text">(
+          string $method, string $url
+              =
+              null, array $headers
+              =
+              array, mixed $data
+              =
+              null, string $contentTypeOverride
+              =
+              null
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Provides pre-processing for HTTP requests to APP services.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::prepareRequest()">\Zend_Gdata_App::prepareRequest()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><ol>
+<li>Checks the $data element and, if it's an entry, extracts the XML,
+multipart data, edit link (PUT,DELETE), etc.</li>
+<li>If $data is a string, sets the default content-type  header as
+'application/atom+xml' if it's not already been set.</li>
+<li>Adds a x-http-method override header and changes the HTTP method
+to 'POST' if necessary as per getHttpMethodOverride()</li>
+</ol>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The HTTP method for the request - 'GET', 'POST', 'PUT', 'DELETE'</p>
+</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em><p>The URL to which this request is being performed, or null if found in $data</p>
+</em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em>An associative array of HTTP headers for this request</em></td>
+</tr>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML for the body of the request</em></td>
+</tr>
+<tr>
+<th>$contentTypeOverride</th>
+<td>string</td>
+<td><em>The override value for the content type of the request body</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An associative array containing the determined 'method', 'url', 'data', 'headers', 'contentType'</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::put()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">put</span><span class="nb-faded-text">(
+          mixed $data, string $uri
+              =
+              null,  $remainingRedirects
+              =
+              null, string $contentType
+              =
+              null, array $extraHeaders
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">PUT data with client object</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::put()">\Zend_Gdata_App::put()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>PUT URI</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em><p>Content-type of the data</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::registerPackage()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerPackage</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Adds a Zend Framework package to the $_registeredPackages array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::registerPackage()">\Zend_Gdata_App::registerPackage()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This array is searched when using the magic __call method below
+to instantiante new objects.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em><p>The name of the package (eg Zend_Gdata_App)</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::replyToCommentEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">replyToCommentEntry</span><span class="nb-faded-text">(
+          <a href="db_Gdata_YouTube_CommentEntry.html#%5CZend_Gdata_YouTube_CommentEntry">\Zend_Gdata_YouTube_CommentEntry</a> $commentEntry, string $commentText
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_CommentEntry.html#%5CZend_Gdata_YouTube_CommentEntry">\Zend_Gdata_YouTube_CommentEntry</a></code><div class="description"><p class="short_description">Post a comment in reply to an existing comment</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$commentEntry</th>
+<td><a href="db_Gdata_YouTube_CommentEntry.html#%5CZend_Gdata_YouTube_CommentEntry">\Zend_Gdata_YouTube_CommentEntry</a></td>
+<td><em>The comment entry to reply to</em></td>
+</tr>
+<tr>
+<th>$commentText</th>
+<td>string</td>
+<td><em>The text of the comment to post</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_YouTube_CommentEntry.html#%5CZend_Gdata_YouTube_CommentEntry">\Zend_Gdata_YouTube_CommentEntry</a></td>
+<td>the posted comment</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::sendVideoMessage()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">sendVideoMessage</span><span class="nb-faded-text">(
+          string $body, <a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a> $videoEntry
+              =
+              null, string $videoId
+              =
+              null, string $recipientUserName
+          )
+        </span>
+        :
+          <a href="db_Gdata_YouTube_InboxEntry.html#%5CZend_Gdata_YouTube_InboxEntry">\Zend_Gdata_YouTube_InboxEntry</a>|null</code><div class="description"><p class="short_description">Send a video message.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Note: Either a Zend_Gdata_YouTube_VideoEntry or a valid video ID must
+be provided.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$body</th>
+<td>string</td>
+<td><em>The body of the message</em></td>
+</tr>
+<tr>
+<th>$videoEntry</th>
+<td><a href="db_Gdata_YouTube_VideoEntry.html#%5CZend_Gdata_YouTube_VideoEntry">\Zend_Gdata_YouTube_VideoEntry</a></td>
+<td><em><p>(optional) The video entry to send</p>
+</em></td>
+</tr>
+<tr>
+<th>$videoId</th>
+<td>string</td>
+<td><em>The id of the video to send</em></td>
+</tr>
+<tr>
+<th>$recipientUserName</th>
+<td>string</td>
+<td><em>The username of the recipient</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_YouTube_InboxEntry.html#%5CZend_Gdata_YouTube_InboxEntry">\Zend_Gdata_YouTube_InboxEntry</a>null</td>
+<td>The Zend_Gdata_YouTube_Inbox_Entry representing the sent message.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em>if no valid Zend_Gdata_YouTube_VideoEntry or videoId were provided</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setGzipEnabled()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setGzipEnabled</span><span class="nb-faded-text">(
+          boolean $enabled
+              =
+              false
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Toggle requesting gzip encoded responses</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setGzipEnabled()">\Zend_Gdata_App::setGzipEnabled()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$enabled</th>
+<td>boolean</td>
+<td><em>Whether or not to enable gzipped responses</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setHttpClient()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client,  $applicationId
+              =
+              MyCompany-MyApp-1.0,  $clientId
+              =
+              null,  $developerKey
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></code><div class="description"><p class="short_description">Set the Zend_Http_Client object used for communication</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em>The client to use for communication</em></td>
+</tr>
+<tr>
+<th>$applicationId</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$clientId</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$developerKey</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setHttpMethodOverride()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpMethodOverride</span><span class="nb-faded-text">(
+          boolean $override
+              =
+              true
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Toggle using POST instead of PUT and DELETE HTTP methods</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setHttpMethodOverride()">\Zend_Gdata_App::setHttpMethodOverride()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Some feed implementations do not accept PUT and DELETE HTTP
+methods, or they can't be used because of proxies or other
+measures. This allows turning on using POST where PUT and
+DELETE would normally be used; in addition, an
+X-Method-Override header will be sent with a value of PUT or
+DELETE as appropriate.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$override</th>
+<td>boolean</td>
+<td><em>Whether to override PUT and DELETE with POST.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMajorProtocolVersion</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the major protocol version that should be used. Values < 1 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMajorProtocolVersion()">\Zend_Gdata_App::setMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em>The major protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setMaxRedirects()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMaxRedirects</span><span class="nb-faded-text">(
+          int $maxRedirects
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set the maximum number of redirects to follow during HTTP operations</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMaxRedirects()">\Zend_Gdata_App::setMaxRedirects()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$maxRedirects</th>
+<td>int</td>
+<td><em>Maximum number of redirects to follow</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMinorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values < 0 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMinorProtocolVersion()">\Zend_Gdata_App::setMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The minor protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setStaticHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStaticHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $httpClient
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set the static HTTP client instance</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setStaticHttpClient()">\Zend_Gdata_App::setStaticHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Sets the static HTTP client object to use for retrieving the feed.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$httpClient</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::setVerboseExceptionMessages()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setVerboseExceptionMessages</span><span class="nb-faded-text">(
+          boolean $verbose
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set whether to use verbose exception messages</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setVerboseExceptionMessages()">\Zend_Gdata_App::setVerboseExceptionMessages()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>In the case of HTTP errors, use the body of the HTTP response
+in the exception message.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$verbose</th>
+<td>boolean</td>
+<td><em>Whether to use verbose exception messages</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube::updateEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">updateEntry</span><span class="nb-faded-text">(
+          mixed $data, string|null $uri
+              =
+              null, string|null $className
+              =
+              null, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Update an entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::updateEntry()">\Zend_Gdata_App::updateEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em><p>Zend_Gdata_App_Entry or XML (w/ID and link rel='edit')</p>
+</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string|null</td>
+<td><em><p>The URI to send requests to, or null if $data contains the URI.</p>
+</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string|null</td>
+<td><em><p>The name of the class that should be deserialized from the server response. If null, then 'Zend_Gdata_App_Entry' will be used.</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>The entry returned from the server</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

@@ -1,0 +1,1705 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/Photos/AlbumQuery.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Photos
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: AlbumQuery.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_Photos_AlbumQuery"></a><h2 class="class">\Zend_Gdata_Photos_AlbumQuery<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Assists in constructing album queries for various entries.</p>
+<div class="long-description"><p>Instances of this class can be provided in many places where a URL is
+required.</p>
+
+<p>For information on submitting queries to a server, see the service
+class, Zend_Gdata_Photos.</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Photos
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::$_albumId"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_albumId</span>= 'null'
+                </code><div class="description">
+<p class="short-description">The ID of the album to query for. Mutually exclusive with AlbumName.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::$_albumName"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_albumName</span>= 'null'
+                </code><div class="description">
+<p class="short-description">The name of the album to query for. Mutually exclusive with AlbumId.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::__construct()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Create a new Query object with default values.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::__construct()">\Zend_Gdata_Photos_UserQuery::__construct()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description">
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::__get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+           $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::__get()">\Zend_Gdata_Query::__get()</a></small>
+</div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::__set()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__set</span><span class="nb-faded-text">(
+           $name,  $val
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::__set()">\Zend_Gdata_Query::__set()</a></small>
+</div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$val</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getAccess()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAccess</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the visibility filter for entries returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getAccess()">\Zend_Gdata_Photos_UserQuery::getAccess()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The visibility to filter by, or null for the default user.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setAccess
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getAlbumId()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlbumId</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the album ID which is to be returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The ID of the album to retrieve.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setAlbum
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getAlbumName()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlbumName</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the album name which is to be returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The name of the album to retrieve.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setAlbumName
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getAlt()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlt</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getAlt()">\Zend_Gdata_Query::getAlt()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>rss or atom</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getAuthor()">\Zend_Gdata_Query::getAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>author</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCategory</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getCategory()">\Zend_Gdata_Query::getCategory()</a></small>
+</div>
+<div class="code-tabs"></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getImgMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getImgMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the maximum image size filter for entries returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getImgMax()">\Zend_Gdata_Photos_UserQuery::getImgMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The image size size to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setImgMax
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getKind()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getKind</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the kind of entries to be returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getKind()">\Zend_Gdata_Photos_UserQuery::getKind()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The kind to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setKind
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getMaxResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMaxResults</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getMaxResults()">\Zend_Gdata_Query::getMaxResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>maxResults</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getParam()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getParam</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getParam()">\Zend_Gdata_Query::getParam()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getProjection()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getProjection</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Gets the format of data in returned in Atom feeds.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getProjection()">\Zend_Gdata_Photos_UserQuery::getProjection()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>projection</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setProjection
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getPublishedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPublishedMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getPublishedMax()">\Zend_Gdata_Query::getPublishedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>publishedMax</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getPublishedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPublishedMin</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getPublishedMin()">\Zend_Gdata_Query::getPublishedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>publishedMin</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getQuery()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQuery</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getQuery()">\Zend_Gdata_Query::getQuery()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>query</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getQueryString()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getQueryString()">\Zend_Gdata_Query::getQueryString()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>querystring</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getQueryUrl()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryUrl</span><span class="nb-faded-text">(
+           $incomingUri
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Returns the URL generated for this query, based on it's current
+parameters.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$incomingUri</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>A URL generated based on the state of this query.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStartIndex</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getStartIndex()">\Zend_Gdata_Query::getStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>startIndex</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getTag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTag</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the tag filter for entries returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getTag()">\Zend_Gdata_Photos_UserQuery::getTag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The tag to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setTag
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getThumbsize()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getThumbsize</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the thumbnail size filter for entries returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getThumbsize()">\Zend_Gdata_Photos_UserQuery::getThumbsize()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The thumbnail size to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setThumbsize
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getType()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getType</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Gets the type of data in returned in queries.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getType()">\Zend_Gdata_Photos_UserQuery::getType()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>type</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setType
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getUpdatedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdatedMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getUpdatedMax()">\Zend_Gdata_Query::getUpdatedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>updatedMax</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getUpdatedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdatedMin</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::getUpdatedMin()">\Zend_Gdata_Query::getUpdatedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>updatedMin</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::getUser()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUser</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the user which is to be returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::getUser()">\Zend_Gdata_Photos_UserQuery::getUser()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The visibility to retrieve.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setUser
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::resetParameters()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">resetParameters</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::resetParameters()">\Zend_Gdata_Query::resetParameters()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description">
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setAccess()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAccess</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the visibility filter for entries returned. Only entries which
+match this value will be returned. If null or unset, the default
+value will be used instead.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setAccess()">\Zend_Gdata_Photos_UserQuery::setAccess()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Valid values are 'all' (default), 'public', and 'private'.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The visibility to filter by, or null to use the default value.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setAlbumId()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAlbumId</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Photos_AlbumQuery.html#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></code><div class="description"><p class="short_description">Set the album ID to query for. When set, this album's photographs
+be returned. If not set or null, the default user's feed will be
+returned instead.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>NOTE: Album and AlbumId are mutually exclusive. Setting one will
+      automatically set the other to null.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The ID of the album to retrieve, or null to clear.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Photos_AlbumQuery.html#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></td>
+<td>The query object.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setAlbumName()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAlbumName</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Photos_AlbumQuery.html#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></code><div class="description"><p class="short_description">Set the album name to query for. When set, this album's photographs
+be returned. If not set or null, the default user's feed will be
+returned instead.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>NOTE: AlbumName and AlbumId are mutually exclusive. Setting one will
+      automatically set the other to null.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The name of the album to retrieve, or null to clear.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Photos_AlbumQuery.html#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></td>
+<td>The query object.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setAlt()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAlt</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setAlt()">\Zend_Gdata_Query::setAlt()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthor</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setAuthor()">\Zend_Gdata_Query::setAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCategory</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setCategory()">\Zend_Gdata_Query::setCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setImgMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setImgMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the maximum image size for entries returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setImgMax()">\Zend_Gdata_Photos_UserQuery::setImgMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The image size to filter by, or null if no filter is to be applied.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setKind()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setKind</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the kind of entries that are returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setKind()">\Zend_Gdata_Photos_UserQuery::setKind()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The kind to filter by, or null if no filter is to be applied.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setMaxResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMaxResults</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setMaxResults()">\Zend_Gdata_Query::setMaxResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setParam()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setParam</span><span class="nb-faded-text">(
+          string $name, string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setParam()">\Zend_Gdata_Query::setParam()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setProjection()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setProjection</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></code><div class="description">
+<p class="short_description">Set's the format of data returned in Atom feeds. Can be either
+'api' or 'base'. Normally, 'api' will be desired. Default is 'api'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setProjection()">\Zend_Gdata_Photos_UserQuery::setProjection()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setPublishedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setPublishedMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setPublishedMax()">\Zend_Gdata_Query::setPublishedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setPublishedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setPublishedMin</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setPublishedMin()">\Zend_Gdata_Query::setPublishedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setQuery()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setQuery</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setQuery()">\Zend_Gdata_Query::setQuery()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStartIndex</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setStartIndex()">\Zend_Gdata_Query::setStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setTag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTag</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the tag for entries that are returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setTag()">\Zend_Gdata_Photos_UserQuery::setTag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The tag to filter by, or null if no filter is to be applied.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setThumbsize()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setThumbsize</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the thumbnail size filter for entries returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setThumbsize()">\Zend_Gdata_Photos_UserQuery::setThumbsize()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The thumbnail size to filter by, or null if no filter is to be applied.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setType()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setType</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></code><div class="description">
+<p class="short_description">Set's the type of data returned in queries. Can be either
+'feed' or 'entry'. Normally, 'feed' will be desired. Default is 'feed'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setType()">\Zend_Gdata_Photos_UserQuery::setType()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setUpdatedMax()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdatedMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setUpdatedMax()">\Zend_Gdata_Query::setUpdatedMax()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setUpdatedMin()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdatedMin</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_Query.html#%5CZend_Gdata_Query::setUpdatedMin()">\Zend_Gdata_Query::setUpdatedMin()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_AlbumQuery::setUser()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUser</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the user to query for. When set, this user's feed will be
+returned. If not set or null, the default user's feed will be returned
+instead.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery::setUser()">\Zend_Gdata_Photos_UserQuery::setUser()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The user to retrieve, or null for the default user.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

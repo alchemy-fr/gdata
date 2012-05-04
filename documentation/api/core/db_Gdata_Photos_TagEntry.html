@@ -1,0 +1,2635 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/Photos/TagEntry.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_Photos_TagEntry">\Zend_Gdata_Photos_TagEntry</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Photos
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: TagEntry.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_Photos_TagEntry"></a><h2 class="class">\Zend_Gdata_Photos_TagEntry<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Data model class for a Tag Entry.</p>
+<div class="long-description"><p>To transfer user entries to and from the servers, including
+creating new entries, refer to the service class,
+Zend_Gdata_Photos.</p>
+
+<p>This class represents <atom:entry> in the Google Data protocol.</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Entry.html#%5CZend_Gdata_Entry">\Zend_Gdata_Entry</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Photos
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Photos_TagEntry::$_entryClassName"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_entryClassName</span>= 'Zend_Gdata_Photos_TagEntry'
+                </code><div class="description">
+<p class="short-description">Class name for each entry in this feed*</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>Zend_Gdata_Photos_TagEntry</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::$_gphotoWeight"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_gphotoWeight</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Photos_TagEntry::__construct()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a> $element
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Create a new instance.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$element</th>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td><em><p>(optional) DOMElement from which this object should be constructed.</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::__get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Magic getter to allow access like $entry->foo to call $entry->getFoo()
+Alternatively, if no getFoo() is defined, but a $_foo protected variable
+is defined, this is returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::__get()">\Zend_Gdata_App_Base::__get()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>TODO Remove ability to bypass getFoo() methods??</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em>The variable name sought</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::delete()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">delete</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Deletes this entry to the server using the referenced
+Zend_Http_Client to do a HTTP DELETE to the edit link stored in this
+entry's link collection.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::delete()">\Zend_Gdata_App_Entry::delete()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::encode()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encode</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_MediaMimeStream.html#%5CZend_Gdata_MediaMimeStream">\Zend_Gdata_MediaMimeStream</a></code><div class="description">
+<p class="short_description">Return the MIME multipart representation of this MediaEntry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_MediaEntry.html#%5CZend_Gdata_App_MediaEntry::encode()">\Zend_Gdata_App_MediaEntry::encode()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Can be overridden by children to provide more complex representations
+of entries.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_MediaMimeStream.html#%5CZend_Gdata_MediaMimeStream">\Zend_Gdata_MediaMimeStream</a>
+</td>
+<td>The MIME multipart representation of this MediaEntry. If the entry consisted only of XML, a string is returned.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::flushNamespaceLookupCache()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flushNamespaceLookupCache</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Flush namespace lookup cache.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::flushNamespaceLookupCache()">\Zend_Gdata_App_Base::flushNamespaceLookupCache()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description"><p>Empties the namespace lookup cache. Call this function if you have
+added data to the namespace lookup table that contradicts values that
+may have been cached during a previous call to lookupNamespace().</p>
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getAlternateLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlternateLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL for an alternate view of the data represented by this feed or
+entry.  This alternate view is commonly a user-facing webpage, blog
+post, etc.  The MIME type for the data at the URL is available from the
+returned Zend_Gdata_App_Extension_Link element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getAlternateLink()">\Zend_Gdata_App_FeedEntryParent::getAlternateLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This link is in the atom feed/entry as an atom:link with a
+rel attribute value of 'self'.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Author.html#%5CZend_Gdata_App_Extension_Author">\Zend_Gdata_App_Extension_Author</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getAuthor()">\Zend_Gdata_App_FeedEntryParent::getAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Author.html#%5CZend_Gdata_App_Extension_Author">\Zend_Gdata_App_Extension_Author</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCategory</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns the array of categories that classify this feed/entry.  Each
+category is represented in an atom feed by an atom:category element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getCategory()">\Zend_Gdata_App_FeedEntryParent::getCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>Array of Zend_Gdata_App_Extension_Category</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getContent()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getContent</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Content.html#%5CZend_Gdata_App_Extension_Content">\Zend_Gdata_App_Extension_Content</a></code><div class="description">
+<p class="short_description">Gets the value of the atom:content element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::getContent()">\Zend_Gdata_App_Entry::getContent()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Content.html#%5CZend_Gdata_App_Extension_Content">\Zend_Gdata_App_Extension_Content</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getContributor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getContributor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns the array of contributors to this feed/entry.  Each contributor
+is represented in an atom feed by an atom:contributor XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getContributor()">\Zend_Gdata_App_FeedEntryParent::getContributor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An array of Zend_Gdata_App_Extension_Contributor</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getControl()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getControl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Control.html#%5CZend_Gdata_App_Extension_Control">\Zend_Gdata_App_Extension_Control</a></code><div class="description">
+<p class="short_description">Gets the value of the app:control element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::getControl()">\Zend_Gdata_App_Entry::getControl()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Control.html#%5CZend_Gdata_App_Extension_Control">\Zend_Gdata_App_Extension_Control</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getDOM()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a> $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></code><div class="description"><p class="short_description">Retrieves a DOMElement which corresponds to this element and all
+child properties.  This is used to build an entry back into a DOM
+and eventually XML text for application storage/persistence.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td><a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a></td>
+<td><em>The DOMDocument used to construct DOMElements</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td>The DOMElement representing this element and all child properties.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getEditLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEditLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to edit this resource.  This link is in the atom feed/entry
+as an atom:link with a rel attribute value of 'edit'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getEditLink()">\Zend_Gdata_App_FeedEntryParent::getEditLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getEtag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEtag</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string|null</code><div class="description">
+<p class="short_description">Return the Etag for the current entry, or null if not set.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getEtag()">\Zend_Gdata_App_FeedEntryParent::getEtag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>stringnull</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionAttributes</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionAttributes()">\Zend_Gdata_App_Base::getExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All extension attributes</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionElements</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all elements not matched to data model classes
+during the parsing of the XML</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionElements()">\Zend_Gdata_App_Base::getExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All elements not matched to data model classes during parsing</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getGphotoWeight()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGphotoWeight</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the value for this element's gphoto:weight attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\setGphotoWeight
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Http_Client_Abstract</code><div class="description">
+<p class="short_description">Gets the HTTP client object. If none is set, a new Zend_Http_Client
+will be used.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getHttpClient()">\Zend_Gdata_App_FeedEntryParent::getHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Http_Client_Abstract</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>deprecated</dt>
+<dd>Deprecated as of Zend Framework 1.7. Use
+getService() instead.
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getId()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getId</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getId()">\Zend_Gdata_App_FeedEntryParent::getId()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getLicenseLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLicenseLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getLicenseLink()">\Zend_Gdata_App_FeedEntryParent::getLicenseLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLink</span><span class="nb-faded-text">(
+          string $rel
+              =
+              null
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Given a particular 'rel' value, this method returns a matching
+Zend_Gdata_App_Extension_Link element.  If the 'rel' value
+is not provided, the full array of Zend_Gdata_App_Extension_Link
+elements is returned.  In an atom feed, each link is represented
+by an atom:link element.  The 'rel' value passed to this function
+is the atom:link/@rel attribute.  Example rel values include 'self',
+'edit', and 'alternate'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getLink()">\Zend_Gdata_App_FeedEntryParent::getLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$rel</th>
+<td>string</td>
+<td><em>The rel value of the link to be found. If null, the array of Zend_Gdata_App_Extension_link elements is returned</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>Either a single Zend_Gdata_App_Extension_link element, an array of the same or null is returned depending on the rel value supplied as the argument to this function</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMajorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the major protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getMajorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::getMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getMediaSource()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMediaSource</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_MediaSource.html#%5CZend_Gdata_App_MediaSource">\Zend_Gdata_App_MediaSource</a></code><div class="description">
+<p class="short_description">Return the MediaSource object representing the file attached to this
+MediaEntry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_MediaEntry.html#%5CZend_Gdata_App_MediaEntry::getMediaSource()">\Zend_Gdata_App_MediaEntry::getMediaSource()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_MediaSource.html#%5CZend_Gdata_App_MediaSource">\Zend_Gdata_App_MediaSource</a></td>
+<td>The attached MediaSource/file</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMinorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the minor protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getMinorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::getMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use, or NULL if no minor version is specified.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getNextLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getNextLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the next chunk of results when paging through
+a feed.  This link is in the atom feed as an atom:link with a
+rel attribute value of 'next'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getNextLink()">\Zend_Gdata_App_FeedEntryParent::getNextLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getPreviousLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPreviousLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the previous chunk of results when paging
+through a feed.  This link is in the atom feed as an atom:link with a
+rel attribute value of 'previous'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getPreviousLink()">\Zend_Gdata_App_FeedEntryParent::getPreviousLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getPublished()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPublished</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Published.html#%5CZend_Gdata_App_Extension_Published">\Zend_Gdata_App_Extension_Published</a></code><div class="description">
+<p class="short_description">Sets the value of the atom:published element
+This represents the publishing date for an entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::getPublished()">\Zend_Gdata_App_Entry::getPublished()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Published.html#%5CZend_Gdata_App_Extension_Published">\Zend_Gdata_App_Extension_Published</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getRights()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRights</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Rights</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getRights()">\Zend_Gdata_App_FeedEntryParent::getRights()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Rights</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getSelfLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSelfLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the entry or feed represented by this object
+This link is in the atom feed/entry as an atom:link with a
+rel attribute value of 'self'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getSelfLink()">\Zend_Gdata_App_FeedEntryParent::getSelfLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getService()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getService</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a>|null</code><div class="description">
+<p class="short_description">Get the active service instance for this object. This will be used to
+perform network requests, such as when calling save() and delete().</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getService()">\Zend_Gdata_App_FeedEntryParent::getService()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a>null</td>
+<td>The current service instance, or null if not set.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getSource()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSource</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Source.html#%5CZend_Gdata_App_Extension_Source">\Zend_Gdata_App_Extension_Source</a></code><div class="description">
+<p class="short_description">Gets the value of the atom:source element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::getSource()">\Zend_Gdata_App_Entry::getSource()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Source.html#%5CZend_Gdata_App_Extension_Source">\Zend_Gdata_App_Extension_Source</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getSummary()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSummary</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Summary.html#%5CZend_Gdata_App_Extension_Summary">\Zend_Gdata_App_Extension_Summary</a></code><div class="description">
+<p class="short_description">Gets the value of the atom:summary element
+This represents a textual summary of this entry's content</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::getSummary()">\Zend_Gdata_App_Entry::getSummary()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Summary.html#%5CZend_Gdata_App_Extension_Summary">\Zend_Gdata_App_Extension_Summary</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getText</span><span class="nb-faded-text">(
+           $trim
+              =
+              true
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Returns the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getText()">\Zend_Gdata_App_Base::getText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$trim</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Child text node</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getTitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTitle</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></code><div class="description">
+<p class="short_description">Returns the title of this feed or entry.  The title is an extremely
+short textual representation of this resource and is found as
+an atom:title element in a feed or entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getTitle()">\Zend_Gdata_App_FeedEntryParent::getTitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getTitleValue()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTitleValue</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Returns a string representation of the title of this feed or entry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getTitleValue()">\Zend_Gdata_App_FeedEntryParent::getTitleValue()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>The title is an extremely short textual representation of this
+resource and is found as an atom:title element in a feed or entry</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getUpdated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdated</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getUpdated()">\Zend_Gdata_App_FeedEntryParent::getUpdated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::getXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Alias for saveXML() returns XML content for this element and all
+children</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getXML()">\Zend_Gdata_App_Base::getXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::lookupNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">lookupNamespace</span><span class="nb-faded-text">(
+          string $prefix, integer $majorVersion
+              =
+              null, integer $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the full version of a namespace prefix</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::lookupNamespace()">\Zend_Gdata_App_FeedEntryParent::lookupNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Looks up a prefix (atom:, etc.) in the list of registered
+namespaces and returns the full namespace URI if
+available. Returns the prefix, unmodified, if it's not
+registered.</p>
+
+<p>The current entry or feed's version will be used when performing the
+namespace lookup unless overridden using $majorVersion and
+$minorVersion. If the entry/fee has a null version, then the latest
+protocol version will be used by default.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix to lookup.</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to null (auto-select).</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (auto-select).</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::registerAllNamespaces()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerAllNamespaces</span><span class="nb-faded-text">(
+          array $namespaceArray
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add an array of namespaces to the registered list.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerAllNamespaces()">\Zend_Gdata_App_Base::registerAllNamespaces()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes an array in the format of:
+namespace prefix, namespace URI, major protocol version,
+minor protocol version and adds them with calls to ->registerNamespace()</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$namespaceArray</th>
+<td>array</td>
+<td><em>An array of namespaces.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::registerNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerNamespace</span><span class="nb-faded-text">(
+          string $prefix, string $namespaceUri, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              0
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add a namespace and prefix to the registered list</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerNamespace()">\Zend_Gdata_App_Base::registerNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes a prefix and a full namespace URI and adds them to the
+list of registered namespaces for use by
+$this->lookupNamespace().</p>
+
+<p>WARNING: Currently, registering a namespace will NOT invalidate any
+         memoized data stored in $_namespaceLookupCache. Under normal
+         use, this behavior is acceptable. If you are adding
+         contradictory data to the namespace lookup table, you must
+         call flushNamespaceLookupCache().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix</em></td>
+</tr>
+<tr>
+<th>$namespaceUri</th>
+<td>string</td>
+<td><em>The full namespace URI</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::reload()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">reload</span><span class="nb-faded-text">(
+          string|null $uri
+              =
+              null, string|null $className
+              =
+              null, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Reload the current entry. Returns a new copy of the entry as returned
+by the server, or null if no changes exist. This does not
+modify the current entry instance.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::reload()">\Zend_Gdata_App_Entry::reload()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string|null</td>
+<td><em><p>The URI to send requests to, or null if $data contains the URI.</p>
+</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string|null</td>
+<td><em><p>The name of the class that should we deserializing the server response. If null, then 'Zend_Gdata_App_Entry' will be used.</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>A new instance of the current entry with updated data, or null if the server reports that no changes have been made.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::save()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">save</span><span class="nb-faded-text">(
+          string|null $uri
+              =
+              null, string|null $className
+              =
+              null, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Uploads changes in this entry to the server using Zend_Gdata_App</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::save()">\Zend_Gdata_App_Entry::save()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string|null</td>
+<td><em><p>The URI to send requests to, or null if $data contains the URI.</p>
+</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string|null</td>
+<td><em><p>The name of the class that should we deserializing the server response. If null, then 'Zend_Gdata_App_Entry' will be used.</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>The updated entry.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::saveXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">saveXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Converts this element and all children into XML text using getDOM()</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::saveXML()">\Zend_Gdata_App_Base::saveXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthor</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the list of the authors of this feed/entry.  In an atom feed, each
+author is represented by an atom:author element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setAuthor()">\Zend_Gdata_App_FeedEntryParent::setAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCategory</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the array of categories that classify this feed/entry.  Each
+category is represented in an atom feed by an atom:category element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setCategory()">\Zend_Gdata_App_FeedEntryParent::setCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>Array of Zend_Gdata_App_Extension_Category</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setContent()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setContent</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Content.html#%5CZend_Gdata_App_Extension_Content">\Zend_Gdata_App_Extension_Content</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Sets the value of the atom:content element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::setContent()">\Zend_Gdata_App_Entry::setContent()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Content.html#%5CZend_Gdata_App_Extension_Content">\Zend_Gdata_App_Extension_Content</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setContributor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setContributor</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the array of contributors to this feed/entry.  Each contributor
+is represented in an atom feed by an atom:contributor XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setContributor()">\Zend_Gdata_App_FeedEntryParent::setContributor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setControl()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setControl</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Control.html#%5CZend_Gdata_App_Extension_Control">\Zend_Gdata_App_Extension_Control</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Sets the value of the app:control element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::setControl()">\Zend_Gdata_App_Entry::setControl()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Control.html#%5CZend_Gdata_App_Extension_Control">\Zend_Gdata_App_Extension_Control</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setEtag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setEtag</span><span class="nb-faded-text">(
+          string|null $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Set the Etag for the current entry to $value. Setting $value to null
+unsets the Etag.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setEtag()">\Zend_Gdata_App_FeedEntryParent::setEtag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string|null</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionAttributes</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);
+This can be used to add arbitrary attributes to any data model element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionAttributes()">\Zend_Gdata_App_Base::setExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension attributes</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionElements</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all elements not matched to data model classes
+during the parsing of the XML.  This method can be used to add arbitrary
+child XML elements to any data model class.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionElements()">\Zend_Gdata_App_Base::setExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setGphotoWeight()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setGphotoWeight</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Photos_Extension_Weight.html#%5CZend_Gdata_Photos_Extension_Weight">\Zend_Gdata_Photos_Extension_Weight</a></code><div class="description"><p class="short_description">Set the value for this element's gphoto:weight attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The desired value for this attribute.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Photos_Extension_Weight.html#%5CZend_Gdata_Photos_Extension_Weight">\Zend_Gdata_Photos_Extension_Weight</a></td>
+<td>The element being modified.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $httpClient
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Set the HTTP client instance</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setHttpClient()">\Zend_Gdata_App_FeedEntryParent::setHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Sets the HTTP client object to use for retrieving the feed.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$httpClient</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>deprecated</dt>
+<dd>Deprecated as of Zend Framework 1.7. Use
+setService() instead.
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setId()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setId</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setId()">\Zend_Gdata_App_FeedEntryParent::setId()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setLink</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setLink()">\Zend_Gdata_App_FeedEntryParent::setLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>The array of Zend_Gdata_App_Extension_Link elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMajorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the major protocol version that should be used. Values < 1
+(excluding NULL) will cause a Zend_Gdata_App_InvalidArgumentException
+to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setMajorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::setMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The major protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setMediaSource()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMediaSource</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_MediaSource.html#%5CZend_Gdata_App_MediaSource">\Zend_Gdata_App_MediaSource</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_MediaEntry.html#%5CZend_Gdata_App_MediaEntry">\Zend_Gdata_App_MediaEntry</a></code><div class="description">
+<p class="short_description">Set the MediaSource object (file) for this MediaEntry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_MediaEntry.html#%5CZend_Gdata_App_MediaEntry::setMediaSource()">\Zend_Gdata_App_MediaEntry::setMediaSource()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_MediaSource.html#%5CZend_Gdata_App_MediaSource">\Zend_Gdata_App_MediaSource</a></td>
+<td><em><p>The attached MediaSource/file</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_MediaEntry.html#%5CZend_Gdata_App_MediaEntry">\Zend_Gdata_App_MediaEntry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMinorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values < 0 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setMinorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::setMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The minor protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setPublished()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setPublished</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Published.html#%5CZend_Gdata_App_Extension_Published">\Zend_Gdata_App_Extension_Published</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Sets the value of the atom:published element
+This represents the publishing date for an entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::setPublished()">\Zend_Gdata_App_Entry::setPublished()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Published.html#%5CZend_Gdata_App_Extension_Published">\Zend_Gdata_App_Extension_Published</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setRights()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRights</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Rights.html#%5CZend_Gdata_App_Extension_Rights">\Zend_Gdata_App_Extension_Rights</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setRights()">\Zend_Gdata_App_FeedEntryParent::setRights()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Rights.html#%5CZend_Gdata_App_Extension_Rights">\Zend_Gdata_App_Extension_Rights</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setService()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setService</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a> $instance
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Set the active service instance for this object. This will be used to
+perform network requests, such as when calling save() and delete().</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setService()">\Zend_Gdata_App_FeedEntryParent::setService()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$instance</th>
+<td><a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></td>
+<td><em>The new service instance.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setSource()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSource</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Source.html#%5CZend_Gdata_App_Extension_Source">\Zend_Gdata_App_Extension_Source</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Sets the value of the atom:source element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::setSource()">\Zend_Gdata_App_Entry::setSource()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Source.html#%5CZend_Gdata_App_Extension_Source">\Zend_Gdata_App_Extension_Source</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setSummary()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSummary</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Summary.html#%5CZend_Gdata_App_Extension_Summary">\Zend_Gdata_App_Extension_Summary</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Sets the value of the atom:summary element
+This represents a textual summary of this entry's content</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::setSummary()">\Zend_Gdata_App_Entry::setSummary()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Summary.html#%5CZend_Gdata_App_Extension_Summary">\Zend_Gdata_App_Extension_Summary</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setText</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setText()">\Zend_Gdata_App_Base::setText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>Child text node</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setTitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTitle</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Returns the title of this feed or entry.  The title is an extremely
+short textual representation of this resource and is found as
+an atom:title element in a feed or entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setTitle()">\Zend_Gdata_App_FeedEntryParent::setTitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::setUpdated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdated</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setUpdated()">\Zend_Gdata_App_FeedEntryParent::setUpdated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::takeAttributeFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeAttributeFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $attribute
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Given a DOMNode representing an attribute, tries to map the data into
+instance members.  If no mapping is defined, the name and value are
+stored in an array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Entry.html#%5CZend_Gdata_Entry::takeAttributeFromDOM()">\Zend_Gdata_Entry::takeAttributeFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$attribute</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode attribute needed to be handled</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::takeChildFromDOM()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Creates individual Entry objects of the appropriate type and
+stores them as members of this entry based upon DOM data.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode to process</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::transferFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $node
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Transfers each child and attribute into member variables.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromDOM()">\Zend_Gdata_App_Base::transferFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This is called when XML is received over the wire and the data
+model needs to be built to represent this XML.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$node</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode that represents this object's data</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_TagEntry::transferFromXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromXML</span><span class="nb-faded-text">(
+          string $xml
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Parses the provided XML text and generates data model classes for
+each know element by turning the XML text into a DOM tree and calling
+transferFromDOM($element).  The first data model element with the same
+name as $this->_rootElement is used and the child elements are
+recursively parsed.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromXML()">\Zend_Gdata_App_Base::transferFromXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$xml</th>
+<td>string</td>
+<td><em>The XML text to parse</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

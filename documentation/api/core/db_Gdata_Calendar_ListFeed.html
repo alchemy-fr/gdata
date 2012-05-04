@@ -1,0 +1,2995 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/Calendar/ListFeed.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_Calendar_ListFeed">\Zend_Gdata_Calendar_ListFeed</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Calendar
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: ListFeed.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_Calendar_ListFeed"></a><h2 class="class">\Zend_Gdata_Calendar_ListFeed<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Represents the meta-feed list of calendars</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Calendar
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Calendar_ListFeed::$_entryClassName"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_entryClassName</span>= 'Zend_Gdata_Calendar_ListEntry'
+                </code><div class="description">
+<p class="short-description">The classname for individual feed elements.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>Zend_Gdata_Calendar_ListEntry</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::$_feedClassName"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_feedClassName</span>= 'Zend_Gdata_Calendar_ListFeed'
+                </code><div class="description">
+<p class="short-description">The classname for the feed.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>Zend_Gdata_Calendar_ListFeed</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::$_timezone"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_timezone</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Calendar_ListFeed::__construct()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+           $element
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Constructs a Feed or Entry</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$element</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::__get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+          string $var
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Make accessing some individual elements of the feed easier.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::__get()">\Zend_Gdata_App_Feed::__get()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Special accessors 'entry' and 'entries' are provided so that if
+you wish to iterate over an Atom feed's entries, you can do so
+using foreach ($feed->entries as $entry) or foreach
+($feed->entry as $entry).</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$var</th>
+<td>string</td>
+<td><em>The property to get.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::addEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">addEntry</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Adds an entry representation to the array of entries
+contained within this feed</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::addEntry()">\Zend_Gdata_App_Feed::addEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td><em>An individual entry to add.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::count()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">count</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          integer</code><div class="description">
+<p class="short_description">Get the number of entries in this feed object.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::count()">\Zend_Gdata_App_Feed::count()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>integer</td>
+<td>Entry count.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::current()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">current</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Required by the Iterator interface.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::current()">\Zend_Gdata_App_Feed::current()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>The current row, or null if no rows.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::encode()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encode</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Alias for saveXML()</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::encode()">\Zend_Gdata_App_Base::encode()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Can be overridden by children to provide more complex representations
+of entries.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Encoded string content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::flushNamespaceLookupCache()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flushNamespaceLookupCache</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Flush namespace lookup cache.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::flushNamespaceLookupCache()">\Zend_Gdata_App_Base::flushNamespaceLookupCache()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description"><p>Empties the namespace lookup cache. Call this function if you have
+added data to the namespace lookup table that contradicts values that
+may have been cached during a previous call to lookupNamespace().</p>
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getAlternateLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAlternateLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL for an alternate view of the data represented by this feed or
+entry.  This alternate view is commonly a user-facing webpage, blog
+post, etc.  The MIME type for the data at the URL is available from the
+returned Zend_Gdata_App_Extension_Link element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getAlternateLink()">\Zend_Gdata_App_FeedEntryParent::getAlternateLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This link is in the atom feed/entry as an atom:link with a
+rel attribute value of 'self'.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Author.html#%5CZend_Gdata_App_Extension_Author">\Zend_Gdata_App_Extension_Author</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getAuthor()">\Zend_Gdata_App_FeedEntryParent::getAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Author.html#%5CZend_Gdata_App_Extension_Author">\Zend_Gdata_App_Extension_Author</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCategory</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns the array of categories that classify this feed/entry.  Each
+category is represented in an atom feed by an atom:category element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getCategory()">\Zend_Gdata_App_FeedEntryParent::getCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>Array of Zend_Gdata_App_Extension_Category</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getContributor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getContributor</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns the array of contributors to this feed/entry.  Each contributor
+is represented in an atom feed by an atom:contributor XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getContributor()">\Zend_Gdata_App_FeedEntryParent::getContributor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An array of Zend_Gdata_App_Extension_Contributor</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getDOM()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a> $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></code><div class="description"><p class="short_description">Retrieves the DOM model representing this object and all children</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td><a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getEditLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEditLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to edit this resource.  This link is in the atom feed/entry
+as an atom:link with a rel attribute value of 'edit'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getEditLink()">\Zend_Gdata_App_FeedEntryParent::getEditLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEntry</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Gets the array of atom:entry elements contained within this
+atom:feed representation</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::getEntry()">\Zend_Gdata_App_Feed::getEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>Zend_Gdata_App_Entry array</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getEtag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEtag</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string|null</code><div class="description">
+<p class="short_description">Return the Etag for the current entry, or null if not set.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getEtag()">\Zend_Gdata_App_FeedEntryParent::getEtag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>stringnull</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionAttributes</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionAttributes()">\Zend_Gdata_App_Base::getExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All extension attributes</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionElements</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all elements not matched to data model classes
+during the parsing of the XML</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionElements()">\Zend_Gdata_App_Base::getExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All elements not matched to data model classes during parsing</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getGenerator()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGenerator</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Generator</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::getGenerator()">\Zend_Gdata_App_FeedSourceParent::getGenerator()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Generator</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Http_Client_Abstract</code><div class="description">
+<p class="short_description">Gets the HTTP client object. If none is set, a new Zend_Http_Client
+will be used.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getHttpClient()">\Zend_Gdata_App_FeedEntryParent::getHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Http_Client_Abstract</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>deprecated</dt>
+<dd>Deprecated as of Zend Framework 1.7. Use
+getService() instead.
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getIcon()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getIcon</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Icon</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::getIcon()">\Zend_Gdata_App_FeedSourceParent::getIcon()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Icon</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getId()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getId</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getId()">\Zend_Gdata_App_FeedEntryParent::getId()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getItemsPerPage()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getItemsPerPage</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Extension_OpenSearchItemsPerPage.html#%5CZend_Gdata_Extension_OpenSearchItemsPerPage">\Zend_Gdata_Extension_OpenSearchItemsPerPage</a>|null</code><div class="description">
+<p class="short_description">Get the value of the itemsPerPage property.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::getItemsPerPage()">\Zend_Gdata_Feed::getItemsPerPage()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_Extension_OpenSearchItemsPerPage.html#%5CZend_Gdata_Extension_OpenSearchItemsPerPage">\Zend_Gdata_Extension_OpenSearchItemsPerPage</a>null</td>
+<td>The value of the itemsPerPage property, or null if unset.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getLicenseLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLicenseLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getLicenseLink()">\Zend_Gdata_App_FeedEntryParent::getLicenseLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLink</span><span class="nb-faded-text">(
+          string $rel
+              =
+              null
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Given a particular 'rel' value, this method returns a matching
+Zend_Gdata_App_Extension_Link element.  If the 'rel' value
+is not provided, the full array of Zend_Gdata_App_Extension_Link
+elements is returned.  In an atom feed, each link is represented
+by an atom:link element.  The 'rel' value passed to this function
+is the atom:link/@rel attribute.  Example rel values include 'self',
+'edit', and 'alternate'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getLink()">\Zend_Gdata_App_FeedEntryParent::getLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$rel</th>
+<td>string</td>
+<td><em>The rel value of the link to be found. If null, the array of Zend_Gdata_App_Extension_link elements is returned</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>Either a single Zend_Gdata_App_Extension_link element, an array of the same or null is returned depending on the rel value supplied as the argument to this function</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMajorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the major protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getMajorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::getMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMinorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the minor protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getMinorProtocolVersion()">\Zend_Gdata_App_FeedEntryParent::getMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use, or NULL if no minor version is specified.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getNextFeed()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getNextFeed</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          mixed|null</code><div class="description">
+<p class="short_description">Retrieve the next set of results from this feed.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::getNextFeed()">\Zend_Gdata_App_Feed::getNextFeed()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixednull</td>
+<td>Returns the next set of results as a feed of the same class as this feed, or null if no results exist.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getNextLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getNextLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the next chunk of results when paging through
+a feed.  This link is in the atom feed as an atom:link with a
+rel attribute value of 'next'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getNextLink()">\Zend_Gdata_App_FeedEntryParent::getNextLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getPreviousFeed()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPreviousFeed</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          mixed|null</code><div class="description">
+<p class="short_description">Retrieve the previous set of results from this feed.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::getPreviousFeed()">\Zend_Gdata_App_Feed::getPreviousFeed()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixednull</td>
+<td>Returns the previous set of results as a feed of the same class as this feed, or null if no results exist.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getPreviousLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getPreviousLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the previous chunk of results when paging
+through a feed.  This link is in the atom feed as an atom:link with a
+rel attribute value of 'previous'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getPreviousLink()">\Zend_Gdata_App_FeedEntryParent::getPreviousLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getRights()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRights</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Rights</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getRights()">\Zend_Gdata_App_FeedEntryParent::getRights()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Rights</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getSelfLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSelfLink</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></code><div class="description">
+<p class="short_description">Returns the Zend_Gdata_App_Extension_Link element which represents
+the URL used to retrieve the entry or feed represented by this object
+This link is in the atom feed/entry as an atom:link with a
+rel attribute value of 'self'.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getSelfLink()">\Zend_Gdata_App_FeedEntryParent::getSelfLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Link.html#%5CZend_Gdata_App_Extension_Link">\Zend_Gdata_App_Extension_Link</a></td>
+<td>The link, or null if not found</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getService()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getService</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a>|null</code><div class="description">
+<p class="short_description">Get the active service instance for this object. This will be used to
+perform network requests, such as when calling save() and delete().</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getService()">\Zend_Gdata_App_FeedEntryParent::getService()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a>null</td>
+<td>The current service instance, or null if not set.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStartIndex</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Extension_OpenSearchStartIndex.html#%5CZend_Gdata_Extension_OpenSearchStartIndex">\Zend_Gdata_Extension_OpenSearchStartIndex</a>|null</code><div class="description">
+<p class="short_description">Get the value of the startIndex property.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::getStartIndex()">\Zend_Gdata_Feed::getStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_Extension_OpenSearchStartIndex.html#%5CZend_Gdata_Extension_OpenSearchStartIndex">\Zend_Gdata_Extension_OpenSearchStartIndex</a>null</td>
+<td>The value of the startIndex property, or null if unset.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getSubtitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSubtitle</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Subtitle</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::getSubtitle()">\Zend_Gdata_App_FeedSourceParent::getSubtitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Subtitle</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getText</span><span class="nb-faded-text">(
+           $trim
+              =
+              true
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Returns the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getText()">\Zend_Gdata_App_Base::getText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$trim</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Child text node</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getTimezone()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTimezone</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs"></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getTitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTitle</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></code><div class="description">
+<p class="short_description">Returns the title of this feed or entry.  The title is an extremely
+short textual representation of this resource and is found as
+an atom:title element in a feed or entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getTitle()">\Zend_Gdata_App_FeedEntryParent::getTitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getTitleValue()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTitleValue</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Returns a string representation of the title of this feed or entry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getTitleValue()">\Zend_Gdata_App_FeedEntryParent::getTitleValue()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>The title is an extremely short textual representation of this
+resource and is found as an atom:title element in a feed or entry</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getTotalResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTotalResults</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Extension_OpenSearchTotalResults.html#%5CZend_Gdata_Extension_OpenSearchTotalResults">\Zend_Gdata_Extension_OpenSearchTotalResults</a>|null</code><div class="description">
+<p class="short_description">Get the value of the totalResults property.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::getTotalResults()">\Zend_Gdata_Feed::getTotalResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Gdata_Extension_OpenSearchTotalResults.html#%5CZend_Gdata_Extension_OpenSearchTotalResults">\Zend_Gdata_Extension_OpenSearchTotalResults</a>null</td>
+<td>The value of the totalResults property, or null if unset.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getUpdated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUpdated</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::getUpdated()">\Zend_Gdata_App_FeedEntryParent::getUpdated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Alias for saveXML() returns XML content for this element and all
+children</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getXML()">\Zend_Gdata_App_Base::getXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::getlogo()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getlogo</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_logo</code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::getlogo()">\Zend_Gdata_App_FeedSourceParent::getlogo()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_logo</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::key()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">key</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Required by the Iterator interface.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::key()">\Zend_Gdata_App_Feed::key()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>The current row number (starts at 0), or NULL if no rows</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::lookupNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">lookupNamespace</span><span class="nb-faded-text">(
+          string $prefix, integer $majorVersion
+              =
+              null, integer $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the full version of a namespace prefix</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::lookupNamespace()">\Zend_Gdata_App_FeedEntryParent::lookupNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Looks up a prefix (atom:, etc.) in the list of registered
+namespaces and returns the full namespace URI if
+available. Returns the prefix, unmodified, if it's not
+registered.</p>
+
+<p>The current entry or feed's version will be used when performing the
+namespace lookup unless overridden using $majorVersion and
+$minorVersion. If the entry/fee has a null version, then the latest
+protocol version will be used by default.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix to lookup.</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to null (auto-select).</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (auto-select).</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::next()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">next</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          mixed</code><div class="description">
+<p class="short_description">Required by the Iterator interface.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::next()">\Zend_Gdata_App_Feed::next()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td>The next row, or null if no more rows.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::offsetExists()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">offsetExists</span><span class="nb-faded-text">(
+          int $key
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<p class="short_description">Required by the ArrayAccess interface</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::offsetExists()">\Zend_Gdata_App_Feed::offsetExists()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>int</td>
+<td><em>The index to check for existence</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::offsetGet()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">offsetGet</span><span class="nb-faded-text">(
+          int $key
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Required by the ArrayAccess interface</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::offsetGet()">\Zend_Gdata_App_Feed::offsetGet()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>int</td>
+<td><em>The index to get</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::offsetSet()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">offsetSet</span><span class="nb-faded-text">(
+          int $key, <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a> $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Required by the ArrayAccess interface</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::offsetSet()">\Zend_Gdata_App_Feed::offsetSet()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>int</td>
+<td><em>The index to set</em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td><em>The value to set</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::offsetUnset()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">offsetUnset</span><span class="nb-faded-text">(
+          int $key
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Required by the ArrayAccess interface</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::offsetUnset()">\Zend_Gdata_App_Feed::offsetUnset()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>int</td>
+<td><em>The index to set</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::registerAllNamespaces()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerAllNamespaces</span><span class="nb-faded-text">(
+          array $namespaceArray
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add an array of namespaces to the registered list.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerAllNamespaces()">\Zend_Gdata_App_Base::registerAllNamespaces()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes an array in the format of:
+namespace prefix, namespace URI, major protocol version,
+minor protocol version and adds them with calls to ->registerNamespace()</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$namespaceArray</th>
+<td>array</td>
+<td><em>An array of namespaces.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::registerNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerNamespace</span><span class="nb-faded-text">(
+          string $prefix, string $namespaceUri, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              0
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add a namespace and prefix to the registered list</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerNamespace()">\Zend_Gdata_App_Base::registerNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes a prefix and a full namespace URI and adds them to the
+list of registered namespaces for use by
+$this->lookupNamespace().</p>
+
+<p>WARNING: Currently, registering a namespace will NOT invalidate any
+         memoized data stored in $_namespaceLookupCache. Under normal
+         use, this behavior is acceptable. If you are adding
+         contradictory data to the namespace lookup table, you must
+         call flushNamespaceLookupCache().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix</em></td>
+</tr>
+<tr>
+<th>$namespaceUri</th>
+<td>string</td>
+<td><em>The full namespace URI</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::rewind()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">rewind</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Required by the Iterator interface.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::rewind()">\Zend_Gdata_App_Feed::rewind()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description">
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::saveXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">saveXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Converts this element and all children into XML text using getDOM()</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::saveXML()">\Zend_Gdata_App_Base::saveXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setAuthor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthor</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the list of the authors of this feed/entry.  In an atom feed, each
+author is represented by an atom:author element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setAuthor()">\Zend_Gdata_App_FeedEntryParent::setAuthor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setCategory()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCategory</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the array of categories that classify this feed/entry.  Each
+category is represented in an atom feed by an atom:category element.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setCategory()">\Zend_Gdata_App_FeedEntryParent::setCategory()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>Array of Zend_Gdata_App_Extension_Category</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setContributor()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setContributor</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Sets the array of contributors to this feed/entry.  Each contributor
+is represented in an atom feed by an atom:contributor XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setContributor()">\Zend_Gdata_App_FeedEntryParent::setContributor()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setEntry</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Sets the array of atom:entry elements contained within this
+atom:feed representation</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::setEntry()">\Zend_Gdata_App_Feed::setEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>The array of Zend_Gdata_App_Entry elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setEtag()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setEtag</span><span class="nb-faded-text">(
+          string|null $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Set the Etag for the current entry to $value. Setting $value to null
+unsets the Etag.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setEtag()">\Zend_Gdata_App_FeedEntryParent::setEtag()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string|null</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionAttributes</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);
+This can be used to add arbitrary attributes to any data model element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionAttributes()">\Zend_Gdata_App_Base::setExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension attributes</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionElements</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all elements not matched to data model classes
+during the parsing of the XML.  This method can be used to add arbitrary
+child XML elements to any data model class.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionElements()">\Zend_Gdata_App_Base::setExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setGenerator()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setGenerator</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Generator.html#%5CZend_Gdata_App_Extension_Generator">\Zend_Gdata_App_Extension_Generator</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setGenerator()">\Zend_Gdata_App_FeedSourceParent::setGenerator()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Generator.html#%5CZend_Gdata_App_Extension_Generator">\Zend_Gdata_App_Extension_Generator</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $httpClient
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description">
+<p class="short_description">Set the HTTP client instance</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setHttpClient()">\Zend_Gdata_App_FeedSourceParent::setHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Sets the HTTP client object to use for retrieving the feed.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$httpClient</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>deprecated</dt>
+<dd>Deprecated as of Zend Framework 1.7. Use
+setService() instead.
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setIcon()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setIcon</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Icon.html#%5CZend_Gdata_App_Extension_Icon">\Zend_Gdata_App_Extension_Icon</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setIcon()">\Zend_Gdata_App_FeedSourceParent::setIcon()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Icon.html#%5CZend_Gdata_App_Extension_Icon">\Zend_Gdata_App_Extension_Icon</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setId()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setId</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setId()">\Zend_Gdata_App_FeedEntryParent::setId()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Id.html#%5CZend_Gdata_App_Extension_Id">\Zend_Gdata_App_Extension_Id</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setItemsPerPage()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setItemsPerPage</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Extension_OpenSearchItemsPerPage.html#%5CZend_Gdata_Extension_OpenSearchItemsPerPage">\Zend_Gdata_Extension_OpenSearchItemsPerPage</a>|null $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></code><div class="description">
+<p class="short_description">Set the itemsPerPage property.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::setItemsPerPage()">\Zend_Gdata_Feed::setItemsPerPage()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>
+<a href="db_Gdata_Extension_OpenSearchItemsPerPage.html#%5CZend_Gdata_Extension_OpenSearchItemsPerPage">\Zend_Gdata_Extension_OpenSearchItemsPerPage</a>|null</td>
+<td><em>The value for the itemsPerPage property. Use nul to unset.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setLink()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setLink</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setLink()">\Zend_Gdata_App_FeedEntryParent::setLink()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>The array of Zend_Gdata_App_Extension_Link elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMajorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the major protocol version that should be used. Values < 1 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::setMajorProtocolVersion()">\Zend_Gdata_App_Feed::setMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This value will be propogated to all child entries.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The major protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMinorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values < 0 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::setMinorProtocolVersion()">\Zend_Gdata_App_Feed::setMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This value will be propogated to all child entries.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The minor protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setRights()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRights</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Rights.html#%5CZend_Gdata_App_Extension_Rights">\Zend_Gdata_App_Extension_Rights</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setRights()">\Zend_Gdata_App_FeedEntryParent::setRights()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Rights.html#%5CZend_Gdata_App_Extension_Rights">\Zend_Gdata_App_Extension_Rights</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setService()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setService</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a> $instance
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Set the active service instance for this feed and all enclosed entries.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setService()">\Zend_Gdata_App_FeedSourceParent::setService()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This will be used to perform network requests, such as when calling
+save() and delete().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$instance</th>
+<td><a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></td>
+<td><em>The new service instance.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setStartIndex()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStartIndex</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Extension_OpenSearchStartIndex.html#%5CZend_Gdata_Extension_OpenSearchStartIndex">\Zend_Gdata_Extension_OpenSearchStartIndex</a>|null $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></code><div class="description">
+<p class="short_description">Set the start index property for feed paging.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::setStartIndex()">\Zend_Gdata_Feed::setStartIndex()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>
+<a href="db_Gdata_Extension_OpenSearchStartIndex.html#%5CZend_Gdata_Extension_OpenSearchStartIndex">\Zend_Gdata_Extension_OpenSearchStartIndex</a>|null</td>
+<td><em>The value for the startIndex property. Use null to unset.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setSubtitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSubtitle</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Subtitle.html#%5CZend_Gdata_App_Extension_Subtitle">\Zend_Gdata_App_Extension_Subtitle</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setSubtitle()">\Zend_Gdata_App_FeedSourceParent::setSubtitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Subtitle.html#%5CZend_Gdata_App_Extension_Subtitle">\Zend_Gdata_App_Extension_Subtitle</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setText</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setText()">\Zend_Gdata_App_Base::setText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>Child text node</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setTimezone()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTimezone</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Calendar_Extension_Timezone.html#%5CZend_Gdata_Calendar_Extension_Timezone">\Zend_Gdata_Calendar_Extension_Timezone</a> $value
+          )
+        </span>
+        :
+          \Zend_Gdata_Extension_ListEntry</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_Calendar_Extension_Timezone.html#%5CZend_Gdata_Calendar_Extension_Timezone">\Zend_Gdata_Calendar_Extension_Timezone</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_Extension_ListEntry</td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setTitle()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTitle</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description">Returns the title of this feed or entry.  The title is an extremely
+short textual representation of this resource and is found as
+an atom:title element in a feed or entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setTitle()">\Zend_Gdata_App_FeedEntryParent::setTitle()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Title.html#%5CZend_Gdata_App_Extension_Title">\Zend_Gdata_App_Extension_Title</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setTotalResults()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTotalResults</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Extension_OpenSearchTotalResults.html#%5CZend_Gdata_Extension_OpenSearchTotalResults">\Zend_Gdata_Extension_OpenSearchTotalResults</a>|null $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></code><div class="description">
+<p class="short_description">Set the value of the totalResults property.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::setTotalResults()">\Zend_Gdata_Feed::setTotalResults()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>
+<a href="db_Gdata_Extension_OpenSearchTotalResults.html#%5CZend_Gdata_Extension_OpenSearchTotalResults">\Zend_Gdata_Extension_OpenSearchTotalResults</a>|null</td>
+<td><em>The value of the totalResults property. Use null to unset.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed">\Zend_Gdata_Feed</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setUpdated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUpdated</span><span class="nb-faded-text">(
+          <a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a> $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent::setUpdated()">\Zend_Gdata_App_FeedEntryParent::setUpdated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Gdata_App_Extension_Updated.html#%5CZend_Gdata_App_Extension_Updated">\Zend_Gdata_App_Extension_Updated</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::setlogo()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setlogo</span><span class="nb-faded-text">(
+          \Zend_Gdata_App_Extension_logo $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description">
+<p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent::setlogo()">\Zend_Gdata_App_FeedSourceParent::setlogo()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\Zend_Gdata_App_Extension_logo</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::takeAttributeFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeAttributeFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $attribute
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Given a DOMNode representing an attribute, tries to map the data into
+instance members.  If no mapping is defined, the name and value are
+stored in an array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_Feed.html#%5CZend_Gdata_Feed::takeAttributeFromDOM()">\Zend_Gdata_Feed::takeAttributeFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$attribute</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode attribute needed to be handled</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::takeChildFromDOM()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Creates individual Entry objects of the appropriate type and
+stores them in the $_entry array based upon DOM data.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode to process</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::transferFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $node
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Transfers each child and attribute into member variables.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromDOM()">\Zend_Gdata_App_Base::transferFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This is called when XML is received over the wire and the data
+model needs to be built to represent this XML.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$node</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode that represents this object's data</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::transferFromXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromXML</span><span class="nb-faded-text">(
+          string $xml
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Parses the provided XML text and generates data model classes for
+each know element by turning the XML text into a DOM tree and calling
+transferFromDOM($element).  The first data model element with the same
+name as $this->_rootElement is used and the child elements are
+recursively parsed.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromXML()">\Zend_Gdata_App_Base::transferFromXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$xml</th>
+<td>string</td>
+<td><em>The XML text to parse</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_ListFeed::valid()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">valid</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<p class="short_description">Required by the Iterator interface.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed::valid()">\Zend_Gdata_App_Feed::valid()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>Whether the iteration is valid</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

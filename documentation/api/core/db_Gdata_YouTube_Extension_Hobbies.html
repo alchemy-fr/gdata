@@ -1,0 +1,862 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/YouTube/Extension/Hobbies.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_YouTube_Extension_Hobbies">\Zend_Gdata_YouTube_Extension_Hobbies</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>YouTube
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: Hobbies.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_YouTube_Extension_Hobbies"></a><h2 class="class">\Zend_Gdata_YouTube_Extension_Hobbies<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Represents the yt:hobbies element</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata_Extension.html#%5CZend_Gdata_Extension">\Zend_Gdata_Extension</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>YouTube
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::$_rootElement"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootElement</span>= 'hobbies'
+                </code><div class="description">
+<p class="short-description"></p>The XML element name, including prefix if desired</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>hobbies</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::$_rootNamespace"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootNamespace</span>= 'yt'
+                </code><div class="description">
+<p class="short-description"></p>The XML namespace prefix</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>yt</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::__construct()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+           $text
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$text</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::__get()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Magic getter to allow access like $entry->foo to call $entry->getFoo()
+Alternatively, if no getFoo() is defined, but a $_foo protected variable
+is defined, this is returned.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::__get()">\Zend_Gdata_App_Base::__get()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>TODO Remove ability to bypass getFoo() methods??</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em>The variable name sought</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::encode()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encode</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Alias for saveXML()</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::encode()">\Zend_Gdata_App_Base::encode()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Can be overridden by children to provide more complex representations
+of entries.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Encoded string content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::flushNamespaceLookupCache()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flushNamespaceLookupCache</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Flush namespace lookup cache.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::flushNamespaceLookupCache()">\Zend_Gdata_App_Base::flushNamespaceLookupCache()</a></small>
+</div>
+<div class="code-tabs"><div class="long-description"><p>Empties the namespace lookup cache. Call this function if you have
+added data to the namespace lookup table that contradicts values that
+may have been cached during a previous call to lookupNamespace().</p>
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::getDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a> $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></code><div class="description">
+<p class="short_description">Retrieves a DOMElement which corresponds to this element and all
+child properties.  This is used to build an entry back into a DOM
+and eventually XML text for sending to the server upon updates, or
+for application storage/persistence.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getDOM()">\Zend_Gdata_App_Base::getDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td><a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a></td>
+<td><em>The DOMDocument used to construct DOMElements</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td>The DOMElement representing this element and all child properties.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::getExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionAttributes</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionAttributes()">\Zend_Gdata_App_Base::getExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All extension attributes</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::getExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionElements</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Returns an array of all elements not matched to data model classes
+during the parsing of the XML</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getExtensionElements()">\Zend_Gdata_App_Base::getExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All elements not matched to data model classes during parsing</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::getText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getText</span><span class="nb-faded-text">(
+           $trim
+              =
+              true
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Returns the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getText()">\Zend_Gdata_App_Base::getText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$trim</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Child text node</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::getXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Alias for saveXML() returns XML content for this element and all
+children</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::getXML()">\Zend_Gdata_App_Base::getXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::lookupNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">lookupNamespace</span><span class="nb-faded-text">(
+          string $prefix, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the full version of a namespace prefix</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::lookupNamespace()">\Zend_Gdata_App_Base::lookupNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Looks up a prefix (atom:, etc.) in the list of registered
+namespaces and returns the full namespace URI if
+available. Returns the prefix, unmodified, if it's not
+registered.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix to lookup.</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::registerAllNamespaces()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerAllNamespaces</span><span class="nb-faded-text">(
+          array $namespaceArray
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add an array of namespaces to the registered list.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerAllNamespaces()">\Zend_Gdata_App_Base::registerAllNamespaces()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes an array in the format of:
+namespace prefix, namespace URI, major protocol version,
+minor protocol version and adds them with calls to ->registerNamespace()</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$namespaceArray</th>
+<td>array</td>
+<td><em>An array of namespaces.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::registerNamespace()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerNamespace</span><span class="nb-faded-text">(
+          string $prefix, string $namespaceUri, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              0
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Add a namespace and prefix to the registered list</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::registerNamespace()">\Zend_Gdata_App_Base::registerNamespace()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes a prefix and a full namespace URI and adds them to the
+list of registered namespaces for use by
+$this->lookupNamespace().</p>
+
+<p>WARNING: Currently, registering a namespace will NOT invalidate any
+         memoized data stored in $_namespaceLookupCache. Under normal
+         use, this behavior is acceptable. If you are adding
+         contradictory data to the namespace lookup table, you must
+         call flushNamespaceLookupCache().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em>The namespace prefix</em></td>
+</tr>
+<tr>
+<th>$namespaceUri</th>
+<td>string</td>
+<td><em>The full namespace URI</em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::saveXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">saveXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Converts this element and all children into XML text using getDOM()</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::saveXML()">\Zend_Gdata_App_Base::saveXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::setExtensionAttributes()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionAttributes</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);
+This can be used to add arbitrary attributes to any data model element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionAttributes()">\Zend_Gdata_App_Base::setExtensionAttributes()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension attributes</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::setExtensionElements()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionElements</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets an array of all elements not matched to data model classes
+during the parsing of the XML.  This method can be used to add arbitrary
+child XML elements to any data model class.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setExtensionElements()">\Zend_Gdata_App_Base::setExtensionElements()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em>All extension elements</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::setText()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setText</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description">
+<p class="short_description">Sets the child text node of this element
+This represents any raw text contained within the XML element</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::setText()">\Zend_Gdata_App_Base::setText()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>Child text node</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::takeAttributeFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeAttributeFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $attribute
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Given a DOMNode representing an attribute, tries to map the data into
+instance members.  If no mapping is defined, the name and value are
+stored in an array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::takeAttributeFromDOM()">\Zend_Gdata_App_Base::takeAttributeFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$attribute</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode attribute needed to be handled</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::takeChildFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Given a child DOMNode, tries to determine how to map the data into
+object instance members.  If no mapping is defined, Extension_Element
+objects are created and stored in an array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::takeChildFromDOM()">\Zend_Gdata_App_Base::takeChildFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em>The DOMNode needed to be handled</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::transferFromDOM()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $node
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Transfers each child and attribute into member variables.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromDOM()">\Zend_Gdata_App_Base::transferFromDOM()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This is called when XML is received over the wire and the data
+model needs to be built to represent this XML.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$node</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode that represents this object's data</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_YouTube_Extension_Hobbies::transferFromXML()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromXML</span><span class="nb-faded-text">(
+          string $xml
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Parses the provided XML text and generates data model classes for
+each know element by turning the XML text into a DOM tree and calling
+transferFromDOM($element).  The first data model element with the same
+name as $this->_rootElement is used and the child elements are
+recursively parsed.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App_Base.html#%5CZend_Gdata_App_Base::transferFromXML()">\Zend_Gdata_App_Base::transferFromXML()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$xml</th>
+<td>string</td>
+<td><em>The XML text to parse</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

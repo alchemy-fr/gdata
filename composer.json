@@ -1,9 +1,14 @@
 {
-  "name": "alchemy/gdata",
-  "version": "master",
-  "autoload": {
-    "psr-0" : {
-      "Zend_" : "./"
+    "name": "zend/gdata",
+    "type": "library",
+    "keywords": ["zend","gdata"],
+    "description": "The Google Data APIs are a set of web services for read/write access to applications hosted by Google",
+    "version": "1.11.11",
+    "license": "New BSD",
+    "homepage": "http://framework.zend.com/download/webservices",
+    "autoload": {
+        "psr-0" : {
+            "Zend_" : "library"
+        }
     }
-  }
 }

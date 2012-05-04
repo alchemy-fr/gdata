@@ -1,0 +1,5104 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/Gapps.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_Gapps">\Zend_Gdata_Gapps</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gapps
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: Gapps.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="functions"></a><h2>Functions</h2>
+<div>
+<a id="::addMemberToGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">addMemberToGroup</span><span class="nb-faded-text">(
+          string $recipientAddress, string $groupId
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></code><div class="description"><p class="short_description">Add an email address to a group as a member</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$recipientAddress</th>
+<td>string</td>
+<td><em>Email address, member id, or group id</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique id of the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></td>
+<td>The member entry returned by the server</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::addOwnerToGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">addOwnerToGroup</span><span class="nb-faded-text">(
+          string $email, string $groupId
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></code><div class="description"><p class="short_description">Add an email as an owner of a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$email</th>
+<td>string</td>
+<td><em><p>Owner's email</p>
+</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>Group ownership to be checked for</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></td>
+<td>The OwnerEntry returned by the server</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::addRecipientToEmailList()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">addRecipientToEmailList</span><span class="nb-faded-text">(
+          string $recipientAddress, string $emailList
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></code><div class="description"><p class="short_description">Add a specified recipient to an existing emailList.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$recipientAddress</th>
+<td>string</td>
+<td><em>The address of the recipient to be added to the email list.</em></td>
+</tr>
+<tr>
+<th>$emailList</th>
+<td>string</td>
+<td><em>The name of the email address to which the recipient should be added.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></td>
+<td>The recipient entry created by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::createEmailList()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">createEmailList</span><span class="nb-faded-text">(
+          string $emailList
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></code><div class="description"><p class="short_description">Create a new email list.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$emailList</th>
+<td>string</td>
+<td><em>The name of the email list to be created.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></td>
+<td>The email list entry as created on the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::createGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">createGroup</span><span class="nb-faded-text">(
+          string $groupId, string $groupName, string $description
+              =
+              null, string $emailPermission
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></code><div class="description"><p class="short_description">Create a new group.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>A unique identifier for the group</em></td>
+</tr>
+<tr>
+<th>$groupName</th>
+<td>string</td>
+<td><em>The name of the group</em></td>
+</tr>
+<tr>
+<th>$description</th>
+<td>string</td>
+<td><em>A description of the group</em></td>
+</tr>
+<tr>
+<th>$emailPermission</th>
+<td>string</td>
+<td><em>The subscription permission of the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td>The group entry as created on the server.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::createNickname()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">createNickname</span><span class="nb-faded-text">(
+          string $username, string $nickname
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></code><div class="description"><p class="short_description">Create a nickname for a given user.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username to which the new nickname should be associated.</em></td>
+</tr>
+<tr>
+<th>$nickname</th>
+<td>string</td>
+<td><em>The new nickname to be created.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></td>
+<td>The nickname entry which was created by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::createUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">createUser</span><span class="nb-faded-text">(
+          string $username, string $givenName, string $familyName, string $password,  $passwordHashFunction
+              =
+              null, string $quotaLimitInMB
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Create a new user entry and send it to the Google Apps servers.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username for the new user.</em></td>
+</tr>
+<tr>
+<th>$givenName</th>
+<td>string</td>
+<td><em>The given name for the new user.</em></td>
+</tr>
+<tr>
+<th>$familyName</th>
+<td>string</td>
+<td><em>The family name for the new user.</em></td>
+</tr>
+<tr>
+<th>$password</th>
+<td>string</td>
+<td><em><p>The password for the new user as a plaintext string (if $passwordHashFunction is null) or a SHA-1 hashed value (if $passwordHashFunction = 'SHA-1').</p>
+</em></td>
+</tr>
+<tr>
+<th>$passwordHashFunction</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$quotaLimitInMB</th>
+<td>string</td>
+<td><em><p>(optional) The quota limit for the new user in MB.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>(optional) The new user entry as returned by server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::deleteEmailList()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">deleteEmailList</span><span class="nb-faded-text">(
+          string $emailList
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Delete a specified email list.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$emailList</th>
+<td>string</td>
+<td><em>The name of the emailList to be deleted.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::deleteGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">deleteGroup</span><span class="nb-faded-text">(
+          string $groupId
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Delete a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique identifier for the group</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::deleteNickname()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">deleteNickname</span><span class="nb-faded-text">(
+          string $nickname
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Delete a specified nickname.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$nickname</th>
+<td>string</td>
+<td><em>The name of the nickname to be deleted.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::deleteUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">deleteUser</span><span class="nb-faded-text">(
+          string $username
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Delete a user by username.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username associated with the user who should be deleted.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::isMember()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">isMember</span><span class="nb-faded-text">(
+          string $memberId, string $groupId
+          )
+        </span>
+        :
+          bool</code><div class="description"><p class="short_description">Check to see if a member id or group id is a member of group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$memberId</th>
+<td>string</td>
+<td><em>Member id or group group id</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>Group to be checked for</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>bool</td>
+<td>True, if given entity is a member</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::isOwner()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">isOwner</span><span class="nb-faded-text">(
+          string $email, string $groupId
+          )
+        </span>
+        :
+          bool</code><div class="description"><p class="short_description">Checks to see if an email is an owner of a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$email</th>
+<td>string</td>
+<td><em><p>Owner's email</p>
+</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>Group ownership to be checked for</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>bool</td>
+<td>True, if given entity is an owner</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::removeMemberFromGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">removeMemberFromGroup</span><span class="nb-faded-text">(
+          string $memberId, string $groupId
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Remove a member id from a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$memberId</th>
+<td>string</td>
+<td><em>Member id or group id</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique id of the group</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::removeOwnerFromGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">removeOwnerFromGroup</span><span class="nb-faded-text">(
+          string $email, string $groupId
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Remove email as an owner of a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$email</th>
+<td>string</td>
+<td><em><p>Owner's email</p>
+</em></td>
+</tr>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique identifier for the group</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::removeRecipientFromEmailList()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">removeRecipientFromEmailList</span><span class="nb-faded-text">(
+          string $recipientAddress, string $emailList
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Remove a specified recipient from an email list.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$recipientAddress</th>
+<td>string</td>
+<td><em>The recipient to be removed.</em></td>
+</tr>
+<tr>
+<th>$emailList</th>
+<td>string</td>
+<td><em>The list from which the recipient should be removed.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::restoreUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">restoreUser</span><span class="nb-faded-text">(
+          string $username
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Mark a given user as not suspended.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username associated with the user who should be restored.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>The UserEntry for the modified user.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllEmailLists()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllEmailLists</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></code><div class="description"><p class="short_description">Retrieve all email lists associated with the curent domain. Be aware that
+calling this function on a domain with many email lists will take a
+signifigant amount of time to complete. On larger domains this may
+may cause execution to timeout without proper precautions in place.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></td>
+<td>The list of email lists found as Zend_Gdata_Gapps_EmailListEntry objects.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllGroups()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllGroups</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></code><div class="description"><p class="short_description">Retrieve all groups in the current domain. Be aware that
+calling this function on a domain with many groups will take a
+signifigant amount of time to complete. On larger domains this may
+may cause execution to timeout without proper precautions in place.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></td>
+<td>Collection of Zend_Gdata_GroupEntry objects representing all groups apart of the domain.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllMembers()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllMembers</span><span class="nb-faded-text">(
+          string $groupId
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></code><div class="description"><p class="short_description">Retrieves all the members of a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique id of the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></td>
+<td>Collection of MemberEntry objects representing all members apart of the group.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllNicknames()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllNicknames</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></code><div class="description"><p class="short_description">Retrieve all nicknames in the current domain. Be aware that
+calling this function on a domain with many nicknames will take a
+signifigant amount of time to complete. On larger domains this may
+may cause execution to timeout without proper precautions in place.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></td>
+<td>Collection of Zend_Gdata_NicknameEntry objects representing all nicknames in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllRecipients()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllRecipients</span><span class="nb-faded-text">(
+           $emailList
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></code><div class="description"><p class="short_description">Retrieve all recipients associated with an email list. Be aware that
+calling this function on a domain with many email lists will take a
+signifigant amount of time to complete. On larger domains this may
+may cause execution to timeout without proper precautions in place.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$emailList</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></td>
+<td>The list of email lists found as Zend_Gdata_Gapps_EmailListRecipientEntry objects.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveAllUsers()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveAllUsers</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></code><div class="description"><p class="short_description">Retrieve all users in the current domain. Be aware that
+calling this function on a domain with many users will take a
+signifigant amount of time to complete. On larger domains this may
+may cause execution to timeout without proper precautions in place.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></td>
+<td>Collection of Zend_Gdata_UserEntry objects representing all users in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveEmailLists()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveEmailLists</span><span class="nb-faded-text">(
+           $recipient
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></code><div class="description"><p class="short_description">Retrieve all email lists associated with a recipient.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$recipient</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></td>
+<td>The list of email lists found as Zend_Gdata_EmailListEntry objects.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveGroup</span><span class="nb-faded-text">(
+          string $groupId
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></code><div class="description"><p class="short_description">Retrieves a group based on group id</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique identifier for the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td>The group entry as returned by the server.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveGroupOwners()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveGroupOwners</span><span class="nb-faded-text">(
+          string $groupId
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_OwnerFeed.html#%5CZend_Gdata_Gapps_OwnerFeed">\Zend_Gdata_Gapps_OwnerFeed</a></code><div class="description"><p class="short_description">Retrieves all the owners of a group</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The unique identifier for the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_OwnerFeed.html#%5CZend_Gdata_Gapps_OwnerFeed">\Zend_Gdata_Gapps_OwnerFeed</a></td>
+<td>Collection of Zend_Gdata_OwnerEntry objects representing all owners apart of the group.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveGroups()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveGroups</span><span class="nb-faded-text">(
+          string $memberId, bool $directOnly
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></code><div class="description"><p class="short_description">Retrieve all of the groups that a user is a member of</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$memberId</th>
+<td>string</td>
+<td><em>Member username</em></td>
+</tr>
+<tr>
+<th>$directOnly</th>
+<td>bool</td>
+<td><em><p>(Optional) If true, members with direct association only will be considered</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></td>
+<td>Collection of Zend_Gdata_GroupEntry objects representing all groups member is apart of in the domain.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveNickname()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveNickname</span><span class="nb-faded-text">(
+          string $nickname
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></code><div class="description"><p class="short_description">Retrieve the entry for a specified nickname.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$nickname</th>
+<td>string</td>
+<td><em>The nickname to be retrieved.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></td>
+<td>The requested nickname entry.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveNicknames()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveNicknames</span><span class="nb-faded-text">(
+          string $username
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></code><div class="description"><p class="short_description">Retrieve all nicknames associated with a specific username.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username whose nicknames should be returned.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></td>
+<td>A feed containing all nicknames for the given user, or null if</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfEmailLists()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfEmailLists</span><span class="nb-faded-text">(
+           $startNickname
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></code><div class="description"><p class="short_description">Retrieve a page of email lists in alphabetical order, starting with the
+provided email list.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$startNickname</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></td>
+<td>Collection of Zend_Gdata_EmailListEntry objects representing all nicknames in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfGroups()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfGroups</span><span class="nb-faded-text">(
+          string $startGroup
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></code><div class="description"><p class="short_description">Retrieve a page of groups in alphabetical order, starting with the
+provided group.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$startGroup</th>
+<td>string</td>
+<td><em><p>(optional) The first group to retrieve. If null or not defined, the page will begin with the first group in the domain.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></td>
+<td>Collection of Zend_Gdata_GroupEntry objects representing the groups in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfMembers()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfMembers</span><span class="nb-faded-text">(
+          string $groupId, string $startMember
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></code><div class="description"><p class="short_description">Gets page of Members</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>The group id which should be searched.</em></td>
+</tr>
+<tr>
+<th>$startMember</th>
+<td>string</td>
+<td><em><p>(optinal) The address of the first member, or null to start with the first member in the list.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></td>
+<td>Collection of Zend_Gdata_MemberEntry objects</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfNicknames()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfNicknames</span><span class="nb-faded-text">(
+          string $startNickname
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></code><div class="description"><p class="short_description">Retrieve a page of nicknames in alphabetical order, starting with the
+provided nickname.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$startNickname</th>
+<td>string</td>
+<td><em><p>(optional) The first nickname to retrieve. If null or not declared, the page will begin with the first nickname in the domain.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></td>
+<td>Collection of Zend_Gdata_NicknameEntry objects representing all nicknames in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfRecipients()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfRecipients</span><span class="nb-faded-text">(
+           $emailList, string $startRecipient
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></code><div class="description"><p class="short_description">Retrieve a page of email list recipients in alphabetical order,
+starting with the provided email list recipient.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$emailList</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$startRecipient</th>
+<td>string</td>
+<td><em><p>(optinal) The address of the first recipient, or null to start with the first recipient in the list.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></td>
+<td>Collection of Zend_Gdata_EmailListRecipientEntry objects representing all recpients in the specified list.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrievePageOfUsers()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrievePageOfUsers</span><span class="nb-faded-text">(
+          string $startUsername
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></code><div class="description"><p class="short_description">Retrieve a page of users in alphabetical order, starting with the
+provided username.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$startUsername</th>
+<td>string</td>
+<td><em><p>(optional) The first username to retrieve. If null or not declared, the page will begin with the first user in the domain.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></td>
+<td>Collection of Zend_Gdata_UserEntry objects representing all users in the domain.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::retrieveUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">retrieveUser</span><span class="nb-faded-text">(
+          string $username
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Retrieve a user based on their username.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username to search for.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>The username to search for, or null if no match found.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::suspendUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">suspendUser</span><span class="nb-faded-text">(
+          string $username
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Mark a given user as suspended.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username associated with the user who should be suspended.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>The UserEntry for the modified user.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::updateGroup()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">updateGroup</span><span class="nb-faded-text">(
+          string $groupId, string $groupName
+              =
+              null, string $description
+              =
+              null, string $emailPermission
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></code><div class="description"><p class="short_description">Update group properties with new values. any property not defined will not
+be updated</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$groupId</th>
+<td>string</td>
+<td><em>A unique identifier for the group</em></td>
+</tr>
+<tr>
+<th>$groupName</th>
+<td>string</td>
+<td><em>The name of the group</em></td>
+</tr>
+<tr>
+<th>$description</th>
+<td>string</td>
+<td><em>A description of the group</em></td>
+</tr>
+<tr>
+<th>$emailPermission</th>
+<td>string</td>
+<td><em>The subscription permission of the group</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td>The group entry as updated on the server.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="::updateUser()"></a><div class="function">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/function.png" alt="function"><span class="highlight">updateUser</span><span class="nb-faded-text">(
+          string $username, <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a> $userEntry
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Overwrite a specified username with the provided UserEntry.  The
+UserEntry does not need to contain an edit link.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This method is provided for compliance with the Google Apps
+Provisioning API specification. Normally users will instead want to
+call UserEntry::save() instead.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$username</th>
+<td>string</td>
+<td><em>The username whose data will be overwritten.</em></td>
+</tr>
+<tr>
+<th>$userEntry</th>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td><em>The user entry which will be overwritten.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>The UserEntry returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>
+<a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry::save">\Zend_Gdata_App_Entry::save</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<a name="classes"></a><a id="\Zend_Gdata_Gapps"></a><h2 class="class">\Zend_Gdata_Gapps<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Service class for interacting with the Google Apps Provisioning API.</p>
+<div class="long-description"><p>Like other service classes in this module, this class provides access via
+an HTTP client to Google servers for working with entries and feeds.</p>
+
+<p>Because of the nature of this API, all access must occur over an
+authenticated connection.</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Gdata.html#%5CZend_Gdata">\Zend_Gdata</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>link</dt>
+<dd>
+<a href="http://code.google.com/apis/apps/gdata_provisioning_api_v2.0_reference.html">http://code.google.com/apis/apps/gdata_provisioning_api_v2.0_reference.html</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gapps
+         
+    </dd>
+</dl>
+<h3>Constants</h3>
+<div>
+<a id="\Zend_Gdata_Gapps::APPS_BASE_FEED_URI"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_BASE_FEED_URI</span>
+                = 'https://apps-apis.google.com/a/feeds'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::AUTH_SERVICE_NAME"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">AUTH_SERVICE_NAME</span>
+                = 'apps'
+            </code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::APPS_USER_PATH"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_USER_PATH</span>
+                = '/user/2.0'
+            </code><div class="description"><p class="short-description">Path to user feeds on the Google Apps server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::APPS_NICKNAME_PATH"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_NICKNAME_PATH</span>
+                = '/nickname/2.0'
+            </code><div class="description"><p class="short-description">Path to nickname feeds on the Google Apps server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::APPS_GROUP_PATH"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_GROUP_PATH</span>
+                = '/group/2.0'
+            </code><div class="description"><p class="short-description">Path to group feeds on the Google Apps server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::APPS_EMAIL_LIST_PATH"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_EMAIL_LIST_PATH</span>
+                = '/emailList/2.0'
+            </code><div class="description"><p class="short-description">Path to email list feeds on the Google Apps server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::APPS_EMAIL_LIST_RECIPIENT_POSTFIX"></a><div class="constant">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">APPS_EMAIL_LIST_RECIPIENT_POSTFIX</span>
+                = '/recipient'
+            </code><div class="description"><p class="short-description">Path to email list recipient feeds on the Google Apps server.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<dl class="constant-info"></dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Gapps::$_domain"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_domain</span>= 'null'
+                </code><div class="description">
+<p class="short-description">The domain which is being administered via the Provisioning API.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::$args"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">
+                 <span class="highlight">$args</span>= ''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::$method"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">
+                 <span class="highlight">$method</span>= ''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::$namespaces"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public">array
+                 <span class="highlight">$namespaces</span>= 'array'
+                </code><div class="description">
+<span class="attribute">static</span><p class="short-description">Namespaces used for Zend_Gdata_Gapps</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>array</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Gapps::__call()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
+          string $method, array $args
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Provides a magic factory method to instantiate new objects with
+shorter syntax than would otherwise be required by the Zend Framework
+naming conventions. For more information, see Zend_Gdata_App::__call().</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This overrides the default behavior of __call() so that query classes
+do not need to have their domain manually set when created with
+a magic factory method.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em>The method name being called</em></td>
+</tr>
+<tr>
+<th>$args</th>
+<td>array</td>
+<td><em>The arguments passed to the call</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>
+<a href="db_Gdata_App.html#%5CZend_Gdata_App::__call()">\Zend_Gdata_App::__call()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::__construct()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client
+              =
+              null, string $domain
+              =
+              null, string $applicationId
+              =
+              MyCompany-MyApp-1.0
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Create Gdata_Gapps object</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em><p>(optional) The HTTP client to use when when communicating with the Google Apps servers.</p>
+</em></td>
+</tr>
+<tr>
+<th>$domain</th>
+<td>string</td>
+<td><em><p>(optional) The Google Apps domain which is to be accessed.</p>
+</em></td>
+</tr>
+<tr>
+<th>$applicationId</th>
+<td>string</td>
+<td><em><p>The identity of the app in the form of Company-AppName-Version</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::delete()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">delete</span><span class="nb-faded-text">(
+          mixed $data, integer $remainingRedirects
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">DELETE entry with client object
+This method overrides the default behavior of Zend_Gdata_App,
+providing support for Zend_Gdata_Gapps_ServiceException.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or URL to delete</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td>integer</td>
+<td><em><p>(optional)</p>
+</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::get()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">get</span><span class="nb-faded-text">(
+          string $uri, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description"><p class="short_description">GET a URI using client object.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This method overrides the default behavior of Zend_Gdata_App,
+providing support for Zend_Gdata_Gapps_ServiceException.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>GET URI</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getBaseUrl()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getBaseUrl</span><span class="nb-faded-text">(
+          string $domain
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Returns the base URL used to access the Google Apps service, based
+on the current domain. The current domain can be temporarily
+overridden by providing a fully qualified domain as $domain.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$domain</th>
+<td>string</td>
+<td><em><p>(optional) A fully-qualified domain to use instead of the default domain for this service instance.</p>
+</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getDomain()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDomain</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get domain for this service instance. This should be a fully qualified
+domain, such as 'foo.example.com'. If no domain is set, null will be
+returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The domain to be used for this session, or null if not set.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getEmailListEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEmailListEntry</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></code><div class="description"><p class="short_description">Retreive a single EmailListEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getEmailListFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEmailListFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></code><div class="description"><p class="short_description">Retreive EmailListFeed object containing multiple EmailListEntry
+objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListFeed.html#%5CZend_Gdata_Gapps_EmailListFeed">\Zend_Gdata_Gapps_EmailListFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getEmailListRecipientEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEmailListRecipientEntry</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></code><div class="description"><p class="short_description">Retreive a single EmailListRecipientEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getEmailListRecipientFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEmailListRecipientFeed</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></code><div class="description"><p class="short_description">Retreive EmailListRecipientFeed object containing multiple
+EmailListRecipientEntry objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientFeed.html#%5CZend_Gdata_Gapps_EmailListRecipientFeed">\Zend_Gdata_Gapps_EmailListRecipientFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEntry</span><span class="nb-faded-text">(
+          mixed $location,  $className
+              =
+              Zend_Gdata_Entry
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Retrieve entry as string or object</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::getEntry()">\Zend_Gdata::getEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location as string or Zend_Gdata_Query</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getFeed()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFeed</span><span class="nb-faded-text">(
+          mixed $location, string $className
+              =
+              Zend_Gdata_Feed
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Retrieve feed as string or object</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::getFeed()">\Zend_Gdata::getFeed()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location as string or Zend_Gdata_Query</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class type to use for returning the feed</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getGroupEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGroupEntry</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></code><div class="description"><p class="short_description">Retreive a single GroupEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getGroupFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGroupFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></code><div class="description"><p class="short_description">Retreive GroupFeed object containing multiple GroupEntry
+objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupFeed.html#%5CZend_Gdata_Gapps_GroupFeed">\Zend_Gdata_Gapps_GroupFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getGzipEnabled()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGzipEnabled</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the HTTP override state</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getGzipEnabled()">\Zend_Gdata_App::getGzipEnabled()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Get the Zend_Http_Client object used for communication</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getHttpClient()">\Zend_Gdata_App::getHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getHttpMethodOverride()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHttpMethodOverride</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the HTTP override state</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getHttpMethodOverride()">\Zend_Gdata_App::getHttpMethodOverride()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMajorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description">Get the major protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMajorProtocolVersion()">\Zend_Gdata_App::getMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>The major protocol version in use.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getMaxRedirects()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMaxRedirects</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get the maximum number of redirects to follow during HTTP operations</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMaxRedirects()">\Zend_Gdata_App::getMaxRedirects()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>Maximum number of redirects to follow</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getMemberEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMemberEntry</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></code><div class="description"><p class="short_description">Retreive a single MemberEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getMemberFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMemberFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></code><div class="description"><p class="short_description">Retreive MemberFeed object containing multiple MemberEntry
+objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberFeed.html#%5CZend_Gdata_Gapps_MemberFeed">\Zend_Gdata_Gapps_MemberFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMinorProtocolVersion</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \(int|\NULL)</code><div class="description">
+<p class="short_description">Get the minor protocol version that is in use.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getMinorProtocolVersion()">\Zend_Gdata_App::getMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\(int\NULL)</td>
+<td>The major protocol version in use, or NULL if no minor version is specified.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getNicknameEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getNicknameEntry</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></code><div class="description"><p class="short_description">Retreive a single NicknameEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getNicknameFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getNicknameFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></code><div class="description"><p class="short_description">Retreive NicknameFeed object containing multiple NicknameEntry objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameFeed.html#%5CZend_Gdata_Gapps_NicknameFeed">\Zend_Gdata_Gapps_NicknameFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getOwnerEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getOwnerEntry</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></code><div class="description"><p class="short_description">Retreive a single OwnerEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getOwnerFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getOwnerFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_OwnerFeed.html#%5CZend_Gdata_Gapps_OwnerFeed">\Zend_Gdata_Gapps_OwnerFeed</a></code><div class="description"><p class="short_description">Retreive OwnerFeed object containing multiple OwnerEntry
+objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_OwnerFeed.html#%5CZend_Gdata_Gapps_OwnerFeed">\Zend_Gdata_Gapps_OwnerFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getStaticHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStaticHttpClient</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Gets the HTTP client object. If none is set, a new Zend_Http_Client will be used.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getStaticHttpClient()">\Zend_Gdata_App::getStaticHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getUserEntry()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUserEntry</span><span class="nb-faded-text">(
+          mixed $location
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Retreive a single UserEntry object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em>The location for the feed, as a URL or Query.</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getUserFeed()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUserFeed</span><span class="nb-faded-text">(
+          mixed $location
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></code><div class="description"><p class="short_description">Retrieve a UserFeed containing multiple UserEntry objects.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$location</th>
+<td>mixed</td>
+<td><em><p>(optional) The location for the feed, as a URL or Query.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserFeed.html#%5CZend_Gdata_Gapps_UserFeed">\Zend_Gdata_Gapps_UserFeed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::getVerboseExceptionMessages()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVerboseExceptionMessages</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Get whether to use verbose exception messages</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::getVerboseExceptionMessages()">\Zend_Gdata_App::getVerboseExceptionMessages()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>In the case of HTTP errors,  use the body of the HTTP response
+in the exception message.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::import()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">import</span><span class="nb-faded-text">(
+          string $uri, <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client
+              =
+              null, string $className
+              =
+              Zend_Gdata_App_Feed
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed located at $uri.</p>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This method overrides the default behavior of Zend_Gdata_App,
+providing support for Zend_Gdata_Gapps_ServiceException.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em><p>(optional) The client used for communication</p>
+</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em><p>(optional) The class which is used as the return type</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::importFile()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importFile</span><span class="nb-faded-text">(
+          string $filename, string $className
+              =
+              Zend_Gdata_App_Feed, string $useIncludePath
+              =
+              false
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed from a file located at $filename.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importFile()">\Zend_Gdata_App::importFile()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$filename</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$useIncludePath</th>
+<td>string</td>
+<td><em>Whether the include_path should be searched</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::importString()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importString</span><span class="nb-faded-text">(
+          string $string, string $className
+              =
+              Zend_Gdata_App_Feed,  $majorProtocolVersion
+              =
+              null,  $minorProtocolVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<span class="attribute">static</span><p class="short_description">Imports a feed represented by $string.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importString()">\Zend_Gdata_App::importString()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$string</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$majorProtocolVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorProtocolVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::importUrl()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">importUrl</span><span class="nb-faded-text">(
+          string $url, string $className
+              =
+              Zend_Gdata_App_Feed, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          string|<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></code><div class="description">
+<p class="short_description">Imports the specified URL (non-statically).</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::importUrl()">\Zend_Gdata_App::importUrl()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em>The URL to import</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class which is used as the return type</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string<a href="db_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a>
+</td>
+<td>Returns string only if the object mapping has been disabled explicitly by passing false to the useObjectMapping() function.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertEmailList()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertEmailList</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a> $emailList, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></code><div class="description"><p class="short_description">Create a new email list from an EmailListEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$emailList</th>
+<td><a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></td>
+<td><em>The email list entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the email list should be uploaded to. If null, the default email list creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListEntry.html#%5CZend_Gdata_Gapps_EmailListEntry">\Zend_Gdata_Gapps_EmailListEntry</a></td>
+<td>The inserted email list entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertEmailListRecipient()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertEmailListRecipient</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a> $recipient, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></code><div class="description"><p class="short_description">Create a new email list recipient from an EmailListRecipientEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$recipient</th>
+<td><a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></td>
+<td><em>The recipient entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the recipient should be uploaded to. If null, the default recipient creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_EmailListRecipientEntry.html#%5CZend_Gdata_Gapps_EmailListRecipientEntry">\Zend_Gdata_Gapps_EmailListRecipientEntry</a></td>
+<td>The inserted recipient entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertEntry</span><span class="nb-faded-text">(
+          mixed $data, string $uri, string $className
+              =
+              Zend_Gdata_App_Entry, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Inserts an entry to a given URI and returns the response as a
+fully formed Entry.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::insertEntry()">\Zend_Gdata_App::insertEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em>POST URI</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string</td>
+<td><em>The class of entry to be returned.</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>The entry returned by the service after insertion.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertGroup()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertGroup</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a> $group, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></code><div class="description"><p class="short_description">Create a new group from a GroupEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$group</th>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td><em>The group entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the group should be uploaded to. If null, the default user creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_GroupEntry.html#%5CZend_Gdata_Gapps_GroupEntry">\Zend_Gdata_Gapps_GroupEntry</a></td>
+<td>The inserted group entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertMember()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertMember</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a> $member, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></code><div class="description"><p class="short_description">Create a new member from a MemberEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$member</th>
+<td><a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></td>
+<td><em>The member entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the group should be uploaded to. If null, the default user creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_MemberEntry.html#%5CZend_Gdata_Gapps_MemberEntry">\Zend_Gdata_Gapps_MemberEntry</a></td>
+<td>The inserted member entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertNickname()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertNickname</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a> $nickname, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></code><div class="description"><p class="short_description">Create a new nickname from a NicknameEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$nickname</th>
+<td><a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></td>
+<td><em>The nickname entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the nickname should be uploaded to. If null, the default nickname creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_NicknameEntry.html#%5CZend_Gdata_Gapps_NicknameEntry">\Zend_Gdata_Gapps_NicknameEntry</a></td>
+<td>The inserted nickname entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertOwner()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertOwner</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a> $owner, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></code><div class="description"><p class="short_description">Create a new group from a OwnerEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$owner</th>
+<td><a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></td>
+<td><em>The owner entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the owner should be uploaded to. If null, the default user creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_OwnerEntry.html#%5CZend_Gdata_Gapps_OwnerEntry">\Zend_Gdata_Gapps_OwnerEntry</a></td>
+<td>The inserted owner entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::insertUser()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">insertUser</span><span class="nb-faded-text">(
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a> $user, string $uri
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></code><div class="description"><p class="short_description">Create a new user from a UserEntry.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td><em>The user entry to insert.</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) The URI where the user should be uploaded to. If null, the default user creation URI for this domain will be used.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_UserEntry.html#%5CZend_Gdata_Gapps_UserEntry">\Zend_Gdata_Gapps_UserEntry</a></td>
+<td>The inserted user entry as returned by the server.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::isAuthenticated()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">isAuthenticated</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<p class="short_description">Determines whether service object is authenticated.</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::isAuthenticated()">\Zend_Gdata::isAuthenticated()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>True if service object is authenticated, false otherwise.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::performHttpRequest()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">performHttpRequest</span><span class="nb-faded-text">(
+          string $method, string $url, array $headers
+              =
+              array, string $body
+              =
+              null, string $contentType
+              =
+              null, int $remainingRedirects
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">Performs a HTTP request using the specified method.</p>
+<small>Inherited from:
+                    <a href="db_Gdata.html#%5CZend_Gdata::performHttpRequest()">\Zend_Gdata::performHttpRequest()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Overrides the definition in the parent (Zend_Gdata_App)
+and uses the Zend_Gdata_HttpClient functionality
+to filter the HTTP requests and responses.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The HTTP method for the request - 'GET', 'POST', 'PUT', 'DELETE'</p>
+</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em><p>The URL to which this request is being performed, or null if found in $data</p>
+</em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em>An associative array of HTTP headers for this request</em></td>
+</tr>
+<tr>
+<th>$body</th>
+<td>string</td>
+<td><em>The body of the HTTP request</em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em>The value for the content type of the request body</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td>int</td>
+<td><em>Number of redirects to follow if requests results in one</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td>The response object</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::post()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">post</span><span class="nb-faded-text">(
+          mixed $data, string $uri
+              =
+              null, integer $remainingRedirects
+              =
+              null, string $contentType
+              =
+              null,  $extraHeaders
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description"><p class="short_description">POST data with client object.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This method overrides the default behavior of Zend_Gdata_App,
+providing support for Zend_Gdata_Gapps_ServiceException.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) POST URI</p>
+</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td>integer</td>
+<td><em><p>(optional)</p>
+</em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em><p>Content-type of the data</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::prepareRequest()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">prepareRequest</span><span class="nb-faded-text">(
+          string $method, string $url
+              =
+              null, array $headers
+              =
+              array, mixed $data
+              =
+              null, string $contentTypeOverride
+              =
+              null
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Provides pre-processing for HTTP requests to APP services.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::prepareRequest()">\Zend_Gdata_App::prepareRequest()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><ol>
+<li>Checks the $data element and, if it's an entry, extracts the XML,
+multipart data, edit link (PUT,DELETE), etc.</li>
+<li>If $data is a string, sets the default content-type  header as
+'application/atom+xml' if it's not already been set.</li>
+<li>Adds a x-http-method override header and changes the HTTP method
+to 'POST' if necessary as per getHttpMethodOverride()</li>
+</ol>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The HTTP method for the request - 'GET', 'POST', 'PUT', 'DELETE'</p>
+</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em><p>The URL to which this request is being performed, or null if found in $data</p>
+</em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em>An associative array of HTTP headers for this request</em></td>
+</tr>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML for the body of the request</em></td>
+</tr>
+<tr>
+<th>$contentTypeOverride</th>
+<td>string</td>
+<td><em>The override value for the content type of the request body</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>An associative array containing the determined 'method', 'url', 'data', 'headers', 'contentType'</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::put()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">put</span><span class="nb-faded-text">(
+          mixed $data, string $uri
+              =
+              null, integer $remainingRedirects
+              =
+              null, string $contentType
+              =
+              null,  $extraHeaders
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description"><p class="short_description">PUT data with client object
+This method overrides the default behavior of Zend_Gdata_App,
+providing support for Zend_Gdata_Gapps_ServiceException.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em>The Zend_Gdata_App_Entry or XML to post</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string</td>
+<td><em><p>(optional) PUT URI</p>
+</em></td>
+</tr>
+<tr>
+<th>$remainingRedirects</th>
+<td>integer</td>
+<td><em><p>(optional)</p>
+</em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em><p>Content-type of the data</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::registerPackage()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerPackage</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Adds a Zend Framework package to the $_registeredPackages array.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::registerPackage()">\Zend_Gdata_App::registerPackage()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This array is searched when using the magic __call method below
+to instantiante new objects.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em><p>The name of the package (eg Zend_Gdata_App)</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setDomain()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setDomain</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set domain for this service instance. This should be a fully qualified
+domain, such as 'foo.example.com'.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This value is used when calculating URLs for retrieving and posting
+entries. If no value is specified, a URL will have to be manually
+constructed prior to using any methods which interact with the Google
+Apps provisioning service.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em>The domain to be used for this session.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setGzipEnabled()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setGzipEnabled</span><span class="nb-faded-text">(
+          boolean $enabled
+              =
+              false
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Toggle requesting gzip encoded responses</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setGzipEnabled()">\Zend_Gdata_App::setGzipEnabled()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$enabled</th>
+<td>boolean</td>
+<td><em>Whether or not to enable gzipped responses</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $client,  $applicationId
+              =
+              MyCompany-MyApp-1.0
+          )
+        </span>
+        :
+          <a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></code><div class="description">
+<p class="short_description">Set the Zend_Http_Client object used for communication</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setHttpClient()">\Zend_Gdata_App::setHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$client</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em>The client to use for communication</em></td>
+</tr>
+<tr>
+<th>$applicationId</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_HttpException.html#%5CZend_Gdata_App_HttpException">\Zend_Gdata_App_HttpException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setHttpMethodOverride()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpMethodOverride</span><span class="nb-faded-text">(
+          boolean $override
+              =
+              true
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Toggle using POST instead of PUT and DELETE HTTP methods</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setHttpMethodOverride()">\Zend_Gdata_App::setHttpMethodOverride()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Some feed implementations do not accept PUT and DELETE HTTP
+methods, or they can't be used because of proxies or other
+measures. This allows turning on using POST where PUT and
+DELETE would normally be used; in addition, an
+X-Method-Override header will be sent with a value of PUT or
+DELETE as appropriate.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$override</th>
+<td>boolean</td>
+<td><em>Whether to override PUT and DELETE with POST.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setMajorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMajorProtocolVersion</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the major protocol version that should be used. Values < 1 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMajorProtocolVersion()">\Zend_Gdata_App::setMajorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em>The major protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_majorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setMaxRedirects()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMaxRedirects</span><span class="nb-faded-text">(
+          int $maxRedirects
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set the maximum number of redirects to follow during HTTP operations</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMaxRedirects()">\Zend_Gdata_App::setMaxRedirects()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$maxRedirects</th>
+<td>int</td>
+<td><em>Maximum number of redirects to follow</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setMinorProtocolVersion()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMinorProtocolVersion</span><span class="nb-faded-text">(
+          \(int|\NULL) $value
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Set the minor protocol version that should be used. If set to NULL, no
+minor protocol version will be sent to the server. Values < 0 will
+cause a Zend_Gdata_App_InvalidArgumentException to be thrown.</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setMinorProtocolVersion()">\Zend_Gdata_App::setMinorProtocolVersion()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\(int|\NULL)</td>
+<td><em>The minor protocol version to use.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\_minorProtocolVersion
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setStaticHttpClient()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStaticHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $httpClient
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set the static HTTP client instance</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setStaticHttpClient()">\Zend_Gdata_App::setStaticHttpClient()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Sets the static HTTP client object to use for retrieving the feed.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$httpClient</th>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::setVerboseExceptionMessages()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setVerboseExceptionMessages</span><span class="nb-faded-text">(
+          boolean $verbose
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Set whether to use verbose exception messages</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::setVerboseExceptionMessages()">\Zend_Gdata_App::setVerboseExceptionMessages()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>In the case of HTTP errors, use the body of the HTTP response
+in the exception message.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$verbose</th>
+<td>boolean</td>
+<td><em>Whether to use verbose exception messages</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::throwServiceExceptionIfDetected()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">throwServiceExceptionIfDetected</span><span class="nb-faded-text">(
+          \Zend_Gdata_Exception $e
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Convert an exception to an ServiceException if an AppsForYourDomain
+XML document is contained within the original exception's HTTP
+response. If conversion fails, throw the original error.</p>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$e</th>
+<td>\Zend_Gdata_Exception</td>
+<td><em>The exception to convert.</em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_Gapps_ServiceException.html#%5CZend_Gdata_Gapps_ServiceException">\Zend_Gdata_Gapps_ServiceException</a></td>
+<td><em></em></td>
+</tr>
+<tr>
+<td>mixed</td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Gapps::updateEntry()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">updateEntry</span><span class="nb-faded-text">(
+          mixed $data, string|null $uri
+              =
+              null, string|null $className
+              =
+              null, array $extraHeaders
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></code><div class="description">
+<p class="short_description">Update an entry</p>
+<small>Inherited from:
+                    <a href="db_Gdata_App.html#%5CZend_Gdata_App::updateEntry()">\Zend_Gdata_App::updateEntry()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>mixed</td>
+<td><em><p>Zend_Gdata_App_Entry or XML (w/ID and link rel='edit')</p>
+</em></td>
+</tr>
+<tr>
+<th>$uri</th>
+<td>string|null</td>
+<td><em><p>The URI to send requests to, or null if $data contains the URI.</p>
+</em></td>
+</tr>
+<tr>
+<th>$className</th>
+<td>string|null</td>
+<td><em><p>The name of the class that should be deserialized from the server response. If null, then 'Zend_Gdata_App_Entry' will be used.</p>
+</em></td>
+</tr>
+<tr>
+<th>$extraHeaders</th>
+<td>array</td>
+<td><em><p>Extra headers to add to the request, as an array of string-based key/value pairs.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Entry.html#%5CZend_Gdata_App_Entry">\Zend_Gdata_App_Entry</a></td>
+<td>The entry returned from the server</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>

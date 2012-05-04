@@ -1,0 +1,2264 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/black-tie/jquery-ui-1.8.2.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script type="text/javascript" src="js/menu.js"></script><script>
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.file-nav').show();
+      });
+    </script><h1 class="file">Gdata/HttpClient.php</h1>
+<div class="file-nav"><ul id="file-nav">
+<li><a href="#top">Global</a></li>
+<li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                      Classes
+                  </a><ul><li><a href="#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></li></ul>
+</li>
+</ul></div>
+<a name="top"></a><div id="file-description">
+<p class="short-description">Zend Framework</p>
+<div class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gdata
+         
+    </dd>
+<dt>version</dt>
+<dd>$Id: HttpClient.php 23775 2011-03-01 17:25:24Z ralph $
+         
+    </dd>
+</dl>
+<a name="classes"></a><a id="\Zend_Gdata_HttpClient"></a><h2 class="class">\Zend_Gdata_HttpClient<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div class="class">
+<p class="short-description">Gdata Http Client object.</p>
+<div class="long-description"><p>Class to extend the generic Zend Http Client with the ability to perform
+secure AuthSub requests</p>
+</div>
+<dl class="class-info">
+<dt>Extends from</dt>
+<dd><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></dd>
+<dt>category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>copyright</dt>
+<dd>Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>license</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>package</dt>
+<dd>Zend_Gdata
+         
+    </dd>
+<dt>subpackage</dt>
+<dd>Gdata
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_HttpClient::$_authSubPrivateKeyId"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">resource
+                 <span class="highlight">$_authSubPrivateKeyId</span>= 'null'
+                </code><div class="description">
+<p class="short-description">OpenSSL private key resource id
+This key is used for AuthSub authentication.  If this value is set,
+it is assuemd that secure AuthSub is desired.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>resource</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::$_authSubToken"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
+                 <span class="highlight">$_authSubToken</span>= 'null'
+                </code><div class="description">
+<p class="short-description">Token for AuthSub authentication.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>If this token is set, AuthSub authentication is used.</p>
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::$_clientLoginKey"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
+                 <span class="highlight">$_clientLoginKey</span>= 'null'
+                </code><div class="description">
+<p class="short-description">Token for ClientLogin authentication.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>If this token is set, and the AuthSub key is not set,
+ClientLogin authentication is used</p>
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::$_clientLoginToken"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
+                 <span class="highlight">$_clientLoginToken</span>= 'null'
+                </code><div class="description">
+<p class="short-description">Token for ClientLogin authentication.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>If only this token is set, ClientLogin authentication is used.</p>
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::$_streamingRequest"></a><div class="property">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">bool
+                 <span class="highlight">$_streamingRequest</span>= 'null'
+                </code><div class="description">
+<p class="short-description">True if this request is being made with data supplied by
+a stream object instead of a raw encoded string.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>bool</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_HttpClient::__construct()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          <a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>|string $uri
+              =
+              null, array $config
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description">
+<p class="short_description">Constructor method. Will create a new HTTP client. Accepts the target
+URL and optionally configuration array.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::__construct()">\Zend_Http_Client::__construct()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>
+<a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>|string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$config</th>
+<td>array</td>
+<td><em><p>Configuration key-value pairs.</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_detectFileMimeType()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_detectFileMimeType</span><span class="nb-faded-text">(
+          string $file
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Attempt to detect the MIME type of a file using available extensions</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_detectFileMimeType()">\Zend_Http_Client::_detectFileMimeType()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This method will try to detect the MIME type of a file. If the fileinfo
+extension is available, it will be used. If not, the mime_magic
+extension which is deprected but is still available in many PHP setups
+will be tried.</p>
+
+<p>If neither extension is available, the default application/octet-stream
+MIME type will be returned</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$file</th>
+<td>string</td>
+<td><em>File path</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>MIME type</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_flattenParametersArray()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_flattenParametersArray</span><span class="nb-faded-text">(
+          array $parray, string $prefix
+              =
+              null
+          )
+        </span>
+        :
+          array</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Convert an array of parameters into a flat array of (key, value) pairs</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_flattenParametersArray()">\Zend_Http_Client::_flattenParametersArray()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Will flatten a potentially multi-dimentional array of parameters (such
+as POST parameters) into a flat array of (key, value) paris. In case
+of multi-dimentional arrays, square brackets ([]) will be added to the
+key to indicate an array.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$parray</th>
+<td>array</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>since</dt>
+<dd>1.9
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_getParametersRecursive()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_getParametersRecursive</span><span class="nb-faded-text">(
+          array $parray, bool $urlencode
+              =
+              false
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Helper method that gets a possibly multi-level parameters array (get or
+post) and flattens it.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_getParametersRecursive()">\Zend_Http_Client::_getParametersRecursive()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>The method returns an array of (key, value) pairs (because keys are not
+necessarily unique. If one of the parameters in as array, it will also
+add a [] suffix to the key.</p>
+
+<p>This method is deprecated since Zend Framework 1.9 in favour of
+self::_flattenParametersArray() and will be dropped in 2.0</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$parray</th>
+<td>array</td>
+<td><em>The parameters array</em></td>
+</tr>
+<tr>
+<th>$urlencode</th>
+<td>bool</td>
+<td><em>Whether to urlencode the name and value</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>deprecated</dt>
+<dd>since 1.9
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_openTempStream()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_openTempStream</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          resource</code><div class="description">
+<p class="short_description">Create temporary stream</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_openTempStream()">\Zend_Http_Client::_openTempStream()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>resource</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_prepareBody()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_prepareBody</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Prepare the request body (for POST and PUT requests)</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_prepareHeaders()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_prepareHeaders</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description">
+<p class="short_description">Prepare the request headers</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_prepareHeaders()">\Zend_Http_Client::_prepareHeaders()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::_setParameter()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">_setParameter</span><span class="nb-faded-text">(
+          string $type, string $name, string $value
+          )
+        </span>
+        :
+          null</code><div class="description">
+<p class="short_description">Set a GET or POST parameter - used by SetParameterGet and SetParameterPost</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::_setParameter()">\Zend_Http_Client::_setParameter()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$type</th>
+<td>string</td>
+<td><em>GET or POST</em></td>
+</tr>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>null</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::encodeAuthHeader()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encodeAuthHeader</span><span class="nb-faded-text">(
+          string $user, string $password, string $type
+              =
+              self
+          )
+        </span>
+        :
+          string</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Create a HTTP authentication "Authorization:" header according to the
+specified user, password and authentication method.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::encodeAuthHeader()">\Zend_Http_Client::encodeAuthHeader()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$password</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$type</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\http://www.faqs.org/rfcs/rfc2617.html
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::encodeFormData()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encodeFormData</span><span class="nb-faded-text">(
+          string $boundary, string $name, mixed $value, string $filename
+              =
+              null, array $headers
+              =
+              array
+          )
+        </span>
+        :
+          string</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Encode data to a multipart/form-data part suitable for a POST request.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::encodeFormData()">\Zend_Http_Client::encodeFormData()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$boundary</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>mixed</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$filename</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em><p>Associative array of optional headers @example ("Content-Transfer-Encoding" => "binary")</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::filterHttpRequest()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">filterHttpRequest</span><span class="nb-faded-text">(
+          string $method, string $url, array $headers
+              =
+              array, string $body
+              =
+              null, string $contentType
+              =
+              null
+          )
+        </span>
+        :
+          array</code><div class="description"><p class="short_description">Filters the HTTP requests being sent to add the Authorization header.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>If both AuthSub and ClientLogin tokens are set,
+AuthSub takes precedence.  If an AuthSub key is set, then
+secure AuthSub authentication is used, and the request is signed.
+Requests must be signed only with the private key corresponding to the
+public key registered with Google.  If an AuthSub key is set, but
+openssl support is not enabled in the PHP installation, an exception is
+thrown.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em>The HTTP method</em></td>
+</tr>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em>The URL</em></td>
+</tr>
+<tr>
+<th>$headers</th>
+<td>array</td>
+<td><em>An associate array of headers to be sent with the request or null</em></td>
+</tr>
+<tr>
+<th>$body</th>
+<td>string</td>
+<td><em>The body of the request or null</em></td>
+</tr>
+<tr>
+<th>$contentType</th>
+<td>string</td>
+<td><em>The MIME content type of the body or null</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>The processed values in an associative array, using the same names as the params</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_Exception.html#%5CZend_Gdata_App_Exception">\Zend_Gdata_App_Exception</a></td>
+<td><em>if there was a signing failure</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::filterHttpResponse()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">filterHttpResponse</span><span class="nb-faded-text">(
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a> $response
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description"><p class="short_description">Method for filtering the HTTP response, though no filtering is
+currently done.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$response</th>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td><em>The response object to filter</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td>The filterd response object</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getAdapter()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAdapter</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Client_Adapter_Interface.html#%5CZend_Http_Client_Adapter_Interface">\Zend_Http_Client_Adapter_Interface</a>|string</code><div class="description"><p class="short_description">Return the current connection adapter</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Http_Client_Adapter_Interface.html#%5CZend_Http_Client_Adapter_Interface">\Zend_Http_Client_Adapter_Interface</a>string</td>
+<td>$adapter</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getAuthSubPrivateKeyId()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthSubPrivateKeyId</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Gets the openssl private key id</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The private key</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getAuthSubToken()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAuthSubToken</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Gets the AuthSub token used for authentication</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The token</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getClientLoginToken()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getClientLoginToken</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Gets the ClientLogin token used for authentication</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The token</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getCookieJar()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getCookieJar</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Http_CookieJar|null</code><div class="description">
+<p class="short_description">Return the current cookie jar or null if none.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getCookieJar()">\Zend_Http_Client::getCookieJar()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Http_CookieJarnull</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getHeader()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getHeader</span><span class="nb-faded-text">(
+          string $key
+          )
+        </span>
+        :
+          string|array|null</code><div class="description">
+<p class="short_description">Get the value of a specific header</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getHeader()">\Zend_Http_Client::getHeader()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Note that if the header has more than one value, an array
+will be returned.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>stringarraynull</td>
+<td>The header value or null if it is not set</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getLastRequest()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLastRequest</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description">
+<p class="short_description">Get the last HTTP request as string</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getLastRequest()">\Zend_Http_Client::getLastRequest()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getLastResponse()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getLastResponse</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">Get the last HTTP response received by this client</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getLastResponse()">\Zend_Http_Client::getLastResponse()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>If $config['storeresponse'] is set to false, or no response was
+stored yet, will return null</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td>or null if none</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getRedirectionsCount()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRedirectionsCount</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description">
+<p class="short_description">Get the number of redirections done on the last request</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getRedirectionsCount()">\Zend_Http_Client::getRedirectionsCount()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getStream()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStream</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean|string</code><div class="description">
+<p class="short_description">Get status of streaming for received data</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getStream()">\Zend_Http_Client::getStream()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>booleanstring</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getStreamingRequest()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStreamingRequest</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description"><p class="short_description">Check whether the client is set to perform streaming requests.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td>True if yes, false otherwise.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getUnmaskStatus()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUnmaskStatus</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          boolean</code><div class="description">
+<p class="short_description">Returns the currently configured unmask status</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getUnmaskStatus()">\Zend_Http_Client::getUnmaskStatus()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>boolean</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::getUri()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUri</span><span class="nb-faded-text">(
+          boolean $as_string
+              =
+              false
+          )
+        </span>
+        :
+          <a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>|string</code><div class="description">
+<p class="short_description">Get the URI for the next request</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::getUri()">\Zend_Http_Client::getUri()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$as_string</th>
+<td>boolean</td>
+<td><em>If true, will return the URI as a string</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::request()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">request</span><span class="nb-faded-text">(
+          string $method
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></code><div class="description">
+<p class="short_description">Send the HTTP request and return an HTTP response object</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::request()">\Zend_Http_Client::request()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Response.html#%5CZend_Http_Response">\Zend_Http_Response</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::resetParameters()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">resetParameters</span><span class="nb-faded-text">(
+          bool $clearAll
+              =
+              false
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description"><p class="short_description">Clear all custom parameters we set.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Should be used to reset the request parameters if the client is
+used for several concurrent requests.</p>
+
+<p>clearAll parameter controls if we clean just parameters or also
+headers and last_*</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$clearAll</th>
+<td>bool</td>
+<td><em><p>Should all data be cleared?</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setAdapter()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAdapter</span><span class="nb-faded-text">(
+          <a href="db_Http_Client_Adapter_Interface.html#%5CZend_Http_Client_Adapter_Interface">\Zend_Http_Client_Adapter_Interface</a> $adapter
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Load the connection adapter</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>While this method is not called more than one for a client, it is
+seperated from ->request() to preserve logic and readability</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$adapter</th>
+<td><a href="db_Http_Client_Adapter_Interface.html#%5CZend_Http_Client_Adapter_Interface">\Zend_Http_Client_Adapter_Interface</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setAuth()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuth</span><span class="nb-faded-text">(
+          string|false $user, string $password, string $type
+              =
+              self
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set HTTP authentication parameters</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setAuth()">\Zend_Http_Client::setAuth()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>$type should be one of the supported types - see the self::AUTH_*
+constants.</p>
+
+<p>To enable authentication:</p>
+
+<pre><code>$this->setAuth('shahar', 'secret', Zend_Http_Client::AUTH_BASIC);
+</code></pre>
+
+<p>To disable authentication:</p>
+
+<pre><code>$this->setAuth(false);
+</code></pre>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$user</th>
+<td>string|false</td>
+<td><em>User name or false disable authentication</em></td>
+</tr>
+<tr>
+<th>$password</th>
+<td>string</td>
+<td><em>Password</em></td>
+</tr>
+<tr>
+<th>$type</th>
+<td>string</td>
+<td><em>Authentication type</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>see</dt>
+<dd>\http://www.faqs.org/rfcs/rfc2617.html
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setAuthSubPrivateKey()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthSubPrivateKey</span><span class="nb-faded-text">(
+          string $key, string $passphrase
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></code><div class="description"><p class="short_description">Sets the PEM formatted private key to be used for secure AuthSub auth.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>In order to call this method, openssl must be enabled in your PHP
+installation.  Otherwise, a Zend_Gdata_App_InvalidArgumentException
+will be thrown.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>string</td>
+<td><em>The private key</em></td>
+</tr>
+<tr>
+<th>$passphrase</th>
+<td>string</td>
+<td><em>The optional private key passphrase</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setAuthSubPrivateKeyFile()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthSubPrivateKeyFile</span><span class="nb-faded-text">(
+          string $file, string $passphrase
+              =
+              null, bool $useIncludePath
+              =
+              false
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Sets the PEM formatted private key, as read from a file.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This method reads the file and then calls setAuthSubPrivateKey()
+with the file contents.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$file</th>
+<td>string</td>
+<td><em>The location of the file containing the PEM key</em></td>
+</tr>
+<tr>
+<th>$passphrase</th>
+<td>string</td>
+<td><em>The optional private key passphrase</em></td>
+</tr>
+<tr>
+<th>$useIncludePath</th>
+<td>bool</td>
+<td><em>Whether to search the include_path for the file</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setAuthSubToken()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAuthSubToken</span><span class="nb-faded-text">(
+          string $token
+          )
+        </span>
+        :
+          <a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></code><div class="description"><p class="short_description">Sets the AuthSub token used for authentication</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$token</th>
+<td>string</td>
+<td><em>The token</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setClientLoginToken()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setClientLoginToken</span><span class="nb-faded-text">(
+          string $token
+          )
+        </span>
+        :
+          <a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></code><div class="description"><p class="short_description">Sets the ClientLogin token used for authentication</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$token</th>
+<td>string</td>
+<td><em>The token</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Gdata_HttpClient.html#%5CZend_Gdata_HttpClient">\Zend_Gdata_HttpClient</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setConfig()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setConfig</span><span class="nb-faded-text">(
+          \Zend_Config $config
+              =
+              array
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set configuration parameters for this HTTP client</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setConfig()">\Zend_Http_Client::setConfig()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$config</th>
+<td>\Zend_Config</td>
+<td><em><p>| array $config</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setCookie()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCookie</span><span class="nb-faded-text">(
+          \Zend_Http_Cookie|string $cookie, string|null $value
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Add a cookie to the request. If the client has no Cookie Jar, the cookies
+will be added directly to the headers array as "Cookie" headers.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setCookie()">\Zend_Http_Client::setCookie()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$cookie</th>
+<td>\Zend_Http_Cookie|string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string|null</td>
+<td><em><p>If "cookie" is a string, this is the cookie value.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setCookieJar()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setCookieJar</span><span class="nb-faded-text">(
+          \Zend_Http_CookieJar|boolean $cookiejar
+              =
+              true
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the HTTP client's cookie jar.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setCookieJar()">\Zend_Http_Client::setCookieJar()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>A cookie jar is an object that holds and maintains cookies across HTTP requests
+and responses.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$cookiejar</th>
+<td>\Zend_Http_CookieJar|boolean</td>
+<td><em>Existing cookiejar object, true to create a new one, false to disable</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setEncType()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setEncType</span><span class="nb-faded-text">(
+          string $enctype
+              =
+              self
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the encoding type for POST data</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setEncType()">\Zend_Http_Client::setEncType()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$enctype</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setFileUpload()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setFileUpload</span><span class="nb-faded-text">(
+          string $filename, string $formname, string $data
+              =
+              null, string $ctype
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set a file to upload (using a POST request)</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setFileUpload()">\Zend_Http_Client::setFileUpload()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Can be used in two ways:</p>
+
+<ol>
+<li>$data is null (default): $filename is treated as the name if a local file which
+will be read and sent. Will try to guess the content type using mime_content_type().</li>
+<li>$data is set - $filename is sent as the file name, but $data is sent as the file
+contents and no file is read from the file system. In this case, you need to
+manually set the Content-Type ($ctype) or it will default to
+application/octet-stream.</li>
+</ol>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$filename</th>
+<td>string</td>
+<td><em>Name of file to upload, or name to save as</em></td>
+</tr>
+<tr>
+<th>$formname</th>
+<td>string</td>
+<td><em>Name of form element to send as</em></td>
+</tr>
+<tr>
+<th>$data</th>
+<td>string</td>
+<td><em><p>Data to send (if null, $filename is read and sent)</p>
+</em></td>
+</tr>
+<tr>
+<th>$ctype</th>
+<td>string</td>
+<td><em><p>Content type to use (if $data is set and $ctype is null, will be application/octet-stream)</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setHeaders()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHeaders</span><span class="nb-faded-text">(
+          string|array $name, mixed $value
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set one or more request headers</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setHeaders()">\Zend_Http_Client::setHeaders()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This function can be used in several ways to set the client's request
+headers:
+1. By providing two parameters: $name as the header to set (e.g. 'Host')
+   and $value as it's value (e.g. 'www.example.com').
+2. By providing a single header string as the only parameter
+   e.g. 'Host: www.example.com'
+3. By providing an array of headers as the first parameter
+   e.g. array('host' => 'www.example.com', 'x-foo: bar'). In This case
+   the function will call itself recursively for each array item.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string|array</td>
+<td><em><p>Header name, full header string ('Header: value') or an array of headers</p>
+</em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>mixed</td>
+<td><em>Header value or null</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setMethod()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMethod</span><span class="nb-faded-text">(
+          string $method
+              =
+              self
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the next request's method</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setMethod()">\Zend_Http_Client::setMethod()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Validated the passed method and sets it. If we have files set for
+POST requests, and the new method is not POST, the files are silently
+dropped.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setParameterGet()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setParameterGet</span><span class="nb-faded-text">(
+          string|array $name, string $value
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set a GET parameter for the request. Wrapper around _setParameter</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setParameterGet()">\Zend_Http_Client::setParameterGet()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string|array</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setParameterPost()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setParameterPost</span><span class="nb-faded-text">(
+          string|array $name, string $value
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set a POST parameter for the request. Wrapper around _setParameter</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setParameterPost()">\Zend_Http_Client::setParameterPost()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string|array</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setRawData()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRawData</span><span class="nb-faded-text">(
+          string|resource $data, string $enctype
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the raw (already encoded) POST data.</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setRawData()">\Zend_Http_Client::setRawData()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This function is here for two reasons:
+1. For advanced user who would like to set their own data, already encoded
+2. For backwards compatibilty: If someone uses the old post($data) method.
+   this method will be used to set the encoded data.</p>
+
+<p>$data can also be stream (such as file) from which the data will be read.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>string|resource</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$enctype</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setRawDataStream()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRawDataStream</span><span class="nb-faded-text">(
+          string $data, string $enctype
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description"><p class="short_description">Set the raw (already encoded) POST data from a stream source.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This is used to support POSTing from open file handles without
+caching the entire body into memory. It is a wrapper around
+Zend_Http_Client::setRawData().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$data</th>
+<td>string</td>
+<td><em>The request data</em></td>
+</tr>
+<tr>
+<th>$enctype</th>
+<td>string</td>
+<td><em>The encoding type</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setStream()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStream</span><span class="nb-faded-text">(
+          string|boolean $streamfile
+              =
+              true
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set streaming for received data</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setStream()">\Zend_Http_Client::setStream()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$streamfile</th>
+<td>string|boolean</td>
+<td><em><p>Stream file, true for temp file, false/null for no streaming</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setStreamingRequest()"></a><div class="method">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStreamingRequest</span><span class="nb-faded-text">(
+          boolean $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the streamingRequest variable which controls whether we are
+sending the raw (already encoded) POST data from a stream source.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>boolean</td>
+<td><em>The value to set.</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setUnmaskStatus()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUnmaskStatus</span><span class="nb-faded-text">(
+          boolean $status
+              =
+              true
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the unmask feature for GET parameters as array</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setUnmaskStatus()">\Zend_Http_Client::setUnmaskStatus()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>Example:
+foo%5B0%5D=a&amp;foo%5B1%5D=b
+becomes
+foo=a&amp;foo=b</p>
+
+<p>This is usefull for some services</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$status</th>
+<td>boolean</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_HttpClient::setUri()"></a><div class="method inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUri</span><span class="nb-faded-text">(
+          <a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>|string $uri
+          )
+        </span>
+        :
+          <a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></code><div class="description">
+<p class="short_description">Set the URI for the next request</p>
+<small>Inherited from:
+                    <a href="db_Http_Client.html#%5CZend_Http_Client::setUri()">\Zend_Http_Client::setUri()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$uri</th>
+<td>
+<a href="db_Uri_Http.html#%5CZend_Uri_Http">\Zend_Uri_Http</a>|string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td></td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Http_Client_Exception.html#%5CZend_Http_Client_Exception">\Zend_Http_Client_Exception</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.13.3</a>.
+    </small></body></html>
