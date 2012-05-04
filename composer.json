@@ -1,6 +1,10 @@
 {
     "name": "zend/gdata",
+    "version": "1.11.11",
+    "license": "New BSD",
+    "homepage": "http://framework.zend.com/download/webservices",
     "type": "library",
+    "description": "The Google Data APIs are a set of web services for read/write access to applications hosted by Google",
     "keywords": ["zend","gdata"],
     "authors": [
     {
@@ -8,10 +12,6 @@
         "homepage": "http://framework.zend.com/community/contributors"
     }
     ],
-    "description": "The Google Data APIs are a set of web services for read/write access to applications hosted by Google",
-    "version": "1.11.11",
-    "license": "New BSD",
-    "homepage": "http://framework.zend.com/download/webservices",
     "require": {
         "php" : ">5.2.4"
     },
