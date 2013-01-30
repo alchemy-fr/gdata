@@ -1,6 +1,5 @@
 {
     "name": "zend/gdata",
-    "version": "1.11.11",
     "license": "New BSD",
     "homepage": "http://framework.zend.com/download/webservices",
     "type": "library",
