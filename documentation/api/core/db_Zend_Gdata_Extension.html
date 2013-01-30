@@ -1,0 +1,345 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/Extension.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_Extension">\Zend_Gdata_Extension</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: Extension.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_Extension" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_Extension<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\Gdata</small><p class="short-description">Represents a Gdata extension</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd>
+<a href="db_Zend_Gdata_App_Extension.html#%5CZend_Gdata_App_Extension">\Zend_Gdata_App_Extension</a>
+            &lt;
+            <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base" style="color: gray; font-size: 0.8em
+                ">\Zend_Gdata_App_Base</a>
+</dd>
+<dt>Children</dt>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_Hidden.html#%5CZend_Gdata_Calendar_Extension_Hidden">\Zend_Gdata_Calendar_Extension_Hidden</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_QuickAdd.html#%5CZend_Gdata_Calendar_Extension_QuickAdd">\Zend_Gdata_Calendar_Extension_QuickAdd</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_SendEventNotifications.html#%5CZend_Gdata_Calendar_Extension_SendEventNotifications">\Zend_Gdata_Calendar_Extension_SendEventNotifications</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_Selected.html#%5CZend_Gdata_Calendar_Extension_Selected">\Zend_Gdata_Calendar_Extension_Selected</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_Timezone.html#%5CZend_Gdata_Calendar_Extension_Timezone">\Zend_Gdata_Calendar_Extension_Timezone</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_AccessLevel.html#%5CZend_Gdata_Calendar_Extension_AccessLevel">\Zend_Gdata_Calendar_Extension_AccessLevel</a></dd>
+<dd><a href="db_Zend_Gdata_Calendar_Extension_Color.html#%5CZend_Gdata_Calendar_Extension_Color">\Zend_Gdata_Calendar_Extension_Color</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Recurrence.html#%5CZend_Gdata_Extension_Recurrence">\Zend_Gdata_Extension_Recurrence</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_OriginalEvent.html#%5CZend_Gdata_Extension_OriginalEvent">\Zend_Gdata_Extension_OriginalEvent</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_When.html#%5CZend_Gdata_Extension_When">\Zend_Gdata_Extension_When</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Comments.html#%5CZend_Gdata_Extension_Comments">\Zend_Gdata_Extension_Comments</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_AttendeeStatus.html#%5CZend_Gdata_Extension_AttendeeStatus">\Zend_Gdata_Extension_AttendeeStatus</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Visibility.html#%5CZend_Gdata_Extension_Visibility">\Zend_Gdata_Extension_Visibility</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Who.html#%5CZend_Gdata_Extension_Who">\Zend_Gdata_Extension_Who</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Rating.html#%5CZend_Gdata_Extension_Rating">\Zend_Gdata_Extension_Rating</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_RecurrenceException.html#%5CZend_Gdata_Extension_RecurrenceException">\Zend_Gdata_Extension_RecurrenceException</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_OpenSearchItemsPerPage.html#%5CZend_Gdata_Extension_OpenSearchItemsPerPage">\Zend_Gdata_Extension_OpenSearchItemsPerPage</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Reminder.html#%5CZend_Gdata_Extension_Reminder">\Zend_Gdata_Extension_Reminder</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_OpenSearchStartIndex.html#%5CZend_Gdata_Extension_OpenSearchStartIndex">\Zend_Gdata_Extension_OpenSearchStartIndex</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Where.html#%5CZend_Gdata_Extension_Where">\Zend_Gdata_Extension_Where</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_OpenSearchTotalResults.html#%5CZend_Gdata_Extension_OpenSearchTotalResults">\Zend_Gdata_Extension_OpenSearchTotalResults</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_Transparency.html#%5CZend_Gdata_Extension_Transparency">\Zend_Gdata_Extension_Transparency</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_EntryLink.html#%5CZend_Gdata_Extension_EntryLink">\Zend_Gdata_Extension_EntryLink</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_FeedLink.html#%5CZend_Gdata_Extension_FeedLink">\Zend_Gdata_Extension_FeedLink</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_AttendeeType.html#%5CZend_Gdata_Extension_AttendeeType">\Zend_Gdata_Extension_AttendeeType</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_EventStatus.html#%5CZend_Gdata_Extension_EventStatus">\Zend_Gdata_Extension_EventStatus</a></dd>
+<dd><a href="db_Zend_Gdata_Extension_ExtendedProperty.html#%5CZend_Gdata_Extension_ExtendedProperty">\Zend_Gdata_Extension_ExtendedProperty</a></dd>
+<dd><a href="db_Zend_Gdata_Books_Extension_Embeddability.html#%5CZend_Gdata_Books_Extension_Embeddability">\Zend_Gdata_Books_Extension_Embeddability</a></dd>
+<dd><a href="db_Zend_Gdata_Books_Extension_Viewability.html#%5CZend_Gdata_Books_Extension_Viewability">\Zend_Gdata_Books_Extension_Viewability</a></dd>
+<dd><a href="db_Zend_Gdata_Books_Extension_Review.html#%5CZend_Gdata_Books_Extension_Review">\Zend_Gdata_Books_Extension_Review</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_MediaRating.html#%5CZend_Gdata_YouTube_Extension_MediaRating">\Zend_Gdata_YouTube_Extension_MediaRating</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_School.html#%5CZend_Gdata_YouTube_Extension_School">\Zend_Gdata_YouTube_Extension_School</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Racy.html#%5CZend_Gdata_YouTube_Extension_Racy">\Zend_Gdata_YouTube_Extension_Racy</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Recorded.html#%5CZend_Gdata_YouTube_Extension_Recorded">\Zend_Gdata_YouTube_Extension_Recorded</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_AboutMe.html#%5CZend_Gdata_YouTube_Extension_AboutMe">\Zend_Gdata_YouTube_Extension_AboutMe</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_State.html#%5CZend_Gdata_YouTube_Extension_State">\Zend_Gdata_YouTube_Extension_State</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Music.html#%5CZend_Gdata_YouTube_Extension_Music">\Zend_Gdata_YouTube_Extension_Music</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Duration.html#%5CZend_Gdata_YouTube_Extension_Duration">\Zend_Gdata_YouTube_Extension_Duration</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_NoEmbed.html#%5CZend_Gdata_YouTube_Extension_NoEmbed">\Zend_Gdata_YouTube_Extension_NoEmbed</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Hobbies.html#%5CZend_Gdata_YouTube_Extension_Hobbies">\Zend_Gdata_YouTube_Extension_Hobbies</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Books.html#%5CZend_Gdata_YouTube_Extension_Books">\Zend_Gdata_YouTube_Extension_Books</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_QueryString.html#%5CZend_Gdata_YouTube_Extension_QueryString">\Zend_Gdata_YouTube_Extension_QueryString</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Status.html#%5CZend_Gdata_YouTube_Extension_Status">\Zend_Gdata_YouTube_Extension_Status</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_LastName.html#%5CZend_Gdata_YouTube_Extension_LastName">\Zend_Gdata_YouTube_Extension_LastName</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Statistics.html#%5CZend_Gdata_YouTube_Extension_Statistics">\Zend_Gdata_YouTube_Extension_Statistics</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Hometown.html#%5CZend_Gdata_YouTube_Extension_Hometown">\Zend_Gdata_YouTube_Extension_Hometown</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Location.html#%5CZend_Gdata_YouTube_Extension_Location">\Zend_Gdata_YouTube_Extension_Location</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_PlaylistId.html#%5CZend_Gdata_YouTube_Extension_PlaylistId">\Zend_Gdata_YouTube_Extension_PlaylistId</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_FirstName.html#%5CZend_Gdata_YouTube_Extension_FirstName">\Zend_Gdata_YouTube_Extension_FirstName</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Uploaded.html#%5CZend_Gdata_YouTube_Extension_Uploaded">\Zend_Gdata_YouTube_Extension_Uploaded</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Occupation.html#%5CZend_Gdata_YouTube_Extension_Occupation">\Zend_Gdata_YouTube_Extension_Occupation</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Position.html#%5CZend_Gdata_YouTube_Extension_Position">\Zend_Gdata_YouTube_Extension_Position</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Movies.html#%5CZend_Gdata_YouTube_Extension_Movies">\Zend_Gdata_YouTube_Extension_Movies</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_ReleaseDate.html#%5CZend_Gdata_YouTube_Extension_ReleaseDate">\Zend_Gdata_YouTube_Extension_ReleaseDate</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Description.html#%5CZend_Gdata_YouTube_Extension_Description">\Zend_Gdata_YouTube_Extension_Description</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Private.html#%5CZend_Gdata_YouTube_Extension_Private">\Zend_Gdata_YouTube_Extension_Private</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_MediaCredit.html#%5CZend_Gdata_YouTube_Extension_MediaCredit">\Zend_Gdata_YouTube_Extension_MediaCredit</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Username.html#%5CZend_Gdata_YouTube_Extension_Username">\Zend_Gdata_YouTube_Extension_Username</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Gender.html#%5CZend_Gdata_YouTube_Extension_Gender">\Zend_Gdata_YouTube_Extension_Gender</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_PlaylistTitle.html#%5CZend_Gdata_YouTube_Extension_PlaylistTitle">\Zend_Gdata_YouTube_Extension_PlaylistTitle</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Company.html#%5CZend_Gdata_YouTube_Extension_Company">\Zend_Gdata_YouTube_Extension_Company</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_CountHint.html#%5CZend_Gdata_YouTube_Extension_CountHint">\Zend_Gdata_YouTube_Extension_CountHint</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Relationship.html#%5CZend_Gdata_YouTube_Extension_Relationship">\Zend_Gdata_YouTube_Extension_Relationship</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_VideoId.html#%5CZend_Gdata_YouTube_Extension_VideoId">\Zend_Gdata_YouTube_Extension_VideoId</a></dd>
+<dd><a href="db_Zend_Gdata_YouTube_Extension_Age.html#%5CZend_Gdata_YouTube_Extension_Age">\Zend_Gdata_YouTube_Extension_Age</a></dd>
+<dd><a href="db_Zend_Gdata_Spreadsheets_Extension_RowCount.html#%5CZend_Gdata_Spreadsheets_Extension_RowCount">\Zend_Gdata_Spreadsheets_Extension_RowCount</a></dd>
+<dd><a href="db_Zend_Gdata_Spreadsheets_Extension_ColCount.html#%5CZend_Gdata_Spreadsheets_Extension_ColCount">\Zend_Gdata_Spreadsheets_Extension_ColCount</a></dd>
+<dd><a href="db_Zend_Gdata_Spreadsheets_Extension_Custom.html#%5CZend_Gdata_Spreadsheets_Extension_Custom">\Zend_Gdata_Spreadsheets_Extension_Custom</a></dd>
+<dd><a href="db_Zend_Gdata_Spreadsheets_Extension_Cell.html#%5CZend_Gdata_Spreadsheets_Extension_Cell">\Zend_Gdata_Spreadsheets_Extension_Cell</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Rights.html#%5CZend_Gdata_DublinCore_Extension_Rights">\Zend_Gdata_DublinCore_Extension_Rights</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Date.html#%5CZend_Gdata_DublinCore_Extension_Date">\Zend_Gdata_DublinCore_Extension_Date</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Language.html#%5CZend_Gdata_DublinCore_Extension_Language">\Zend_Gdata_DublinCore_Extension_Language</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Creator.html#%5CZend_Gdata_DublinCore_Extension_Creator">\Zend_Gdata_DublinCore_Extension_Creator</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Description.html#%5CZend_Gdata_DublinCore_Extension_Description">\Zend_Gdata_DublinCore_Extension_Description</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Identifier.html#%5CZend_Gdata_DublinCore_Extension_Identifier">\Zend_Gdata_DublinCore_Extension_Identifier</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Publisher.html#%5CZend_Gdata_DublinCore_Extension_Publisher">\Zend_Gdata_DublinCore_Extension_Publisher</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Format.html#%5CZend_Gdata_DublinCore_Extension_Format">\Zend_Gdata_DublinCore_Extension_Format</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Title.html#%5CZend_Gdata_DublinCore_Extension_Title">\Zend_Gdata_DublinCore_Extension_Title</a></dd>
+<dd><a href="db_Zend_Gdata_DublinCore_Extension_Subject.html#%5CZend_Gdata_DublinCore_Extension_Subject">\Zend_Gdata_DublinCore_Extension_Subject</a></dd>
+<dd><a href="db_Zend_Gdata_Geo_Extension_GmlPoint.html#%5CZend_Gdata_Geo_Extension_GmlPoint">\Zend_Gdata_Geo_Extension_GmlPoint</a></dd>
+<dd><a href="db_Zend_Gdata_Geo_Extension_GeoRssWhere.html#%5CZend_Gdata_Geo_Extension_GeoRssWhere">\Zend_Gdata_Geo_Extension_GeoRssWhere</a></dd>
+<dd><a href="db_Zend_Gdata_Geo_Extension_GmlPos.html#%5CZend_Gdata_Geo_Extension_GmlPos">\Zend_Gdata_Geo_Extension_GmlPos</a></dd>
+<dd><a href="db_Zend_Gdata_Analytics_Extension_Property.html#%5CZend_Gdata_Analytics_Extension_Property">\Zend_Gdata_Analytics_Extension_Property</a></dd>
+<dd><a href="db_Zend_Gdata_Analytics_Extension_Goal.html#%5CZend_Gdata_Analytics_Goal">\Zend_Gdata_Analytics_Goal</a></dd>
+<dd><a href="db_Zend_Gdata_Analytics_Extension_TableId.html#%5CZend_Gdata_Analytics_Extension_TableId">\Zend_Gdata_Analytics_Extension_TableId</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaRestriction.html#%5CZend_Gdata_Media_Extension_MediaRestriction">\Zend_Gdata_Media_Extension_MediaRestriction</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaRating.html#%5CZend_Gdata_Media_Extension_MediaRating">\Zend_Gdata_Media_Extension_MediaRating</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaCategory.html#%5CZend_Gdata_Media_Extension_MediaCategory">\Zend_Gdata_Media_Extension_MediaCategory</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaText.html#%5CZend_Gdata_Media_Extension_MediaText">\Zend_Gdata_Media_Extension_MediaText</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaHash.html#%5CZend_Gdata_Media_Extension_MediaHash">\Zend_Gdata_Media_Extension_MediaHash</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaCopyright.html#%5CZend_Gdata_Media_Extension_MediaCopyright">\Zend_Gdata_Media_Extension_MediaCopyright</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaTitle.html#%5CZend_Gdata_Media_Extension_MediaTitle">\Zend_Gdata_Media_Extension_MediaTitle</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaGroup.html#%5CZend_Gdata_Media_Extension_MediaGroup">\Zend_Gdata_Media_Extension_MediaGroup</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaCredit.html#%5CZend_Gdata_Media_Extension_MediaCredit">\Zend_Gdata_Media_Extension_MediaCredit</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaKeywords.html#%5CZend_Gdata_Media_Extension_MediaKeywords">\Zend_Gdata_Media_Extension_MediaKeywords</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaContent.html#%5CZend_Gdata_Media_Extension_MediaContent">\Zend_Gdata_Media_Extension_MediaContent</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaPlayer.html#%5CZend_Gdata_Media_Extension_MediaPlayer">\Zend_Gdata_Media_Extension_MediaPlayer</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaThumbnail.html#%5CZend_Gdata_Media_Extension_MediaThumbnail">\Zend_Gdata_Media_Extension_MediaThumbnail</a></dd>
+<dd><a href="db_Zend_Gdata_Media_Extension_MediaDescription.html#%5CZend_Gdata_Media_Extension_MediaDescription">\Zend_Gdata_Media_Extension_MediaDescription</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_Quota.html#%5CZend_Gdata_Gapps_Extension_Quota">\Zend_Gdata_Gapps_Extension_Quota</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_EmailList.html#%5CZend_Gdata_Gapps_Extension_EmailList">\Zend_Gdata_Gapps_Extension_EmailList</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_Property.html#%5CZend_Gdata_Gapps_Extension_Property">\Zend_Gdata_Gapps_Extension_Property</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_Name.html#%5CZend_Gdata_Gapps_Extension_Name">\Zend_Gdata_Gapps_Extension_Name</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_Login.html#%5CZend_Gdata_Gapps_Extension_Login">\Zend_Gdata_Gapps_Extension_Login</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Extension_Nickname.html#%5CZend_Gdata_Gapps_Extension_Nickname">\Zend_Gdata_Gapps_Extension_Nickname</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></dd>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Height.html#%5CZend_Gdata_Photos_Extension_Height">\Zend_Gdata_Photos_Extension_Height</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_QuotaCurrent.html#%5CZend_Gdata_Photos_Extension_QuotaCurrent">\Zend_Gdata_Photos_Extension_QuotaCurrent</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_PhotoId.html#%5CZend_Gdata_Photos_Extension_PhotoId">\Zend_Gdata_Photos_Extension_PhotoId</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Checksum.html#%5CZend_Gdata_Photos_Extension_Checksum">\Zend_Gdata_Photos_Extension_Checksum</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_User.html#%5CZend_Gdata_Photos_Extension_User">\Zend_Gdata_Photos_Extension_User</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_AlbumId.html#%5CZend_Gdata_Photos_Extension_AlbumId">\Zend_Gdata_Photos_Extension_AlbumId</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_BytesUsed.html#%5CZend_Gdata_Photos_Extension_BytesUsed">\Zend_Gdata_Photos_Extension_BytesUsed</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_CommentingEnabled.html#%5CZend_Gdata_Photos_Extension_CommentingEnabled">\Zend_Gdata_Photos_Extension_CommentingEnabled</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Client.html#%5CZend_Gdata_Photos_Extension_Client">\Zend_Gdata_Photos_Extension_Client</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_NumPhotos.html#%5CZend_Gdata_Photos_Extension_NumPhotos">\Zend_Gdata_Photos_Extension_NumPhotos</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Name.html#%5CZend_Gdata_Photos_Extension_Name">\Zend_Gdata_Photos_Extension_Name</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Rotation.html#%5CZend_Gdata_Photos_Extension_Rotation">\Zend_Gdata_Photos_Extension_Rotation</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_QuotaLimit.html#%5CZend_Gdata_Photos_Extension_QuotaLimit">\Zend_Gdata_Photos_Extension_QuotaLimit</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Thumbnail.html#%5CZend_Gdata_Photos_Extension_Thumbnail">\Zend_Gdata_Photos_Extension_Thumbnail</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Location.html#%5CZend_Gdata_Photos_Extension_Location">\Zend_Gdata_Photos_Extension_Location</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_NumPhotosRemaining.html#%5CZend_Gdata_Photos_Extension_NumPhotosRemaining">\Zend_Gdata_Photos_Extension_NumPhotosRemaining</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_MaxPhotosPerAlbum.html#%5CZend_Gdata_Photos_Extension_MaxPhotosPerAlbum">\Zend_Gdata_Photos_Extension_MaxPhotosPerAlbum</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_CommentCount.html#%5CZend_Gdata_Photos_Extension_CommentCount">\Zend_Gdata_Photos_Extension_CommentCount</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Weight.html#%5CZend_Gdata_Photos_Extension_Weight">\Zend_Gdata_Photos_Extension_Weight</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Width.html#%5CZend_Gdata_Photos_Extension_Width">\Zend_Gdata_Photos_Extension_Width</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Position.html#%5CZend_Gdata_Photos_Extension_Position">\Zend_Gdata_Photos_Extension_Position</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Timestamp.html#%5CZend_Gdata_Photos_Extension_Timestamp">\Zend_Gdata_Photos_Extension_Timestamp</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Access.html#%5CZend_Gdata_Photos_Extension_Access">\Zend_Gdata_Photos_Extension_Access</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Id.html#%5CZend_Gdata_Photos_Extension_Id">\Zend_Gdata_Photos_Extension_Id</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Nickname.html#%5CZend_Gdata_Photos_Extension_Nickname">\Zend_Gdata_Photos_Extension_Nickname</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Version.html#%5CZend_Gdata_Photos_Extension_Version">\Zend_Gdata_Photos_Extension_Version</a></dd>
+<dd><a href="db_Zend_Gdata_Photos_Extension_Size.html#%5CZend_Gdata_Photos_Extension_Size">\Zend_Gdata_Photos_Extension_Size</a></dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Extension::$_rootNamespace" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_rootNamespace</span>= ''gd''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>'gd'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Extension::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>

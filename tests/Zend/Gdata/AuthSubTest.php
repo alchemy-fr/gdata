@@ -15,7 +15,7 @@
  * @category   Zend
  * @package    Zend_Gdata
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
@@ -27,7 +27,7 @@ require_once 'Zend/Gdata/HttpClient.php';
  * @category   Zend
  * @package    Zend_Gdata
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @group      Zend_Gdata
  * @group      Zend_Gdata_AuthSub
@@ -133,19 +133,7 @@ class Zend_Gdata_AuthSubTest extends PHPUnit_Framework_TestCase
             $c->setAuthSubPrivateKeyFile("zendauthsubfilenotfound",  null, true);
         }
     }
-
-    /**
-     * @group ZF-11351
-     * @expectedException Zend_Gdata_App_HttpException
-     */
-    public function testAuthSubGetHttpClientShouldThrowExceptionOnVanillaHttpClient()
-    {
-        $client = new Zend_Http_Client();
-        $client->setUri('http://example.com/AuthSub');
-        $gdclient = Zend_Gdata_AuthSub::getHttpClient('FakeToken', $client);
-        $this->fail('Expected exception Zend_Gdata_App_HttpException not raised!');
-    }
-    
+        
     public function testAuthSubSessionTokenReceivesSuccessfulResult()
     {
         $adapter = new Zend_Http_Client_Adapter_Test();
@@ -270,6 +258,18 @@ Secure=false");
         $client = Zend_Gdata_AuthSub::getHttpClient($this->token);
         $this->assertTrue($client instanceof Zend_Gdata_HttpClient );
         $this->assertEquals($this->token, $client->getAuthSubToken());
+    }
+    
+    /**
+     * @group ZF-11351
+     * @expectedException Zend_Gdata_App_HttpException
+     */
+    public function testAuthSubGetHttpClientShouldThrowExceptionOnVanillaHttpClient()
+    {
+        $client = new Zend_Http_Client();
+        $client->setUri('http://example.com/AuthSub');
+        $gdclient = Zend_Gdata_AuthSub::getHttpClient('FakeToken', $client);
+        $this->fail('Expected exception Zend_Gdata_App_HttpException not raised!');
     }
     
 }

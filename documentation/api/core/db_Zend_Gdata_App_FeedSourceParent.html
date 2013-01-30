@@ -1,0 +1,673 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/App/FeedSourceParent.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">App
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: FeedSourceParent.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_App_FeedSourceParent" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_App_FeedSourceParent<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\App</small><p class="short-description">Atom feed class</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd>
+<a href="db_Zend_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a>
+            &lt;
+            <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base" style="color: gray; font-size: 0.8em
+                ">\Zend_Gdata_App_Base</a>
+</dd>
+<dt>Children</dt>
+<dd><a href="db_Zend_Gdata_App_Extension_Source.html#%5CZend_Gdata_App_Extension_Source">\Zend_Gdata_App_Extension_Source</a></dd>
+<dd><a href="db_Zend_Gdata_App_Feed.html#%5CZend_Gdata_App_Feed">\Zend_Gdata_App_Feed</a></dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_entryClassName" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_entryClassName</span>= ''Zend_Gdata_App_Entry''
+                </code><div class="description">
+<p class="short-description">The classname for individual feed elements.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'Zend_Gdata_App_Entry'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_generator" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_generator</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_icon" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_icon</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_logo" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_logo</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_rootElement" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootElement</span>= 'null'
+                </code><div class="description">
+<p class="short-description">Root XML element for Atom entries.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::$_subtitle" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_subtitle</span>= 'null'
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_App_FeedSourceParent::__get()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+          string $var
+          )
+        </span>
+        :
+          mixed</code><div class="description"><p class="short_description">Make accessing some individual elements of the feed easier.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Special accessors 'entry' and 'entries' are provided so that if
+you wish to iterate over an Atom feed's entries, you can do so
+using foreach ($feed->entries as $entry) or foreach
+($feed->entry as $entry).</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$var</th>
+<td>string</td>
+<td><em><p>The property to access.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>mixed</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::getDOM()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+           $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::getGenerator()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getGenerator</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Generator</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Generator</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::getIcon()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getIcon</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Icon</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Icon</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::getSubtitle()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSubtitle</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_Subtitle</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_Subtitle</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::getlogo()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getlogo</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          \Zend_Gdata_AppExtension_logo</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>\Zend_Gdata_AppExtension_logo</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setGenerator()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setGenerator</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_App_Extension_Generator.html#%5CZend_Gdata_App_Extension_Generator">\Zend_Gdata_App_Extension_Generator</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_App_Extension_Generator.html#%5CZend_Gdata_App_Extension_Generator">\Zend_Gdata_App_Extension_Generator</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setHttpClient()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setHttpClient</span><span class="nb-faded-text">(
+          <a href="db_Zend_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a> $httpClient
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description"><p class="short_description">Set the HTTP client instance</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Sets the HTTP client object to use for retrieving the feed.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$httpClient</th>
+<td><a href="db_Zend_Http_Client.html#%5CZend_Http_Client">\Zend_Http_Client</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>Deprecated</dt>
+<dd>Deprecated as of Zend Framework 1.7. Use
+setService() instead.
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setIcon()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setIcon</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_App_Extension_Icon.html#%5CZend_Gdata_App_Extension_Icon">\Zend_Gdata_App_Extension_Icon</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_App_Extension_Icon.html#%5CZend_Gdata_App_Extension_Icon">\Zend_Gdata_App_Extension_Icon</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setService()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setService</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a> $instance
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></code><div class="description"><p class="short_description">Set the active service instance for this feed and all enclosed entries.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This will be used to perform network requests, such as when calling
+save() and delete().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$instance</th>
+<td><a href="db_Zend_Gdata_App.html#%5CZend_Gdata_App">\Zend_Gdata_App</a></td>
+<td><em><p>The new service instance.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></td>
+<td>Provides a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setSubtitle()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSubtitle</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_App_Extension_Subtitle.html#%5CZend_Gdata_App_Extension_Subtitle">\Zend_Gdata_App_Extension_Subtitle</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_App_Extension_Subtitle.html#%5CZend_Gdata_App_Extension_Subtitle">\Zend_Gdata_App_Extension_Subtitle</a></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::setlogo()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setlogo</span><span class="nb-faded-text">(
+          \Zend_Gdata_App_Extension_logo $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>\Zend_Gdata_App_Extension_logo</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_FeedSourceParent.html#%5CZend_Gdata_App_FeedSourceParent">\Zend_Gdata_App_FeedSourceParent</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_FeedSourceParent::takeChildFromDOM()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Creates individual Entry objects of the appropriate type and
+stores them in the $_entry array based upon DOM data.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode to process</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>

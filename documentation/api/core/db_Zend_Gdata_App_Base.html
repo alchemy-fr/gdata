@@ -1,0 +1,1053 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/App/Base.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">App
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: Base.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_App_Base" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_App_Base<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\App</small><p class="short-description">Abstract class for all XML elements</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Children</dt>
+<dd><a href="db_Zend_Gdata_App_Extension.html#%5CZend_Gdata_App_Extension">\Zend_Gdata_App_Extension</a></dd>
+<dd><a href="db_Zend_Gdata_App_FeedEntryParent.html#%5CZend_Gdata_App_FeedEntryParent">\Zend_Gdata_App_FeedEntryParent</a></dd>
+<dd><a href="db_Zend_Gdata_Gapps_Error.html#%5CZend_Gdata_Gapps_Error">\Zend_Gdata_Gapps_Error</a></dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_App_Base::$_extensionAttributes" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">array
+                 <span class="highlight">$_extensionAttributes</span>= 'array()'
+                </code><div class="description">
+<p class="short-description"></p>Leftover attributes which were not handled</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>array()</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_extensionElements" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">array
+                 <span class="highlight">$_extensionElements</span>= 'array()'
+                </code><div class="description">
+<p class="short-description"></p>Leftover elements which were not handled</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>array()</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_namespaceLookupCache" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">array
+                 <span class="highlight">$_namespaceLookupCache</span>= 'array()'
+                </code><div class="description">
+<span class="attribute">static</span><p class="short-description"></p>Memoized results from calls to lookupNamespace() to avoid expensive calls to getGreatestBoundedValue(). The key is in the form 'prefix-majorVersion-minorVersion', and the value is the output from getGreatestBoundedValue().</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>array()</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_namespaces" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">array
+                 <span class="highlight">$_namespaces</span>= 'array(
+        'atom'      =&gt; array(
+            1 =&gt; array(
+                0 =&gt; 'http://www.w3.org/2005/Atom'
+                )
+            )'
+                </code><div class="description">
+<p class="short-description">List of namespaces, as a three-dimensional array. The first dimension
+represents the namespace prefix, the second dimension represents the
+minimum major protocol version, and the third dimension is the minimum
+minor protocol version. Null keys are NOT allowed.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>When looking up a namespace for a given prefix, the greatest version
+number (both major and minor) which is less than the effective version
+should be used.</p>
+</div>
+<strong>Default value</strong><code>array(
+        'atom'      =&gt; array(
+            1 =&gt; array(
+                0 =&gt; 'http://www.w3.org/2005/Atom'
+                )
+            )</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+<dt>See</dt>
+<dd>\lookupNamespace()
+         
+    </dd>
+<dt>See</dt>
+<dd>\registerNamespace()
+         
+    </dd>
+<dt>See</dt>
+<dd>\registerAllNamespaces()
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_rootElement" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootElement</span>= 'null'
+                </code><div class="description">
+<p class="short-description"></p>The XML element name, including prefix if desired</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_rootNamespace" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootNamespace</span>= ''atom''
+                </code><div class="description">
+<p class="short-description"></p>The XML namespace prefix</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'atom'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_rootNamespaceURI" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_rootNamespaceURI</span>= 'null'
+                </code><div class="description">
+<p class="short-description"></p>The XML namespace URI - takes precedence over lookup up the corresponding URI for $_rootNamespace</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::$_text" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_text</span>= 'null'
+                </code><div class="description">
+<p class="short-description"></p>XML child text node content</div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_App_Base::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs"></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::__get()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__get</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Magic getter to allow access like $entry->foo to call $entry->getFoo()
+Alternatively, if no getFoo() is defined, but a $_foo protected variable
+is defined, this is returned.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>TODO Remove ability to bypass getFoo() methods??</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em><p>The variable name sought</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::__isset()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__isset</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Magic __isset method</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::__set()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__set</span><span class="nb-faded-text">(
+          string $name,  $val
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Magic setter to allow acces like $entry->foo='bar' to call
+$entry->setFoo('bar') automatically.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Alternatively, if no setFoo() is defined, but a $_foo protected variable
+is defined, this is returned.</p>
+
+<p>TODO Remove ability to bypass getFoo() methods??</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$val</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::__toString()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__toString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Magic toString method allows using this directly via echo
+Works best in PHP >= 4.2.0</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The text representation of this object</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::__unset()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__unset</span><span class="nb-faded-text">(
+          string $name
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Magic __unset method</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$name</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::encode()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">encode</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Alias for saveXML()</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Can be overridden by children to provide more complex representations
+of entries.</p>
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Encoded string content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::flushNamespaceLookupCache()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flushNamespaceLookupCache</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">static</span><p class="short_description">Flush namespace lookup cache.</p>
+</div>
+<div class="code-tabs"><div class="long-description"><p>Empties the namespace lookup cache. Call this function if you have
+added data to the namespace lookup table that contradicts values that
+may have been cached during a previous call to lookupNamespace().</p>
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::getDOM()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a> $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></code><div class="description"><p class="short_description">Retrieves a DOMElement which corresponds to this element and all
+child properties.  This is used to build an entry back into a DOM
+and eventually XML text for sending to the server upon updates, or
+for application storage/persistence.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td><a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a></td>
+<td><em><p>The DOMDocument used to construct DOMElements</p></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td>The DOMElement representing this element and all child properties.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::getExtensionAttributes()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionAttributes</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description"><p class="short_description">Returns an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All extension attributes</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::getExtensionElements()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExtensionElements</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          array</code><div class="description"><p class="short_description">Returns an array of all elements not matched to data model classes
+during the parsing of the XML</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>array</td>
+<td>All elements not matched to data model classes during parsing</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::getText()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getText</span><span class="nb-faded-text">(
+           $trim
+              =
+              true
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Returns the child text node of this element
+This represents any raw text contained within the XML element</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$trim</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>Child text node</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::getXML()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Alias for saveXML() returns XML content for this element and all
+children</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::lookupNamespace()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">lookupNamespace</span><span class="nb-faded-text">(
+          string $prefix, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the full version of a namespace prefix</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Looks up a prefix (atom:, etc.) in the list of registered
+namespaces and returns the full namespace URI if
+available. Returns the prefix, unmodified, if it's not
+registered.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em><p>The namespace prefix to lookup.</p></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::registerAllNamespaces()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerAllNamespaces</span><span class="nb-faded-text">(
+          array $namespaceArray
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Add an array of namespaces to the registered list.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes an array in the format of:
+namespace prefix, namespace URI, major protocol version,
+minor protocol version and adds them with calls to ->registerNamespace()</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$namespaceArray</th>
+<td>array</td>
+<td><em><p>An array of namespaces.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::registerNamespace()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">registerNamespace</span><span class="nb-faded-text">(
+          string $prefix, string $namespaceUri, integer $majorVersion
+              =
+              1, integer $minorVersion
+              =
+              0
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Add a namespace and prefix to the registered list</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Takes a prefix and a full namespace URI and adds them to the
+list of registered namespaces for use by
+$this->lookupNamespace().</p>
+
+<p>WARNING: Currently, registering a namespace will NOT invalidate any
+         memoized data stored in $_namespaceLookupCache. Under normal
+         use, this behavior is acceptable. If you are adding
+         contradictory data to the namespace lookup table, you must
+         call flushNamespaceLookupCache().</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$prefix</th>
+<td>string</td>
+<td><em><p>The namespace prefix</p></em></td>
+</tr>
+<tr>
+<th>$namespaceUri</th>
+<td>string</td>
+<td><em><p>The full namespace URI</p></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td>integer</td>
+<td><em><p>The major protocol version in effect. Defaults to '1'.</p>
+</em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td>integer</td>
+<td><em><p>The minor protocol version in effect. Defaults to null (use latest).</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::saveXML()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">saveXML</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Converts this element and all children into XML text using getDOM()</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>XML content</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::setExtensionAttributes()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionAttributes</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description"><p class="short_description">Sets an array of all extension attributes not transformed into data
+model properties during parsing of the XML.  Each element of the array
+is a hashed array of the format:
+    array('namespaceUri' => string, 'name' => string, 'value' => string);
+This can be used to add arbitrary attributes to any data model element</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em><p>All extension attributes</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::setExtensionElements()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExtensionElements</span><span class="nb-faded-text">(
+          array $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description"><p class="short_description">Sets an array of all elements not matched to data model classes
+during the parsing of the XML.  This method can be used to add arbitrary
+child XML elements to any data model class.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>array</td>
+<td><em><p>All extension elements</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::setText()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setText</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></code><div class="description"><p class="short_description">Sets the child text node of this element
+This represents any raw text contained within the XML element</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>Child text node</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base">\Zend_Gdata_App_Base</a></td>
+<td>Returns an object of the same type as 'this' to provide a fluent interface.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::takeAttributeFromDOM()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeAttributeFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $attribute
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Given a DOMNode representing an attribute, tries to map the data into
+instance members.  If no mapping is defined, the name and value are
+stored in an array.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$attribute</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode attribute needed to be handled</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::takeChildFromDOM()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Given a child DOMNode, tries to determine how to map the data into
+object instance members.  If no mapping is defined, Extension_Element
+objects are created and stored in an array.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode needed to be handled</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::transferFromDOM()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $node
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Transfers each child and attribute into member variables.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This is called when XML is received over the wire and the data
+model needs to be built to represent this XML.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$node</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode that represents this object's data</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_App_Base::transferFromXML()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">transferFromXML</span><span class="nb-faded-text">(
+          string $xml
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Parses the provided XML text and generates data model classes for
+each know element by turning the XML text into a DOM tree and calling
+transferFromDOM($element).  The first data model element with the same
+name as $this->_rootElement is used and the child elements are
+recursively parsed.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$xml</th>
+<td>string</td>
+<td><em><p>The XML text to parse</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>

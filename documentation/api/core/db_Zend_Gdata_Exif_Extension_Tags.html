@@ -1,0 +1,1175 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/Exif/Extension/Tags.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Exif
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: Tags.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_Exif_Extension_Tags" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_Exif_Extension_Tags<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\Exif</small><p class="short-description">Represents the exif:tags element used by the Gdata Exif extensions.</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd>
+<a href="db_Zend_Gdata_Extension.html#%5CZend_Gdata_Extension">\Zend_Gdata_Extension</a>
+            &lt;
+            <a href="db_Zend_Gdata_App_Extension.html#%5CZend_Gdata_App_Extension" style="color: gray; font-size: 0.8em
+                ">\Zend_Gdata_App_Extension</a>
+            &lt;
+            <a href="db_Zend_Gdata_App_Base.html#%5CZend_Gdata_App_Base" style="color: gray; font-size: 0.8em
+                ">\Zend_Gdata_App_Base</a>
+</dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_distance" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Distance
+                 <span class="highlight">$_distance</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:distance value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_exposure" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Exposure
+                 <span class="highlight">$_exposure</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:exposure value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_fStop" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_FStop
+                 <span class="highlight">$_fStop</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:fStop value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_flash" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Flash
+                 <span class="highlight">$_flash</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:flash value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_focalLength" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_FocalLength
+                 <span class="highlight">$_focalLength</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:focalLength value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_imageUniqueId" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_ImageUniqueId
+                 <span class="highlight">$_imageUniqueId</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:imageUniqueID value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_iso" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Iso
+                 <span class="highlight">$_iso</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:iso value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_make" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Make
+                 <span class="highlight">$_make</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:make value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_model" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Model
+                 <span class="highlight">$_model</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:model value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_rootElement" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_rootElement</span>= ''tags''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>'tags'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_rootNamespace" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_rootNamespace</span>= ''exif''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>'exif'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::$_time" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">\Zend_Gdata_Exif_Extension_Time
+                 <span class="highlight">$_time</span>= 'null'
+                </code><div class="description">
+<p class="short-description">exif:time value</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a> $distance
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a> $exposure
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a> $flash
+              =
+              null, \Zend_Gdata_Exif_Extension_FocalLength$focalLength $focalLength
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a> $fStop
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a> $imageUniqueId
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a> $iso
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a> $make
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a> $model
+              =
+              null, <a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a> $time
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Constructs a new Zend_Gdata_Exif_Extension_Tags object.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$distance</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></td>
+<td><em><p>(optional) The exif:distance value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$exposure</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></td>
+<td><em><p>(optional) The exif:exposure value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$flash</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></td>
+<td><em><p>(optional) The exif:flash value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$focalLength</th>
+<td>\Zend_Gdata_Exif_Extension_FocalLength$focalLength</td>
+<td><em><p>(optional) The exif:focallength value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$fStop</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></td>
+<td><em><p>(optional) The exif:fstop value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$imageUniqueId</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></td>
+<td><em><p>(optional) The exif:imageUniqueID value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$iso</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></td>
+<td><em><p>(optional) The exif:iso value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$make</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></td>
+<td><em><p>(optional) The exif:make value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$model</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></td>
+<td><em><p>(optional) The exif:model value to be set in the constructed object.</p>
+</em></td>
+</tr>
+<tr>
+<th>$time</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></td>
+<td><em><p>(optional) The exif:time value to be set in the constructed object.</p>
+</em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getDOM()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a> $doc
+              =
+              null,  $majorVersion
+              =
+              1,  $minorVersion
+              =
+              null
+          )
+        </span>
+        :
+          <a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></code><div class="description"><p class="short_description">Retrieves a DOMElement which corresponds to this element and all
+child properties.  This is used to build an entry back into a DOM
+and eventually XML text for application storage/persistence.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$doc</th>
+<td><a href="http://php.net/manual/en/class.domdocument.php">\DOMDocument</a></td>
+<td><em><p>The DOMDocument used to construct DOMElements</p></em></td>
+</tr>
+<tr>
+<th>$majorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$minorVersion</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="http://php.net/manual/en/class.domelement.php">\DOMElement</a></td>
+<td>The DOMElement representing this element and all child properties.</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getDistance()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getDistance</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></code><div class="description"><p class="short_description">Get the value for this element's distance attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setDistance
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getExposure()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getExposure</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></code><div class="description"><p class="short_description">Get the value for this element's exposure attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setExposure
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getFStop()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFStop</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></code><div class="description"><p class="short_description">Get the value for this element's fStop attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setFStop
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getFlash()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFlash</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></code><div class="description"><p class="short_description">Get the value for this element's flash attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setFlash
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getFocalLength()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFocalLength</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a></code><div class="description"><p class="short_description">Get the value for this element's name attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setFocalLength
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getImageUniqueId()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getImageUniqueId</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></code><div class="description"><p class="short_description">Get the value for this element's imageUniqueId attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setImageUniqueId
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getIso()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getIso</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></code><div class="description"><p class="short_description">Get the value for this element's iso attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setIso
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getMake()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getMake</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></code><div class="description"><p class="short_description">Get the value for this element's make attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setMake
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getModel()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getModel</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></code><div class="description"><p class="short_description">Get the value for this element's model attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setModel
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::getTime()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTime</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></code><div class="description"><p class="short_description">Get the value for this element's time attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></td>
+<td>The requested attribute.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setTime
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setDistance()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setDistance</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's distance attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Distance.html#%5CZend_Gdata_Exif_Extension_Distance">\Zend_Gdata_Exif_Extension_Distance</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setExposure()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setExposure</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's exposure attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Exposure.html#%5CZend_Gdata_Exif_Extension_Exposure">\Zend_Gdata_Exif_Extension_Exposure</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setFStop()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setFStop</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's fStop attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_FStop.html#%5CZend_Gdata_Exif_Extension_FStop">\Zend_Gdata_Exif_Extension_FStop</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setFlash()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setFlash</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's flash attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Flash.html#%5CZend_Gdata_Exif_Extension_Flash">\Zend_Gdata_Exif_Extension_Flash</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setFocalLength()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setFocalLength</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's focalLength attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_FocalLength.html#%5CZend_Gdata_Exif_Extension_FocalLength">\Zend_Gdata_Exif_Extension_FocalLength</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setImageUniqueId()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setImageUniqueId</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's imageUniqueId attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_ImageUniqueId.html#%5CZend_Gdata_Exif_Extension_ImageUniqueId">\Zend_Gdata_Exif_Extension_ImageUniqueId</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setIso()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setIso</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's iso attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Iso.html#%5CZend_Gdata_Exif_Extension_Iso">\Zend_Gdata_Exif_Extension_Iso</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setMake()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setMake</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's make attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Make.html#%5CZend_Gdata_Exif_Extension_Make">\Zend_Gdata_Exif_Extension_Make</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setModel()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setModel</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's model attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Model.html#%5CZend_Gdata_Exif_Extension_Model">\Zend_Gdata_Exif_Extension_Model</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::setTime()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTime</span><span class="nb-faded-text">(
+          <a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a> $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></code><div class="description"><p class="short_description">Set the value for this element's time attribute.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td><a href="db_Zend_Gdata_Exif_Extension_Time.html#%5CZend_Gdata_Exif_Extension_Time">\Zend_Gdata_Exif_Extension_Time</a></td>
+<td><em><p>The desired value for this attribute.</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Exif_Extension_Tags.html#%5CZend_Gdata_Exif_Extension_Tags">\Zend_Gdata_Exif_Extension_Tags</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Exif_Extension_Tags::takeChildFromDOM()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">takeChildFromDOM</span><span class="nb-faded-text">(
+          <a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a> $child
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Creates individual Entry objects of the appropriate type and
+stores them as members of this entry based upon DOM data.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$child</th>
+<td><a href="http://php.net/manual/en/class.domnode.php">\DOMNode</a></td>
+<td><em><p>The DOMNode to process</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>

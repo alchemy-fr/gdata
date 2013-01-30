@@ -15,7 +15,7 @@
  * @category   Zend
  * @package    Zend_Gdata_YouTube
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
@@ -28,7 +28,7 @@ require_once 'Zend/Http/Client.php';
  * @category   Zend
  * @package    Zend_Gdata_YouTube
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @group      Zend_Gdata
  * @group      Zend_Gdata_YouTube
@@ -49,7 +49,7 @@ class Zend_Gdata_YouTubeTest extends PHPUnit_Framework_TestCase
     public function testGetFormUploadTokenResponseHandler()
     {
         $responseArray = Zend_Gdata_YouTube::parseFormUploadTokenResponse($this->responseText);
-        $this->assertEquals('http://uploads.gdata.youtube.com/action/FormDataUpload/AIwbF1_JjEQ9cGTjEAd5FKwV42SeNWJexmc5y7XR-eFj24uqbqU6NRcxKJW_4R-sYISLxQ',
+        $this->assertEquals('https://uploads.gdata.youtube.com/action/FormDataUpload/AIwbF1_JjEQ9cGTjEAd5FKwV42SeNWJexmc5y7XR-eFj24uqbqU6NRcxKJW_4R-sYISLxQ',
                             $responseArray['url']);
         $this->assertEquals('AIwbFAQ21fImpR2iYPaFnfuCvfbCB3qBxl5qXiZlpH3lfkungiSPoyw1iOM1gFB6Nx-wmY-kjprNT3qtdp7LJCLfngn11Ne_X9Jd44Vz8AzygtEtaDGyib5tnri0O0-V5pwcAPCHIJurOMsOpA2zInW8V8qHk2S2LheXfTXVbqc0Li9iCBpsoBGbykYU0moNoyGAaKRbSBD0oPnCv6v9Rll5Zjvivi2hQt-Br2JDb9wVeLv3qyAFaeyN6X6k32RyaAHs_n8d8d_oSriQmvS8g1HxSCS4dnoGL7tafQ4SBqnrQEb-hxFeu1ZrAwCLv',
                             $responseArray['token']);

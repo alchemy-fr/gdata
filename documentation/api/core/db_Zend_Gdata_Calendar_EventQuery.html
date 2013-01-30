@@ -1,0 +1,1153 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/Calendar/EventQuery.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Calendar
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: EventQuery.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_Calendar_EventQuery" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_Calendar_EventQuery<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\Calendar</small><p class="short-description">Assists in constructing queries for Google Calendar events</p>
+<div class="long-description">
+</div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd><a href="db_Zend_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt>Link</dt>
+<dd>
+<a href="http://code.google.com/apis/gdata/calendar/">http://code.google.com/apis/gdata/calendar/</a>
+         
+    </dd>
+</dl>
+<h3>Constants</h3>
+<div>
+<a id="\Zend_Gdata_Calendar_EventQuery::CALENDAR_FEED_URI" class="anchor"></a><div class="constant publicC">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/constant.png" alt="Constant"> 
+                <span class="highlight">CALENDAR_FEED_URI</span>
+                = 'https://www.google.com/calendar/feeds'</code><div class="description"></div>
+<div class="code-tabs"><dl class="constant-info"></dl></div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_comments" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_comments</span>= 'null'
+                </code><div class="description"><p class="short-description">The comment ID to retrieve. If null, no specific comment will be
+retrieved unless already included in the query URI. The event ID
+($_event) must be set, otherwise this property is ignored.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_defaultFeedUri" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_defaultFeedUri</span>= 'self::CALENDAR_FEED_URI'
+                </code><div class="description"><p class="short-description">The default URI used for feeds.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>self::CALENDAR_FEED_URI</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_event" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_event</span>= 'null'
+                </code><div class="description"><p class="short-description">The event ID to retrieve. If null, no specific event will be retrieved
+unless already included in the query URI.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>null</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_projection" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_projection</span>= ''full''
+                </code><div class="description"><p class="short-description">Projection to be requested by queries. Defaults to "full". A null value
+should be used when the calendar address has already been set as part
+of the query URI.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'full'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_user" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_user</span>= ''default''
+                </code><div class="description"><p class="short-description">The calendar address to be requested by queries. This may be an email
+address if requesting the primary calendar for a user. Defaults to
+"default" (the currently authenticated user). A null value should be
+used when the calendar address has already been set as part of the
+query URI.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'default'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::$_visibility" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">
+                 <span class="highlight">$_visibility</span>= ''public''
+                </code><div class="description"></div>
+<div class="code-tabs">
+<strong>Default value</strong><code>'public'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd></dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Calendar_EventQuery::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          string $url
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Create Gdata_Calendar_EventQuery object.  If a URL is provided,
+it becomes the base URL, and additional URL components may be
+appended.  For instance, if $url is 'https://www.google.com/calendar',
+the default URL constructed will be
+'https://www.google.com/calendar/default/public/full'.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>If the URL already contains a calendar ID, projection, visibility,
+event ID, or comment ID, you will need to set these fields to null
+to prevent them from being inserted. See this class's properties for
+more information.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$url</th>
+<td>string</td>
+<td><em><p>The URL to use as the base path for requests</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getComments()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getComments</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>comments</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_comments;
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getEvent()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getEvent</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>event</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_event;
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getFutureEvents()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getFutureEvents</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>futureevents</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getOrderBy()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getOrderBy</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>orderby</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getProjection()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getProjection</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>projection</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_projection
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getQueryUrl()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryUrl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>url</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getRecurrenceExpansionEnd()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRecurrenceExpansionEnd</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>recurrence-expansion-end</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getRecurrenceExpansionStart()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getRecurrenceExpansionStart</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>recurrence-expansion-start</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getSingleEvents()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSingleEvents</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getSortOrder()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getSortOrder</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>sortorder</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getStartMax()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStartMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>start-max</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getStartMin()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getStartMin</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          int</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>int</td>
+<td>start-min</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getUser()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUser</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>user</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_user
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::getVisibility()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getVisibility</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>visibility</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_visibility
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setComments()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setComments</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_comments
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setEvent()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setEvent</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_event
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setFutureEvents()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setFutureEvents</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>Also accepts bools. If using a string, must be either "true" or "false" or an exception will be thrown on retrieval.</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setOrderBy()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setOrderBy</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setProjection()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setProjection</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_projection
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setRecurrenceExpansionEnd()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRecurrenceExpansionEnd</span><span class="nb-faded-text">(
+           $value
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>recurrence-expansion-end</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setRecurrenceExpansionStart()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setRecurrenceExpansionStart</span><span class="nb-faded-text">(
+           $value
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>recurrence-expansion-start</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setSingleEvents()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSingleEvents</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>Also accepts bools. If using a string, must be either "true" or "false".</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setSortOrder()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setSortOrder</span><span class="nb-faded-text">(
+           $value
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>sortorder</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setStartMax()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStartMax</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setStartMin()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setStartMin</span><span class="nb-faded-text">(
+          int $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>int</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setUser()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUser</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_user
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Calendar_EventQuery::setVisibility()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setVisibility</span><span class="nb-faded-text">(
+          bool $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>bool</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Calendar_EventQuery.html#%5CZend_Gdata_Calendar_EventQuery">\Zend_Gdata_Calendar_EventQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\$_visibility
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>

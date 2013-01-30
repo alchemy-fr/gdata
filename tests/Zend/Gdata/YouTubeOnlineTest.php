@@ -15,7 +15,7 @@
  * @category   Zend
  * @package    Zend_Gdata_YouTube
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id $
  */
@@ -28,7 +28,7 @@ require_once 'Zend/Gdata/ClientLogin.php';
  * @category   Zend
  * @package    Zend_Gdata_YouTube
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @group      Zend_Gdata
  * @group      Zend_Gdata_YouTube
@@ -104,7 +104,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
         $entry = $this->gdata->getVideoEntry('66wj2g5yz0M');
         $this->assertEquals('TestMovie', $entry->title->text);
 
-        $entry = $this->gdata->getVideoEntry(null, 'http://gdata.youtube.com/feeds/api/videos/66wj2g5yz0M');
+        $entry = $this->gdata->getVideoEntry(null, 'https://gdata.youtube.com/feeds/api/videos/66wj2g5yz0M');
         $this->assertEquals('TestMovie', $entry->title->text);
     }
 
@@ -263,6 +263,23 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
             }
         }
     }
+    /**
+     * @group ZF-9479
+     */
+    public function testPerformV2Query()
+    {
+        $this->gdata->setMajorProtocolVersion(2);
+        $query = $this->gdata->newVideoQuery();
+        $query->videoQuery = 'zend framework';
+        $query->startIndex = 0;
+        $query->maxResults = 10;
+        $query->orderBy = 'viewCount';
+        $query->safeSearch = 'strict';
+        $videoFeed = $this->gdata->getVideoFeed($query);
+        $this->assertTrue(count($videoFeed->entry) > 0,
+            'Could not retrieve a single entry for location search:' .
+            $query->getQueryUrl(2));
+    }
 
     public function testPerformV2Query_Location()
     {
@@ -335,7 +352,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
         $titleString = $this->generateRandomString(10);
         $newPlaylist->title = $yt->newTitle()->setText($titleString);
         $newPlaylist->summary = $yt->newSummary()->setText('testing');
-        $postUrl = 'http://gdata.youtube.com/feeds/api/users/default/playlists';
+        $postUrl = 'https://gdata.youtube.com/feeds/api/users/default/playlists';
         $successfulInsertion = true;
 
         try {
@@ -454,7 +471,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
             $channelToSubscribeTo));
 
         $postUrl =
-            'http://gdata.youtube.com/feeds/api/users/default/subscriptions';
+            'https://gdata.youtube.com/feeds/api/users/default/subscriptions';
 
         $successPosting = true;
         $message = null;
@@ -549,7 +566,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
             $usernameOfFavoritesToSubscribeTo));
 
         $postUrl =
-            'http://gdata.youtube.com/feeds/api/users/default/subscriptions';
+            'https://gdata.youtube.com/feeds/api/users/default/subscriptions';
 
         $successPosting = true;
         $message = null;
@@ -644,7 +661,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
             $playlistIdToSubscribeTo));
 
         $postUrl =
-            'http://gdata.youtube.com/feeds/api/users/default/subscriptions';
+            'https://gdata.youtube.com/feeds/api/users/default/subscriptions';
 
         $successPosting = true;
         $message = null;
@@ -737,7 +754,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
             $queryStringToSubscribeTo));
 
         $postUrl =
-            'http://gdata.youtube.com/feeds/api/users/default/subscriptions';
+            'https://gdata.youtube.com/feeds/api/users/default/subscriptions';
 
         $successPosting = true;
         $message = null;
@@ -1009,7 +1026,7 @@ class Zend_Gdata_YouTubeOnlineTest extends PHPUnit_Framework_TestCase
         $youtube->setMajorProtocolVersion(2);
 
         $mostDiscussedFeed = $youtube->getVideoFeed(
-            'http://gdata.youtube.com/feeds/api/standardfeeds/most_discussed');
+            'https://gdata.youtube.com/feeds/api/standardfeeds/most_discussed');
 
         // get first entry
         $mostDiscussedFeed->rewind();

@@ -15,9 +15,9 @@
  * @category   Zend
  * @package    Zend_Gdata
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: MockHttpClient.php 23775 2011-03-01 17:25:24Z ralph $
+ * @version    $Id: MockHttpClient.php 24593 2012-01-05 20:35:02Z matthew $
  */
 
 require_once 'Zend/Http/Client/Adapter/Test.php';
@@ -26,7 +26,7 @@ require_once 'Zend/Http/Client/Adapter/Test.php';
  * @category   Zend
  * @package    Zend_Gdata
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Test_Zend_Gdata_MockHttpClient_Request
@@ -42,7 +42,7 @@ class Test_Zend_Gdata_MockHttpClient_Request
  * @category   Zend
  * @package    Zend_Gdata
  * @subpackage UnitTests
- * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Test_Zend_Gdata_MockHttpClient extends Zend_Http_Client_Adapter_Test

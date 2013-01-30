@@ -1,0 +1,758 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Zend Gdata API Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" class="content">
+<div class="sub-page-main-header-api-documentation"><h2>API Documentation</h2></div>
+<div class="dotted-line"></div>
+</div>
+<div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Zend/Gdata/Photos/UserQuery.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">Zend Framework</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>LICENSE</p>
+
+<p>This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.</p>
+</div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Category</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Zend_Gdata
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Photos
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Version</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">$Id: UserQuery.php 24593 2012-01-05 20:35:02Z matthew $
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\Zend_Gdata_Photos_UserQuery" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\Zend_Gdata_Photos_UserQuery<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Zend\Gdata\Photos</small><p class="short-description">Assists in constructing queries for user entries.</p>
+<div class="long-description"><p>Instances of this class can be provided in many places where a URL is
+required.</p>
+
+<p>For information on submitting queries to a server, see the
+service class, Zend_Gdata_Photos.</p>
+</div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd><a href="db_Zend_Gdata_Query.html#%5CZend_Gdata_Query">\Zend_Gdata_Query</a></dd>
+<dt>Children</dt>
+<dd><a href="db_Zend_Gdata_Photos_AlbumQuery.html#%5CZend_Gdata_Photos_AlbumQuery">\Zend_Gdata_Photos_AlbumQuery</a></dd>
+<dt>Category</dt>
+<dd>Zend
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://framework.zend.com/license/new-bsd">New BSD License</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\Zend_Gdata_Photos_UserQuery::$_projection" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_projection</span>= ''api''
+                </code><div class="description">
+<p class="short-description">Indicates the format of data returned in Atom feeds. Can be either
+'api' or 'base'. Default value is 'api'.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'api'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::$_type" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_type</span>= ''feed''
+                </code><div class="description">
+<p class="short-description">Indicates whether to request a feed or entry in queries. Default
+value is 'feed';</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>'feed'</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::$_user" class="anchor"></a><div class="property protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$_user</span>= 'Zend_Gdata_Photos::DEFAULT_USER'
+                </code><div class="description">
+<p class="short-description">A string which, if not null, indicates which user should
+be retrieved by this query. If null, the default user will be used
+instead.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Default value</strong><code>Zend_Gdata_Photos::DEFAULT_USER</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\Zend_Gdata_Photos_UserQuery::__construct()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Create a new Query object with default values.</p></div>
+<div class="code-tabs"><div class="long-description">
+</div></div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getAccess()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAccess</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the visibility filter for entries returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The visibility to filter by, or null for the default user.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setAccess
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getImgMax()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getImgMax</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the maximum image size filter for entries returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The image size size to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setImgMax
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getKind()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getKind</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the kind of entries to be returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The kind to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setKind
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getProjection()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getProjection</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Gets the format of data in returned in Atom feeds.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>projection</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setProjection
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getQueryUrl()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getQueryUrl</span><span class="nb-faded-text">(
+           $incomingUri
+              =
+              null
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Returns the URL generated for this query, based on it's current
+parameters.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$incomingUri</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>A URL generated based on the state of this query.</td>
+</tr>
+</table>
+<strong>Throws</strong><table class="argument-info">
+<thead><tr>
+<th>Exception</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_App_InvalidArgumentException.html#%5CZend_Gdata_App_InvalidArgumentException">\Zend_Gdata_App_InvalidArgumentException</a></td>
+<td><em></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getTag()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getTag</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the tag filter for entries returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The tag to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setTag
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getThumbsize()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getThumbsize</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the thumbnail size filter for entries returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The thumbnail size to filter by, or null if no filter is to be applied.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setThumbsize
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getType()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getType</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Gets the type of data in returned in queries.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>type</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setType
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::getUser()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUser</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the user which is to be returned.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td>The visibility to retrieve.</td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>\setUser
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setAccess()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAccess</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the visibility filter for entries returned. Only entries which
+match this value will be returned. If null or unset, the default
+value will be used instead.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>Valid values are 'all' (default), 'public', and 'private'.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The visibility to filter by, or null to use the default value.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setImgMax()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setImgMax</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the maximum image size for entries returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The image size to filter by, or null if no filter is to be applied.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setKind()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setKind</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the kind of entries that are returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The kind to filter by, or null if no filter is to be applied.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setProjection()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setProjection</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></code><div class="description"><p class="short_description">Set's the format of data returned in Atom feeds. Can be either
+'api' or 'base'. Normally, 'api' will be desired. Default is 'api'.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setTag()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setTag</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the tag for entries that are returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The tag to filter by, or null if no filter is to be applied.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setThumbsize()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setThumbsize</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the thumbnail size filter for entries returned. Only entries which
+match this value will be returned. If null or unset, this filter will
+not be applied.</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>See http://code.google.com/apis/picasaweb/reference.html#Parameters
+for a list of valid values.</p>
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The thumbnail size to filter by, or null if no filter is to be applied.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setType()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setType</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          <a href="db_Zend_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></code><div class="description"><p class="short_description">Set's the type of data returned in queries. Can be either
+'feed' or 'entry'. Normally, 'feed' will be desired. Default is 'feed'.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Zend_Gdata_Photos_UserQuery.html#%5CZend_Gdata_Photos_UserQuery">\Zend_Gdata_Photos_UserQuery</a></td>
+<td>Provides a fluent interface</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\Zend_Gdata_Photos_UserQuery::setUser()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setUser</span><span class="nb-faded-text">(
+          string $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description">Set the user to query for. When set, this user's feed will be
+returned. If not set or null, the default user's feed will be returned
+instead.</p></div>
+<div class="code-tabs">
+<div class="long-description">
+</div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The user to retrieve, or null for the default user.</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.15.1</a>.
+    </small></body></html>
